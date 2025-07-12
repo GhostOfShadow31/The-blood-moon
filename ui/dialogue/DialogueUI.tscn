@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwg7hcybr50fi" path="res://scripts/systems/dialogue_ui.gd" id="1_0o7td"]
 [ext_resource type="Texture2D" uid="uid://cqih5vyacrxef" path="res://assets/ui/fond_frame.png" id="2_ukqbk"]
-[ext_resource type="Texture2D" uid="uid://dof4xolxfwthp" path="res://assets/ui/aporte_elfe_frame.png" id="3_l8u30"]
+[ext_resource type="Texture2D" uid="uid://be081mgjmx2ce" path="res://assets/ui/apotre_elfe_portrait.png" id="3_l8u30"]
 
 [node name="DialogueUI" type="CanvasLayer"]
 script = ExtResource("1_0o7td")

@@ -21,9 +21,9 @@ func _on_dialogue_changed(character, text, _choices):
 	
 	match character:
 		"Hero":
-			portrait.texture = preload("res://assets/ui/hero_frame.png")
+			portrait.texture = preload("res://assets/ui/hero_portrait.png")
 		"Apotre Elfe":
-			portrait.texture = preload("res://assets/ui/aporte_elfe_frame.png")
+			portrait.texture = preload("res://assets/ui/apotre_elfe_portrait.png")
 		_:
 			portrait.texture = null
 	

@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*res://managers/dialogueManager.gd"
-StoryManager="*res://managers/storyManager.gd"
+DialogueManager="*res://scripts/managers/dialogueManager.gd"
+StoryManager="*res://scripts/managers/storyManager.gd"
+CinematiqueManager="*res://scripts/managers/cinematiqueManager.gd"
 DialogueUi="*res://ui/dialogue/DialogueUI.tscn"
-CinematiqueManager="*res://managers/cinematiqueManager.gd"
 
 [input]
 
