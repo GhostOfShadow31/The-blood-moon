@@ -1,0 +1,128 @@
+[
+	{
+		"character": "Apotre Elfe",
+		"text": "Tu t'étires hors du sommeil... comme un souvenir qui résiste à l'oubli.",
+		"choices": [],
+		"responses": {
+			"following": 1
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "*brouillé* Je... ne reconnais rien.",
+		"choices": [],
+		"responses": {
+			"following": 2
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "C'est normal. Le monde a changé plusieurs fois... pendant ton silence.",
+		"choices": [],
+		"responses": {
+			"following": 3
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "*regarde ses mains* Combien de temps ?",
+		"choices": [],
+		"responses": {
+			"following": 4
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "Assez pour que personne ne te pose la question.",
+		"choices": [],
+		"responses": {
+			"following": 5
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "Qui êtes-vous ?",
+		"choices": [],
+		"responses": {
+			"following": 6
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "Nous sommes ceux qui veillent. Ceux que le vent n'a pas encore emportés.",
+		"choices": [],
+		"responses": {
+			"following": 7
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "*se tait*",
+		"choices": [],
+		"responses": {
+			"following": 8
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "*tend un objet* Prends ceci. Ce catalyseur ne te donnera pas de réponses, mais il saura quand les poser.",
+		"choices": [],
+		"responses": {
+			"following": 9
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "*Prend le catalyseur*",
+		"choices": [],
+		"responses": {
+			"following": 10
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "Vers le sud s'étend une mer de sable, immobile... mais vivante. Au coeur de cette chaleur, un trône forgé par le tumulte.",
+		"choices": [],
+		"responses": {
+			"following": 11
+		},
+		"end": false
+	},
+	{
+		"character": "Hero",
+		"text": "Un roi ?",
+		"choices": [],
+		"responses": {
+			"following": 12
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "Un roc qu'aucune tempête ne plie. Ses mots sont des ordres, ses silences des menaces.",
+		"choices": [],
+		"responses": {
+			"following": 13
+		},
+		"end": false
+	},
+	{
+		"character": "Apotre Elfe",
+		"text": "Approche avec prudence... et avec fermeté. Il ne tolère ni faiblesse… ni détour.",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	}
+]

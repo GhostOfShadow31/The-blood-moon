@@ -1,0 +1,54 @@
+[
+	{
+		"type": "dialogue", 
+		"path": "res://dialogues/elf_apotre.json", 
+		"index": 0, 
+		"owner": "ApotreElfe"
+	},
+	{
+		"type": "monologue",
+		 "path": "res://dialogues/hero.json",
+		 "index": 0,
+		 "owner": "Hero"
+	},
+	{
+		"type": "monologue",
+		 "path": "res://dialogues/hero.json",
+		 "index": 1,
+		 "owner": "Hero"
+	},
+	{
+		"type": "cinematics",
+		"name": "apotre_elfe_depart",
+		"wait_before": 1.0,
+		"actions": [
+			{
+				"actor": "/root/Main/Grotte/ApotreElfe",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [-657, 817],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Root"
+	},
+	{
+		"type": "cinematics",
+		"name": "apotre_elfe_chasing",
+		"wait_before": 1.5,
+		"actions": [
+			{
+				"actor": "/root/Main/Grotte/ApotreElfe",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [-657, 535],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Root"
+	}
+]
