@@ -11,10 +11,13 @@ var points: Array = []
 var _current_index = 0
 var wait_timer = 0.0
 var wait_direction = ""
+var somme = 0.0
 
 func _ready():
 	# Trouve le point de départ
 	global_position = origin
+	
+	var last_position = origin
 	
 	# On ajoute toutes les positions dans un tableau
 	for child in path_points.get_children():
@@ -38,6 +41,15 @@ func _ready():
 				point_data["wait_direction"] = parts[2]
 		
 		points.append(point_data)
+	# ➜ Ajoute la distance entre last_position et ce point
+		somme += last_position.distance_to(child.global_position)
+		last_position = child.global_position
+
+	# Boucle fermée ? ➜ On peut aussi rajouter la distance retour vers l'origine :
+	somme += last_position.distance_to(origin)
+
+	#print("Distance totale du trajet: ", somme)
+
 
 func _process(delta: float) -> void:
 	if points.is_empty():

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd8ipyhup8g87"
-path="res://.godot/imported/pnj_walk.png-dae9b86582506f8dd8787b689d9a1e59.ctex"
+uid="uid://27ncj5ra6gg2"
+path="res://.godot/imported/pnj3.png-685e1c907ad8ef7566dedeff9930b6bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/mainMenu/pnj_walk.png"
-dest_files=["res://.godot/imported/pnj_walk.png-dae9b86582506f8dd8787b689d9a1e59.ctex"]
+source_file="res://assets/characters/npcs/mainMenu/pnj3.png"
+dest_files=["res://.godot/imported/pnj3.png-685e1c907ad8ef7566dedeff9930b6bf.ctex"]
 
 [params]
 
