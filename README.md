@@ -32,8 +32,22 @@ Contient les dialogues de chaque pnj du jeu :
 ### scene
 Contient toutes les scenes du jeu (mis à part l'UI)
 
+Contient les dossier suivants:
+
+- Chapitre
+- Characters
+- Map
+- Ui / dialogue
+
 ### script
 Contient tous les scripts du projet
+
+Contient les dossier suivants:
+
+- Managers
+- Npcs
+- Player
+- Systems
 
 ### story
 Contient la story de chaque chapitre du jeu
