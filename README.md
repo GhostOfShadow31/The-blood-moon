@@ -12,6 +12,15 @@ Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_re
 ## Comment fonctionne chaque répertoire
 ### asset
 Contient toutes les ressources graphiques et audios (sprites, tuilesets...)
+Contient les dossier suivant :
+
+- Character
+- Effect
+- Fonts
+- Items
+- TileSet
+- Ui
+Et contient le fichier des Credits
 
 ### dialogue
 Contient les dialogues de chaque pnj du jeu :
