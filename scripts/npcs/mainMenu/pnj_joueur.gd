@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed = 100
+@export var speed = 500
 @export var path_node: NodePath
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -8,9 +8,12 @@ extends Node2D
 @onready var origin: Vector2 = path_points.get_node("Origin").global_position
 @onready var main_menu = self.get_parent()
 
+signal zoom_book
+
 var points: Array = []
 var _current_index = 0
 var is_cinematic = false
+var is_signal_send = false
 var wait_timer = 0.0
 
 func _ready():
@@ -44,6 +47,10 @@ func _process(delta: float) -> void:
 	if wait_timer > 0:
 		wait_timer -= delta
 		return
+	
+	if not is_signal_send and _current_index >= points.size():
+		is_signal_send = true
+		emit_signal("zoom_book")
 	
 	if _current_index >= points.size():
 		animated_sprite.play("wait")

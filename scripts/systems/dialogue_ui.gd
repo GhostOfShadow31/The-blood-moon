@@ -24,6 +24,8 @@ func _on_dialogue_changed(character, text, _choices):
 			portrait.texture = preload("res://assets/ui/hero_portrait.png")
 		"Apotre Elfe":
 			portrait.texture = preload("res://assets/ui/apotre_elfe_portrait.png")
+		"Narrateur":
+			portrait.texture = preload("res://assets/ui/shrek_giga_chad.jpeg")
 		_:
 			portrait.texture = null
 	

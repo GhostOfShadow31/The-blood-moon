@@ -1,0 +1,11 @@
+[
+	{
+		"character": "Narrateur",
+		"text": "Coucou toi, tu veux jouer avec Daddy Shrek ?",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	}
+]

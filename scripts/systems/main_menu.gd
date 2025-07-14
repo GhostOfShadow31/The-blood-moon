@@ -2,21 +2,42 @@ extends Control
 
 @onready var tilemap_effect = $Effect
 @onready var black_screen = $BlackScreen
+@onready var black_screen2 = $BlackScreen2
 @onready var UI_container = $UIContainer
-@onready var camera_menu = $Camera2D
 @onready var pnj = $PNJJoueur
+@onready var livre = $Livre
+@onready var camera_menu = $Camera2D
 @onready var camera_pnj = $PNJJoueur/Camera2D
 
 signal start_cinematic(is_on: bool)
 
 var fade_speed = 0.1
 var is_play_button_clicked = false
+var is_zoom_on_book = false
+var main_menu_steps = ""
 
 func _ready() -> void:
+	pnj.zoom_book.connect(_on_zoom_book)
+	
 	black_screen.visible = true
+	black_screen2.visible = false
 	UI_container.visible = true
 	
+	black_screen2.modulate.a = 0.0
+	
+	livre.size = Vector2(16, 16)
+	livre.stretch_mode = TextureRect.STRETCH_SCALE
+	
 	camera_menu.make_current()
+	
+	# Accès aux dialogues
+	var file = FileAccess.open("res://story/storyMainMenu.json", FileAccess.READ)
+	var content = file.get_as_text()
+	main_menu_steps = JSON.parse_string(content)
+
+func _play_scene(index: int):
+	# On lance la story avec ces étapes
+	StoryManager.play_story(main_menu_steps, index)
 
 func _process(delta: float) -> void:
 	if black_screen.modulate.a > 0.0:
@@ -28,6 +49,17 @@ func _process(delta: float) -> void:
 		UI_container.modulate.a -= fade_speed * delta * 10
 		if UI_container.modulate.a < 0.0:
 			UI_container.modulate.a = 0.0
+	
+	if is_zoom_on_book:
+		if black_screen2.modulate.a < 1.0:
+			black_screen2.modulate.a += fade_speed * delta * 4
+			if black_screen2.modulate.a > 1.0:
+				black_screen2.modulate.a = 1.0
+				livre.texture = preload("res://assets/item/livre-ouvert.png")
+				_play_scene(0)
+	
+	if Input.is_action_just_pressed("ui_accept") and StoryManager.is_playing:
+		DialogueUi.advance_or_close()
 
 func _on_play_button_pressed() -> void:
 	#get_tree().change_scene_to_file("res://scenes/chapitres/grotte.tscn")
@@ -61,3 +93,16 @@ func start_camera_transition_move():
 
 func _switch_to_gameplay_camera():
 	camera_pnj.make_current()
+
+func _on_zoom_book():
+	var tween = create_tween()
+	
+	var livre_center = livre.global_position + livre.size * 0.5 * livre.scale
+	
+	var target_pos = camera_pnj.get_parent().to_local(livre_center)
+	
+	black_screen2.visible = true
+	is_zoom_on_book = true
+	
+	tween.tween_property(camera_pnj, "position", target_pos, 0.25).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(camera_pnj, "zoom", Vector2(100, 100), 4.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
