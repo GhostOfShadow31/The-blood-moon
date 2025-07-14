@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed = 500
+@export var speed = 100
 @export var path_node: NodePath
 
 @onready var animated_sprite = $AnimatedSprite2D
