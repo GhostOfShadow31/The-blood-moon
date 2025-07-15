@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://1gd18qhmqbyj"]
+[gd_scene load_steps=17 format=3 uid="uid://1gd18qhmqbyj"]
 
 [ext_resource type="Script" uid="uid://ydhrs3hbbm5i" path="res://scripts/systems/grotte.gd" id="1_6uhle"]
 [ext_resource type="PackedScene" uid="uid://11824va5mgyp" path="res://scenes/map/mapGrotte.tscn" id="2_8w5qq"]
+[ext_resource type="Texture2D" uid="uid://baw530r74dnhn" path="res://assets/effect/black_screen.png" id="2_fhqjf"]
 [ext_resource type="PackedScene" uid="uid://ckymwn86st6te" path="res://scenes/characters/player.tscn" id="3_fhqjf"]
 [ext_resource type="Script" uid="uid://dpdj08mxmdrwe" path="res://scripts/systems/camera_2d.gd" id="4_ff8e7"]
 [ext_resource type="Script" uid="uid://b7fdigt4lwk5o" path="res://scripts/systems/camera_zone_1.gd" id="5_outh2"]
@@ -24,6 +25,15 @@ size = Vector2(198, 125)
 
 [node name="Grotte" type="Node2D"]
 script = ExtResource("1_6uhle")
+
+[node name="BlackScreen" type="TextureRect" parent="."]
+visible = false
+z_index = 4
+offset_left = -1010.0
+offset_top = -197.0
+offset_right = 296.0
+offset_bottom = 799.0
+texture = ExtResource("2_fhqjf")
 
 [node name="MapGrotte" parent="." instance=ExtResource("2_8w5qq")]
 

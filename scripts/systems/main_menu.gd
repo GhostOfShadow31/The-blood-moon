@@ -15,9 +15,11 @@ var fade_speed = 0.1
 var is_play_button_clicked = false
 var is_zoom_on_book = false
 var main_menu_steps = ""
+var black_screen_1_enabled = true
 
 func _ready() -> void:
 	pnj.zoom_book.connect(_on_zoom_book)
+	StoryManager.step_finished.connect(_on_monologue_finished)
 	
 	black_screen.visible = true
 	black_screen2.visible = false
@@ -40,10 +42,17 @@ func _play_scene(index: int):
 	StoryManager.play_story(main_menu_steps, index)
 
 func _process(delta: float) -> void:
-	if black_screen.modulate.a > 0.0:
-		black_screen.modulate.a -= fade_speed * delta
-		if black_screen.modulate.a < 0.0:
-			black_screen.modulate.a = 0.0
+	if black_screen_1_enabled:
+		if black_screen.modulate.a > 0.0:
+			black_screen.modulate.a -= fade_speed * delta
+			if black_screen.modulate.a < 0.0:
+				black_screen.modulate.a = 0.0
+	else:
+		if black_screen.modulate.a < 1.0:
+			black_screen.modulate.a += fade_speed * delta * 4
+			if black_screen.modulate.a > 1.0:
+				black_screen.modulate.a = 1.0
+				get_tree().change_scene_to_file("res://scenes/chapitres/grotte.tscn")
 	
 	if is_play_button_clicked and UI_container.modulate.a > 0.0:
 		UI_container.modulate.a -= fade_speed * delta * 10
@@ -62,7 +71,6 @@ func _process(delta: float) -> void:
 		DialogueUi.advance_or_close()
 
 func _on_play_button_pressed() -> void:
-	#get_tree().change_scene_to_file("res://scenes/chapitres/grotte.tscn")
 	emit_signal("start_cinematic", true)
 	is_play_button_clicked = true
 	start_camera_transition_move()
@@ -106,3 +114,8 @@ func _on_zoom_book():
 	
 	tween.tween_property(camera_pnj, "position", target_pos, 0.25).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(camera_pnj, "zoom", Vector2(100, 100), 4.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func _on_monologue_finished(who: String):
+	if who != "Narrateur":
+		return
+	black_screen_1_enabled = false
