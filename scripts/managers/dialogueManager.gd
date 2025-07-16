@@ -11,7 +11,9 @@ var current_owner = ""
 
 var is_dialogue_active = false
 
+# Permet de faire un dialogue
 func load_dialogue(path: String, index: int, own: String):
+	# Va chercher le dialogue
 	var file = FileAccess.open(path, FileAccess.READ)
 	var content = file.get_as_text()
 	dialogues = JSON.parse_string(content)
@@ -21,6 +23,7 @@ func load_dialogue(path: String, index: int, own: String):
 	_update_current_text()
 	emit_current()
 
+# Emet le dialogue courant
 func emit_current():
 	if dialogues.is_empty():
 		return
@@ -28,6 +31,7 @@ func emit_current():
 	var current = dialogues[current_index]
 	emit_signal("dialogue_changed", current.character, current.text, current.choices)
 
+# Passe au dialogue suivant
 func next(response_idx = null):
 	if dialogues.is_empty() or not is_dialogue_active:
 		return
@@ -46,9 +50,11 @@ func next(response_idx = null):
 	_update_current_text()
 	emit_current()
 
+# Renvoie le texte de tout le dialogue
 func get_current_text() -> String:
 	return current_text
 
+# Met à jour le texte de tout le dialogue
 func _update_current_text():
 	if dialogues.is_empty():
 		current_text = ""

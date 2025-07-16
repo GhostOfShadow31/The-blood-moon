@@ -1,17 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://1gd18qhmqbyj"]
+[gd_scene load_steps=12 format=3 uid="uid://1gd18qhmqbyj"]
 
 [ext_resource type="Script" uid="uid://ydhrs3hbbm5i" path="res://scripts/systems/grotte.gd" id="1_6uhle"]
 [ext_resource type="PackedScene" uid="uid://11824va5mgyp" path="res://scenes/map/mapGrotte.tscn" id="2_8w5qq"]
 [ext_resource type="Texture2D" uid="uid://baw530r74dnhn" path="res://assets/effect/black_screen.png" id="2_fhqjf"]
 [ext_resource type="PackedScene" uid="uid://ckymwn86st6te" path="res://scenes/characters/player.tscn" id="3_fhqjf"]
 [ext_resource type="Script" uid="uid://dpdj08mxmdrwe" path="res://scripts/systems/camera_2d.gd" id="4_ff8e7"]
-[ext_resource type="Script" uid="uid://b7fdigt4lwk5o" path="res://scripts/systems/camera_zone_1.gd" id="5_outh2"]
-[ext_resource type="Script" uid="uid://djk3kvkodn4gw" path="res://scripts/systems/camera_couloir_1.gd" id="6_vb0os"]
-[ext_resource type="Script" uid="uid://bmtlti55sldwi" path="res://scripts/systems/camera_zone_2.gd" id="7_xomsx"]
-[ext_resource type="Script" uid="uid://bu5vhfhaq5sn2" path="res://scripts/systems/camera_couloir_2.gd" id="8_nuhrp"]
-[ext_resource type="Script" uid="uid://dld0l4luaymcn" path="res://scripts/systems/camera_zone_3.gd" id="9_0rk6l"]
-[ext_resource type="Script" uid="uid://cmy1synoyyml3" path="res://scripts/systems/camera_couloir_3.gd" id="10_8o241"]
-[ext_resource type="Script" uid="uid://0xgyp2jof1nq" path="res://scripts/systems/camera_zone_secret.gd" id="11_aw4rd"]
+[ext_resource type="Script" uid="uid://b7fdigt4lwk5o" path="res://scripts/systems/area_2d_start.gd" id="5_outh2"]
+[ext_resource type="Script" uid="uid://djk3kvkodn4gw" path="res://scripts/systems/area_2d.gd" id="6_vb0os"]
 [ext_resource type="PackedScene" uid="uid://wwaaoxj6f6ye" path="res://scenes/characters/elfes/apotre_elfe.tscn" id="12_v5sv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
@@ -70,7 +65,7 @@ shape = SubResource("RectangleShape2D_7mycd")
 
 [node name="CameraZone2" type="Area2D" parent="."]
 visible = false
-script = ExtResource("7_xomsx")
+script = ExtResource("6_vb0os")
 camera_target_position = Vector2(0, 408)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CameraZone2"]
@@ -79,7 +74,7 @@ polygon = PackedVector2Array(-119, -136, 106, -137, 209, -42, 212, 32, 133, 109,
 
 [node name="CameraCouloir2" type="Area2D" parent="."]
 visible = false
-script = ExtResource("8_nuhrp")
+script = ExtResource("6_vb0os")
 camera_target_position = Vector2(-312, 408)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraCouloir2"]
@@ -88,7 +83,7 @@ shape = SubResource("RectangleShape2D_5vw27")
 
 [node name="CameraZone3" type="Area2D" parent="."]
 visible = false
-script = ExtResource("9_0rk6l")
+script = ExtResource("6_vb0os")
 camera_target_position = Vector2(-650, 408)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CameraZone3"]
@@ -97,7 +92,7 @@ polygon = PackedVector2Array(240, -58, 241, 58, 97, 121, -87, 121, -232, 56, -23
 
 [node name="CameraCouloir3" type="Area2D" parent="."]
 visible = false
-script = ExtResource("10_8o241")
+script = ExtResource("6_vb0os")
 camera_target_position = Vector2(-650, 600)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraCouloir3"]
@@ -106,7 +101,7 @@ shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="CameraZoneSecret" type="Area2D" parent="."]
 visible = false
-script = ExtResource("11_aw4rd")
+script = ExtResource("6_vb0os")
 camera_target_position = Vector2(-327, 263)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CameraZoneSecret"]

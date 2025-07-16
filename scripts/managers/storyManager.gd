@@ -14,6 +14,7 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_step_finished)
 	await DialogueUi.ui_ready
 
+# Joue une story
 func play_story(new_steps: Array, index: int):
 	if is_playing:
 		print("play_story déjà en cours")
@@ -23,9 +24,11 @@ func play_story(new_steps: Array, index: int):
 	current_step_index = index
 	_play_current_step()
 
+# Joue le step courant de la story
 func _play_current_step():
 	
 	var step = steps[current_step_index]
+	# Trois type de step pour l'instant
 	match step.type:
 		"dialogue":
 			DialogueManager.load_dialogue(step.path, step.index, step.owner)
@@ -48,6 +51,7 @@ func _play_current_step():
 		_:
 			push_error("Type d'étape inconnu : %s" % step.type)
 
+# Quand la story n'est plus en cours
 func _on_step_finished(own):
 	is_playing = false
 	emit_signal("step_finished", own)

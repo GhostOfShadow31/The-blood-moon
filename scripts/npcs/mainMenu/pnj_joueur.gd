@@ -8,7 +8,7 @@ extends Node2D
 @onready var origin: Vector2 = path_points.get_node("Origin").global_position
 @onready var main_menu = self.get_parent()
 
-signal zoom_book
+signal zoom_book # Dest: main_menu.gd
 
 var points: Array = []
 var _current_index = 0
@@ -48,6 +48,7 @@ func _process(delta: float) -> void:
 		wait_timer -= delta
 		return
 	
+	# On a fini le trajet, on envoie le signal pour zoomer sur le livre
 	if not is_signal_send and _current_index >= points.size():
 		is_signal_send = true
 		emit_signal("zoom_book")
@@ -56,6 +57,7 @@ func _process(delta: float) -> void:
 		animated_sprite.play("wait")
 		return
 	
+	# Déplacements du pnj
 	if is_cinematic:
 		var target = points[_current_index]["position"]
 		var direction = (target - global_position).normalized()
@@ -66,6 +68,7 @@ func _process(delta: float) -> void:
 			wait_timer = points[_current_index]["wait"]
 			_current_index += 1
 
+# Met à jour l'animation du pnj quand il marche
 func _update_animation(direction: Vector2):
 	if abs(direction.x) > abs(direction.y):
 		if direction.x > 0:

@@ -13,11 +13,16 @@ func _ready():
 	animation_state.travel("sleep")
 
 func _process(_delta):
+	# Si le joueur est entrain de dormir
 	if is_sleeping:
 		if Input.is_action_just_pressed("ui_accept"):
 			_start_wake_up_sequence()
+	
+	# Si il n'y a pas d'histoire en cours
 	elif not StoryManager.is_playing:
+		# Si l'inventaire n'est pas visible
 		if not Inventaire.is_inventory_active:
+			# On peut se déplacer
 			var input_vector := Vector2.ZERO
 			input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 			input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -43,15 +48,21 @@ func _process(_delta):
 				velocity = input_vector * speed
 				move_and_slide()
 			
+			# Si le joueur appui sur la touche <E>
 			if Input.is_action_just_pressed("ui_e"):
+				# On affiche l'inventaire
 				Inventaire._show()
 				animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+		# Si l'inventaire est visible
 		else:
+			# Cliquer sur la touche <E> ferme l'inventaire
 			if Input.is_action_just_pressed("ui_e"):
 				Inventaire._hide()
+	# Si le joueur ne bouge pas, on fait l'animation idle dans la dernière direction
 	else:
 		animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
 
+# Animation de réveil
 func _start_wake_up_sequence() -> void:
 	# Lance un timer (await) avant d’exécuter l’animation get_up
 	await get_tree().create_timer(1.0).timeout
