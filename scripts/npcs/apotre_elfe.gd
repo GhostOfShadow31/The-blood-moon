@@ -10,6 +10,7 @@ signal action_done() # Pour CinematiqueManager
 
 var player_in_range := false
 var has_talked := false
+var item := "res://assets/item/catalyseur.png"
 
 func _ready() -> void:
 	sprite.play("idle")
@@ -57,6 +58,8 @@ func _on_dialogue_ended(who: String):
 	# On se déconnecte du signal pour le passer à la cinématique
 	StoryManager.step_finished.disconnect(_on_dialogue_ended)
 	StoryManager.step_finished.connect(_on_get_out_ended)
+	
+	Inventaire._add_item(item)
 	
 	# Le pnj sort de la caméra
 	emit_signal("start_new_cinematic", 3)

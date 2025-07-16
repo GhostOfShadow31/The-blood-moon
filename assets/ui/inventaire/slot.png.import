@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8r82arrjsmkj"
-path="res://.godot/imported/bouton_jouer_hover.png-a0834a8658798b8cb6baea52bec4ab63.ctex"
+uid="uid://b78yv17ls1pda"
+path="res://.godot/imported/slot.png-7dc8fbc0b9e3a64a6b00e90a0c9bb4db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/button/bouton_jouer_hover.png"
-dest_files=["res://.godot/imported/bouton_jouer_hover.png-a0834a8658798b8cb6baea52bec4ab63.ctex"]
+source_file="res://assets/ui/inventaire/slot.png"
+dest_files=["res://.godot/imported/slot.png-7dc8fbc0b9e3a64a6b00e90a0c9bb4db.ctex"]
 
 [params]
 

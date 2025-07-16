@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqih5vyacrxef"
-path="res://.godot/imported/fond_frame.png-e9f6957a5c8b71f6b3b414bcc505cd61.ctex"
+uid="uid://8r82arrjsmkj"
+path="res://.godot/imported/bouton_jouer_hover.png-39c1c00dd2cbfb1e16d4ed466eec9d34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/fond_frame.png"
-dest_files=["res://.godot/imported/fond_frame.png-e9f6957a5c8b71f6b3b414bcc505cd61.ctex"]
+source_file="res://assets/ui/mainMenu/button/bouton_jouer_hover.png"
+dest_files=["res://.godot/imported/bouton_jouer_hover.png-39c1c00dd2cbfb1e16d4ed466eec9d34.ctex"]
 
 [params]
 

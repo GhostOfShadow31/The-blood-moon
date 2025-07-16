@@ -1,0 +1,457 @@
+[gd_scene load_steps=4 format=3 uid="uid://k3il616witlw"]
+
+[ext_resource type="Script" uid="uid://bml47im7n36r5" path="res://scripts/systems/inventaire.gd" id="1_msa1f"]
+[ext_resource type="Texture2D" uid="uid://duyxwcusph1cu" path="res://assets/ui/inventaire/panel.png" id="1_q8qu1"]
+[ext_resource type="Texture2D" uid="uid://b78yv17ls1pda" path="res://assets/ui/inventaire/slot.png" id="3_y147a"]
+
+[node name="Inventaire" type="CanvasLayer"]
+script = ExtResource("1_msa1f")
+path_node = NodePath("CenterContainer/MarginContainer/NinePatchRect/Textures")
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer/MarginContainer"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_q8qu1")
+
+[node name="Textures" type="Node2D" parent="CenterContainer/MarginContainer/NinePatchRect"]
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures"]
+custom_minimum_size = Vector2(600, 300)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Ligne 1" type="HBoxContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ligne 2" type="HBoxContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ligne 3" type="HBoxContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ligne 4" type="HBoxContainer" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("3_y147a")
+
+[node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

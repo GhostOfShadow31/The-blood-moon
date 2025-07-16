@@ -11,16 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://bb068cibtp2v8" path="res://assets/characters/npcs/mainMenu/pnj2.png" id="6_8vx4p"]
 [ext_resource type="Texture2D" uid="uid://c84dgqdq3ex2p" path="res://assets/characters/npcs/mainMenu/pnj4.png" id="6_l4mxc"]
 [ext_resource type="Texture2D" uid="uid://27ncj5ra6gg2" path="res://assets/characters/npcs/mainMenu/pnj3.png" id="7_tdapf"]
-[ext_resource type="Texture2D" uid="uid://kt37igabre58" path="res://assets/ui/title.png" id="7_ucygd"]
-[ext_resource type="Texture2D" uid="uid://bp5vavlifb0yq" path="res://assets/ui/button/bouton_jouer_normal.png" id="8_mipys"]
-[ext_resource type="Texture2D" uid="uid://8r82arrjsmkj" path="res://assets/ui/button/bouton_jouer_hover.png" id="9_8a8k8"]
 [ext_resource type="Texture2D" uid="uid://bb3ex21wherfa" path="res://assets/characters/player/walk/hero_walk.png" id="10_8vx4p"]
-[ext_resource type="Texture2D" uid="uid://bnh1bfxh2wbsg" path="res://assets/ui/button/bouton_parametre_normal.png" id="10_l4mxc"]
 [ext_resource type="Script" uid="uid://c8grmtkbnfvkg" path="res://scripts/npcs/mainMenu/pnj_joueur.gd" id="10_tdapf"]
-[ext_resource type="Texture2D" uid="uid://bc4d78u8d4r2b" path="res://assets/ui/button/bouton_parametre_hover.png" id="11_5faoh"]
-[ext_resource type="Texture2D" uid="uid://ddbd73jwio0wj" path="res://assets/ui/button/bouton_quitter_normal.png" id="12_ptake"]
-[ext_resource type="Texture2D" uid="uid://de08knhdex3s4" path="res://assets/ui/button/bouton_quitter_hover.png" id="13_hubol"]
 [ext_resource type="Texture2D" uid="uid://swrodlfu31r" path="res://assets/characters/player/idle/hero_idle.png" id="13_viowm"]
+[ext_resource type="Texture2D" uid="uid://kt37igabre58" path="res://assets/ui/mainMenu/title.png" id="15_viowm"]
+[ext_resource type="Texture2D" uid="uid://bp5vavlifb0yq" path="res://assets/ui/mainMenu/button/bouton_jouer_normal.png" id="16_1n6yq"]
+[ext_resource type="Texture2D" uid="uid://8r82arrjsmkj" path="res://assets/ui/mainMenu/button/bouton_jouer_hover.png" id="17_yovvs"]
+[ext_resource type="Texture2D" uid="uid://bnh1bfxh2wbsg" path="res://assets/ui/mainMenu/button/bouton_parametre_normal.png" id="18_viowm"]
+[ext_resource type="Texture2D" uid="uid://bc4d78u8d4r2b" path="res://assets/ui/mainMenu/button/bouton_parametre_hover.png" id="19_1n6yq"]
+[ext_resource type="Texture2D" uid="uid://ddbd73jwio0wj" path="res://assets/ui/mainMenu/button/bouton_quitter_normal.png" id="20_yovvs"]
+[ext_resource type="Texture2D" uid="uid://de08knhdex3s4" path="res://assets/ui/mainMenu/button/bouton_quitter_hover.png" id="21_2axsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wh52"]
 texture = ExtResource("2_0ykhv")
@@ -5791,22 +5791,22 @@ custom_minimum_size = Vector2(336, 336)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("7_ucygd")
+texture = ExtResource("15_viowm")
 
 [node name="PlayButton" type="TextureButton" parent="UIContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_mipys")
-texture_hover = ExtResource("9_8a8k8")
+texture_normal = ExtResource("16_1n6yq")
+texture_hover = ExtResource("17_yovvs")
 
 [node name="SettingsButton" type="TextureButton" parent="UIContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("10_l4mxc")
-texture_hover = ExtResource("11_5faoh")
+texture_normal = ExtResource("18_viowm")
+texture_hover = ExtResource("19_1n6yq")
 
 [node name="QuitPlay" type="TextureButton" parent="UIContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("12_ptake")
-texture_hover = ExtResource("13_hubol")
+texture_normal = ExtResource("20_yovvs")
+texture_hover = ExtResource("21_2axsc")
 
 [node name="PorteChateau" type="Area2D" parent="."]
 visible = false

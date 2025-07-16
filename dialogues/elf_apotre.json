@@ -6,7 +6,7 @@
 		"responses": {
 			"following": 1
 		},
-		"end": false
+		"end": true
 	},
 	{
 		"character": "Hero",

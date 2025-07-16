@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp5vavlifb0yq"
-path="res://.godot/imported/bouton_jouer_normal.png-9a2be88c0b6e85bab2a6bf56a8d5fd0d.ctex"
+uid="uid://dyql5y66r1kcc"
+path="res://.godot/imported/narrateur_portrait.png-7731748e5651cd083c626772756d3487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/button/bouton_jouer_normal.png"
-dest_files=["res://.godot/imported/bouton_jouer_normal.png-9a2be88c0b6e85bab2a6bf56a8d5fd0d.ctex"]
+source_file="res://assets/ui/dialogue/narrateur_portrait.png"
+dest_files=["res://.godot/imported/narrateur_portrait.png-7731748e5651cd083c626772756d3487.ctex"]
 
 [params]
 

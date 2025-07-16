@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyql5y66r1kcc"
-path="res://.godot/imported/narrateur_portrait.png-ff77f8530ae222519ee9731cc391f8cb.ctex"
+uid="uid://kt37igabre58"
+path="res://.godot/imported/title.png-c8efe46fc072f328d43cd9cecf97adb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/narrateur_portrait.png"
-dest_files=["res://.godot/imported/narrateur_portrait.png-ff77f8530ae222519ee9731cc391f8cb.ctex"]
+source_file="res://assets/ui/mainMenu/title.png"
+dest_files=["res://.godot/imported/title.png-c8efe46fc072f328d43cd9cecf97adb7.ctex"]
 
 [params]
 

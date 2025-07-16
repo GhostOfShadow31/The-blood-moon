@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnh1bfxh2wbsg"
-path="res://.godot/imported/bouton_parametre_normal.png-6b7f6f1edca7105342b71802f5705d4b.ctex"
+uid="uid://be081mgjmx2ce"
+path="res://.godot/imported/apotre_elfe_portrait.png-988445de615f0009a667af454b76fd37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/button/bouton_parametre_normal.png"
-dest_files=["res://.godot/imported/bouton_parametre_normal.png-6b7f6f1edca7105342b71802f5705d4b.ctex"]
+source_file="res://assets/ui/dialogue/apotre_elfe_portrait.png"
+dest_files=["res://.godot/imported/apotre_elfe_portrait.png-988445de615f0009a667af454b76fd37.ctex"]
 
 [params]
 

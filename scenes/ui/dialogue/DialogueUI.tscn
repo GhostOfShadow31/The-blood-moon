@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b01i0fcj2v826"]
 
 [ext_resource type="Script" uid="uid://dwg7hcybr50fi" path="res://scripts/systems/dialogue_ui.gd" id="1_m1c1c"]
-[ext_resource type="Texture2D" uid="uid://cqih5vyacrxef" path="res://assets/ui/fond_frame.png" id="2_mxqop"]
-[ext_resource type="Texture2D" uid="uid://be081mgjmx2ce" path="res://assets/ui/apotre_elfe_portrait.png" id="3_2elm4"]
+[ext_resource type="Texture2D" uid="uid://cqih5vyacrxef" path="res://assets/ui/dialogue/fond_frame.png" id="2_mxqop"]
+[ext_resource type="Texture2D" uid="uid://be081mgjmx2ce" path="res://assets/ui/dialogue/apotre_elfe_portrait.png" id="3_2elm4"]
 
 [node name="DialogueUI" type="CanvasLayer"]
 script = ExtResource("1_m1c1c")

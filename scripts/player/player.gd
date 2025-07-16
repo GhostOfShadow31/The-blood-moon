@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 100.0  # Vitesse de déplacement
+@export var speed := 500.0  # Vitesse de déplacement
 var last_direction := Vector2(0, 1) # Par défaut regarde vers le bas (idle_down)
 
 @onready var animation_tree = $AnimatedSprite2D/AnimationTree
@@ -17,30 +17,38 @@ func _process(_delta):
 		if Input.is_action_just_pressed("ui_accept"):
 			_start_wake_up_sequence()
 	elif not StoryManager.is_playing:
-		var input_vector := Vector2.ZERO
-		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-		input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-		
-		# Empêcher déplacement diagonal : priorité axe X si différent de zéro sinon axe Y
-		if input_vector.x != 0:
-			input_vector.y = 0
-		elif input_vector.y != 0:
-			input_vector.x = 0
+		if not Inventaire.is_inventory_active:
+			var input_vector := Vector2.ZERO
+			input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+			input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+			
+			# Empêcher déplacement diagonal : priorité axe X si différent de zéro sinon axe Y
+			if input_vector.x != 0:
+				input_vector.y = 0
+			elif input_vector.y != 0:
+				input_vector.x = 0
 
-		# Normaliser pour vitesse constante
-		input_vector = input_vector.normalized()
-		
-		if input_vector == Vector2.ZERO:
-			# Personnage immobile : joue idle dans la dernière direction
-			animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+			# Normaliser pour vitesse constante
+			input_vector = input_vector.normalized()
+			
+			if input_vector == Vector2.ZERO:
+				# Personnage immobile : joue idle dans la dernière direction
+				animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+			else:
+				# Personnage bouge : on joue walk et on met à jour la dernière direction
+				animation_tree.set("parameters/Move/blend_position", input_vector)
+				last_direction = input_vector
+			
+				# Déplace le personnage
+				velocity = input_vector * speed
+				move_and_slide()
+			
+			if Input.is_action_just_pressed("ui_e"):
+				Inventaire._show()
+				animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
 		else:
-			# Personnage bouge : on joue walk et on met à jour la dernière direction
-			animation_tree.set("parameters/Move/blend_position", input_vector)
-			last_direction = input_vector
-		
-			# Déplace le personnage
-			velocity = input_vector * speed
-			move_and_slide()
+			if Input.is_action_just_pressed("ui_e"):
+				Inventaire._hide()
 	else:
 		animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
 
