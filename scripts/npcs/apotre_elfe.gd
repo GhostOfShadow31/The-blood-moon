@@ -22,7 +22,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	# Clique pour skip les dialogues et monologues
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and not Inventaire.is_inventory_active:
 		if player_in_range and not StoryManager.is_playing:
 			start_dialogue()
 		elif StoryManager.is_playing:

@@ -5774,7 +5774,6 @@ tile_map_data = PackedByteArray("AAAcAAUAAAAEAA4AAAATAAgAAAAHAAAAAAATAAkAAAAHAAE
 tile_set = SubResource("TileSet_826wr")
 
 [node name="UIContainer" type="CenterContainer" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
@@ -5803,7 +5802,7 @@ layout_mode = 2
 texture_normal = ExtResource("18_viowm")
 texture_hover = ExtResource("19_1n6yq")
 
-[node name="QuitPlay" type="TextureButton" parent="UIContainer/VBoxContainer"]
+[node name="QuitButton" type="TextureButton" parent="UIContainer/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("20_yovvs")
 texture_hover = ExtResource("21_2axsc")
@@ -6790,6 +6789,6 @@ position = Vector2(792, 185)
 
 [connection signal="pressed" from="UIContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UIContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="UIContainer/VBoxContainer/QuitPlay" to="." method="_on_quit_play_pressed"]
+[connection signal="pressed" from="UIContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="body_entered" from="PorteChateau" to="." method="_on_porte_chateau_body_entered"]
 [connection signal="body_exited" from="PorteChateau" to="." method="_on_porte_chateau_body_exited"]

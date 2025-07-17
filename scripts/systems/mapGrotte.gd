@@ -14,7 +14,7 @@ func _ready() -> void:
 	StoryManager.step_finished.connect(_on_dialogue_ended)
 
 func _process(_delta: float) -> void:
-	if player_in_range and Input.is_action_just_pressed("ui_accept"):
+	if player_in_range and Input.is_action_just_pressed("ui_accept") and not Inventaire.is_inventory_active:
 		if StoryManager.is_playing:
 			DialogueUi.advance_or_close()
 		else:

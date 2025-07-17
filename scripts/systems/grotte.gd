@@ -15,7 +15,7 @@ func _ready() -> void:
 	map_grotte.start_new_dialogue.connect(_play_scene)
 	
 	# On va chercher la story associée
-	var file = FileAccess.open("res://story/storyGrotte.json", FileAccess.READ)
+	var file = FileAccess.open("res://data/story/storyGrotte.json", FileAccess.READ)
 	var content = file.get_as_text()
 	grotte_steps = JSON.parse_string(content)
 	

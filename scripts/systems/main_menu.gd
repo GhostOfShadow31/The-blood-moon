@@ -33,7 +33,7 @@ func _ready() -> void:
 	camera_menu.make_current()
 	
 	# Accès aux dialogues
-	var file = FileAccess.open("res://story/storyMainMenu.json", FileAccess.READ)
+	var file = FileAccess.open("res://data/story/storyMainMenu.json", FileAccess.READ)
 	var content = file.get_as_text()
 	main_menu_steps = JSON.parse_string(content)
 
@@ -93,7 +93,7 @@ func _on_settings_button_pressed() -> void:
 	print("Paramètre non-implémenter")
 
 # Quand le bouton "Quitter" est pressé
-func _on_quit_play_pressed() -> void:
+func _on_quit_button_pressed() -> void:
 	get_tree().quit()
 
 # Quand un pnj s'approche de la porfte du chateau,

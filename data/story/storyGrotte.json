@@ -1,19 +1,19 @@
 [
 	{
 		"type": "dialogue", 
-		"path": "res://dialogues/elf_apotre.json", 
+		"path": "res://data/dialogues/elf_apotre.json", 
 		"index": 0, 
 		"owner": "ApotreElfe"
 	},
 	{
 		"type": "monologue",
-		 "path": "res://dialogues/hero.json",
+		 "path": "res://data/dialogues/hero.json",
 		 "index": 0,
 		 "owner": "Hero"
 	},
 	{
 		"type": "monologue",
-		 "path": "res://dialogues/hero.json",
+		 "path": "res://data/dialogues/hero.json",
 		 "index": 1,
 		 "owner": "Hero"
 	},

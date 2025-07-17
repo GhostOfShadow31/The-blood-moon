@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://k3il616witlw"]
+[gd_scene load_steps=5 format=3 uid="uid://k3il616witlw"]
 
 [ext_resource type="Script" uid="uid://bml47im7n36r5" path="res://scripts/systems/inventaire.gd" id="1_msa1f"]
 [ext_resource type="Texture2D" uid="uid://duyxwcusph1cu" path="res://assets/ui/inventaire/panel.png" id="1_q8qu1"]
 [ext_resource type="Texture2D" uid="uid://b78yv17ls1pda" path="res://assets/ui/inventaire/slot.png" id="3_y147a"]
+[ext_resource type="Script" uid="uid://doo0icg6t57bn" path="res://scripts/systems/slot.gd" id="4_y147a"]
 
 [node name="Inventaire" type="CanvasLayer"]
 script = ExtResource("1_msa1f")
@@ -47,7 +48,9 @@ alignment = 1
 [node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 1"]
 custom_minimum_size = Vector2(48, 48)
@@ -59,7 +62,9 @@ expand_mode = 1
 [node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 2"]
 custom_minimum_size = Vector2(48, 48)
@@ -71,7 +76,9 @@ expand_mode = 1
 [node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 3"]
 custom_minimum_size = Vector2(48, 48)
@@ -83,7 +90,9 @@ expand_mode = 1
 [node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 4"]
 custom_minimum_size = Vector2(48, 48)
@@ -95,7 +104,9 @@ expand_mode = 1
 [node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 5"]
 custom_minimum_size = Vector2(48, 48)
@@ -107,7 +118,9 @@ expand_mode = 1
 [node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 6"]
 custom_minimum_size = Vector2(48, 48)
@@ -119,7 +132,9 @@ expand_mode = 1
 [node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 7"]
 custom_minimum_size = Vector2(48, 48)
@@ -131,7 +146,9 @@ expand_mode = 1
 [node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 8"]
 custom_minimum_size = Vector2(48, 48)
@@ -143,7 +160,9 @@ expand_mode = 1
 [node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 1/Slot 9"]
 custom_minimum_size = Vector2(48, 48)
@@ -160,7 +179,9 @@ alignment = 1
 [node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 1"]
 custom_minimum_size = Vector2(48, 48)
@@ -172,7 +193,9 @@ expand_mode = 1
 [node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 2"]
 custom_minimum_size = Vector2(48, 48)
@@ -184,7 +207,9 @@ expand_mode = 1
 [node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 3"]
 custom_minimum_size = Vector2(48, 48)
@@ -196,7 +221,9 @@ expand_mode = 1
 [node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 4"]
 custom_minimum_size = Vector2(48, 48)
@@ -208,7 +235,9 @@ expand_mode = 1
 [node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 5"]
 custom_minimum_size = Vector2(48, 48)
@@ -220,7 +249,9 @@ expand_mode = 1
 [node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 6"]
 custom_minimum_size = Vector2(48, 48)
@@ -232,7 +263,9 @@ expand_mode = 1
 [node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 7"]
 custom_minimum_size = Vector2(48, 48)
@@ -244,7 +277,9 @@ expand_mode = 1
 [node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 8"]
 custom_minimum_size = Vector2(48, 48)
@@ -256,7 +291,9 @@ expand_mode = 1
 [node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 2/Slot 9"]
 custom_minimum_size = Vector2(48, 48)
@@ -273,7 +310,9 @@ alignment = 1
 [node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 1"]
 custom_minimum_size = Vector2(48, 48)
@@ -285,7 +324,9 @@ expand_mode = 1
 [node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 2"]
 custom_minimum_size = Vector2(48, 48)
@@ -297,7 +338,9 @@ expand_mode = 1
 [node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 3"]
 custom_minimum_size = Vector2(48, 48)
@@ -309,7 +352,9 @@ expand_mode = 1
 [node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 4"]
 custom_minimum_size = Vector2(48, 48)
@@ -321,7 +366,9 @@ expand_mode = 1
 [node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 5"]
 custom_minimum_size = Vector2(48, 48)
@@ -333,7 +380,9 @@ expand_mode = 1
 [node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 6"]
 custom_minimum_size = Vector2(48, 48)
@@ -345,7 +394,9 @@ expand_mode = 1
 [node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 7"]
 custom_minimum_size = Vector2(48, 48)
@@ -357,7 +408,9 @@ expand_mode = 1
 [node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 8"]
 custom_minimum_size = Vector2(48, 48)
@@ -369,7 +422,9 @@ expand_mode = 1
 [node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 3/Slot 9"]
 custom_minimum_size = Vector2(48, 48)
@@ -386,7 +441,9 @@ alignment = 1
 [node name="Slot 1" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 1"]
 custom_minimum_size = Vector2(48, 48)
@@ -398,7 +455,9 @@ expand_mode = 1
 [node name="Slot 2" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 2"]
 custom_minimum_size = Vector2(48, 48)
@@ -410,7 +469,9 @@ expand_mode = 1
 [node name="Slot 3" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 3"]
 custom_minimum_size = Vector2(48, 48)
@@ -422,7 +483,9 @@ expand_mode = 1
 [node name="Slot 4" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 4"]
 custom_minimum_size = Vector2(48, 48)
@@ -434,7 +497,9 @@ expand_mode = 1
 [node name="Slot 5" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 5"]
 custom_minimum_size = Vector2(48, 48)
@@ -446,7 +511,9 @@ expand_mode = 1
 [node name="Slot 6" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 6"]
 custom_minimum_size = Vector2(48, 48)
@@ -458,7 +525,9 @@ expand_mode = 1
 [node name="Slot 7" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 7"]
 custom_minimum_size = Vector2(48, 48)
@@ -470,7 +539,9 @@ expand_mode = 1
 [node name="Slot 8" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 8"]
 custom_minimum_size = Vector2(48, 48)
@@ -482,7 +553,9 @@ expand_mode = 1
 [node name="Slot 9" type="NinePatchRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("3_y147a")
+script = ExtResource("4_y147a")
 
 [node name="Item" type="TextureRect" parent="CenterContainer/MarginContainer/NinePatchRect/Textures/MarginContainer/VBoxContainer/Ligne 4/Slot 9"]
 custom_minimum_size = Vector2(48, 48)
@@ -490,3 +563,30 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 expand_mode = 1
+
+[node name="Tooltip" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(150, 250)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip"]
+custom_minimum_size = Vector2(150, 250)
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 250.0
+theme_override_constants/separation = 50
+
+[node name="Nom" type="Label" parent="Tooltip/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Hello"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Description" type="Label" parent="Tooltip/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "World"
+horizontal_alignment = 1
+autowrap_mode = 2
