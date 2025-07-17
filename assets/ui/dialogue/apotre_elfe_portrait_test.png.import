@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkhv3lcwht2kj"
-path="res://.godot/imported/hero_portrait.png-5a1d8cc790a87c7042dd69ab8de62fc4.ctex"
+uid="uid://ckvyxyqcsawl7"
+path="res://.godot/imported/apotre_elfe_portrait_test.png-db1b31e97917b1643eb91b5c546858ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/dialogue/hero_portrait.png"
-dest_files=["res://.godot/imported/hero_portrait.png-5a1d8cc790a87c7042dd69ab8de62fc4.ctex"]
+source_file="res://assets/ui/dialogue/apotre_elfe_portrait_test.png"
+dest_files=["res://.godot/imported/apotre_elfe_portrait_test.png-db1b31e97917b1643eb91b5c546858ac.ctex"]
 
 [params]
 

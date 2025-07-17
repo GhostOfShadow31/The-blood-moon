@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwg7hcybr50fi" path="res://scripts/systems/dialogue_ui.gd" id="1_m1c1c"]
 [ext_resource type="Texture2D" uid="uid://cqih5vyacrxef" path="res://assets/ui/dialogue/fond_frame.png" id="2_mxqop"]
-[ext_resource type="Texture2D" uid="uid://be081mgjmx2ce" path="res://assets/ui/dialogue/apotre_elfe_portrait.png" id="3_2elm4"]
+[ext_resource type="Texture2D" uid="uid://ckvyxyqcsawl7" path="res://assets/ui/dialogue/apotre_elfe_portrait_test.png" id="3_m1c1c"]
 
 [node name="DialogueUI" type="CanvasLayer"]
 script = ExtResource("1_m1c1c")
@@ -37,7 +37,7 @@ custom_minimum_size = Vector2(146, 146)
 layout_mode = 2
 offset_right = 146.0
 offset_bottom = 146.0
-texture = ExtResource("3_2elm4")
+texture = ExtResource("3_m1c1c")
 
 [node name="DialogueRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(442, 142)
