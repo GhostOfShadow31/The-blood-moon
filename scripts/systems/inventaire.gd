@@ -3,7 +3,7 @@ extends CanvasLayer
 @export var path_node: NodePath
 
 @onready var v_box_container = get_node(path_node).get_child(0).get_child(0)
-@onready var center_container = $CenterContainer
+@onready var center_container = $VBoxContainer # Pose pas de question sur ça
 @onready var tooltip = $Tooltip
 
 var last_row := 0
