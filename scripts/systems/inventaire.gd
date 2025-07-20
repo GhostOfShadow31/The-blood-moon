@@ -18,8 +18,6 @@ func _ready() -> void:
 	for slot in get_tree().get_nodes_in_group("slots"):
 		slot.connect("hovered", Callable(self, "_show_tooltip"))
 		slot.connect("unhovered", Callable(self, "_hide_tooltip"))
-		
-	_add_item("res://assets/item/catalyseur.png")
 
 # Montrer l'inventaire de manière stylisée
 func _show():
