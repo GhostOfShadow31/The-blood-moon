@@ -1,16 +1,20 @@
 extends CharacterBody2D
 
-@export var speed := 100.0  # Vitesse de déplacement
-var last_direction := Vector2(0, 1) # Par défaut regarde vers le bas (idle_down)
+@export var speed := 300.0  # Vitesse de déplacement
+var last_direction := "Down" # Par défaut regarde vers le bas (idle_down)
 
-@onready var animation_tree = $AnimatedSprite2D/AnimationTree
-@onready var animation_state = animation_tree.get("parameters/playback")
+@onready var animation = $AnimatedSprite2D
 
-var is_sleeping := true
+var is_sleeping := false
 
 func _ready():
-	animation_tree.active = true
-	animation_state.travel("sleep")
+	var parent = get_parent()
+	parent.player_position.connect(_set_global_position)
+	if parent.name == "Grotte":
+		is_sleeping = true
+		animation.play("sleep")
+	else:
+		animation.play("idle_down")
 
 func _process(_delta):
 	# Si le joueur est entrain de dormir
@@ -38,11 +42,10 @@ func _process(_delta):
 			
 			if input_vector == Vector2.ZERO:
 				# Personnage immobile : joue idle dans la dernière direction
-				animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+				_play_wait_sequence(last_direction)
 			else:
 				# Personnage bouge : on joue walk et on met à jour la dernière direction
-				animation_tree.set("parameters/Move/blend_position", input_vector)
-				last_direction = input_vector
+				_play_walk_sequence(input_vector)
 			
 				# Déplace le personnage
 				velocity = input_vector * speed
@@ -52,7 +55,7 @@ func _process(_delta):
 			if Input.is_action_just_pressed("ui_e"):
 				# On affiche l'inventaire
 				Inventaire._show()
-				animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+				_play_wait_sequence(last_direction)
 		# Si l'inventaire est visible
 		else:
 			# Cliquer sur la touche <E> ferme l'inventaire
@@ -60,16 +63,44 @@ func _process(_delta):
 				Inventaire._hide()
 	# Si le joueur ne bouge pas, on fait l'animation idle dans la dernière direction
 	else:
-		animation_tree.set("parameters/Move/blend_position", last_direction * 0.9)
+		_play_wait_sequence(last_direction)
+
+# Définit la position du joueur quand il entre dans la zone
+func _set_global_position(pos: Vector2):
+	global_position = pos
 
 # Animation de réveil
 func _start_wake_up_sequence() -> void:
 	# Lance un timer (await) avant d’exécuter l’animation get_up
 	await get_tree().create_timer(1.0).timeout
 	# Passe à get_up
-	animation_state.travel("get_up")
+	animation.stop()
+	animation.play("get_up")
 	# Attends que l’animation get_up soit finie
-	await get_tree().create_timer(1.0).timeout
-	# Passe à Move
-	animation_state.travel("Move")
+	await animation.animation_finished
 	is_sleeping = false
+
+func _play_wait_sequence(dir: String) -> void:
+	if dir == "Down":
+		animation.play("idle_down")
+	elif dir == "Up":
+		animation.play("idle_up")
+	elif dir == "Left":
+		animation.play("idle_left")
+	elif dir == "Right":
+		animation.play("idle_right")
+	else:
+		push_error("dernière position inconnue: ", dir)
+
+func _play_walk_sequence(dir: Vector2) -> void:
+	if dir == Vector2.DOWN:
+		animation.play("walk_down")
+	elif dir == Vector2.UP:
+		animation.play("walk_up")
+	elif dir == Vector2.LEFT:
+		animation.play("walk_left"	)
+	elif dir == Vector2.RIGHT:
+		animation.play("walk_right")
+	else:
+		push_error("direction inconnue: ", dir)
+	

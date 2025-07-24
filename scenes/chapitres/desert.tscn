@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://mt22ij73r4tu"]
+
+[ext_resource type="Script" uid="uid://ce5wloadk7cnf" path="res://scripts/systems/desert.gd" id="1_cfq1l"]
+[ext_resource type="PackedScene" uid="uid://brpocs5ow8l61" path="res://scenes/map/mapDesert.tscn" id="1_ne4hm"]
+[ext_resource type="PackedScene" uid="uid://ckymwn86st6te" path="res://scenes/characters/player.tscn" id="2_cfq1l"]
+[ext_resource type="Script" uid="uid://dpdj08mxmdrwe" path="res://scripts/systems/camera_2d.gd" id="4_a27i8"]
+[ext_resource type="Script" uid="uid://dqptx2gfdmfhy" path="res://scripts/systems/area_2D_free.gd" id="6_4ww3g"]
+[ext_resource type="Texture2D" uid="uid://bvuiubvknv0eq" path="res://assets/tilesets/desert/sable.png" id="7_egpq4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp15"]
+texture = ExtResource("7_egpq4")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d6tn3"]
+tile_size = Vector2i(128, 128)
+sources/1 = SubResource("TileSetAtlasSource_qsp15")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a27i8"]
+size = Vector2(4000, 3008)
+
+[node name="Desert" type="Node2D"]
+script = ExtResource("1_cfq1l")
+
+[node name="MapDesert" parent="." instance=ExtResource("1_ne4hm")]
+
+[node name="Player" parent="." instance=ExtResource("2_cfq1l")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.75, 1.75)
+script = ExtResource("4_a27i8")
+
+[node name="repere" type="TileMapLayer" parent="."]
+visible = false
+scale = Vector2(0.125, 0.125)
+tile_map_data = PackedByteArray(0, 0, 59, 166, 134, 226, 1, 0, 0, 0, 0, 0, 0, 0, 208, 0, 17, 0, 1, 0, 0, 0, 0, 0, 0, 0, 208, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_d6tn3")
+
+[node name="Area" type="Node2D" parent="."]
+
+[node name="Area_free" type="Area2D" parent="Area"]
+script = ExtResource("6_4ww3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area_free"]
+position = Vector2(2000, 1504)
+shape = SubResource("RectangleShape2D_a27i8")

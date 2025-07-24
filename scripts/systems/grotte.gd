@@ -4,6 +4,9 @@ extends Node
 @onready var map_grotte = $MapGrotte
 @onready var black_screen = $BlackScreen
 
+# Position du joueur quand il entre dans la zone
+signal player_position(Vector2) # Dest: player.gd
+
 # Liste des étapes du scénario dans la grotte : dialogues et monologues
 var grotte_steps = ""
 var fade_speed = 0.1
@@ -20,6 +23,9 @@ func _ready() -> void:
 	grotte_steps = JSON.parse_string(content)
 	
 	black_screen.visible = true
+	
+	# On envoie la position au joueur
+	emit_signal("player_position", Vector2(0, 0))
 
 func _process(delta: float) -> void:
 	# Effet de blackScreen au début
