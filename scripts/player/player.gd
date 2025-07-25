@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 300.0  # Vitesse de déplacement
+@export var speed := 500.0  # Vitesse de déplacement
 var last_direction := "Down" # Par défaut regarde vers le bas (idle_down)
 
 @onready var animation = $AnimatedSprite2D

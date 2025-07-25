@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://mt22ij73r4tu"]
+[gd_scene load_steps=16 format=3 uid="uid://mt22ij73r4tu"]
 
 [ext_resource type="Script" uid="uid://ce5wloadk7cnf" path="res://scripts/systems/desert.gd" id="1_cfq1l"]
 [ext_resource type="PackedScene" uid="uid://brpocs5ow8l61" path="res://scenes/map/mapDesert.tscn" id="1_ne4hm"]
 [ext_resource type="PackedScene" uid="uid://ckymwn86st6te" path="res://scenes/characters/player.tscn" id="2_cfq1l"]
+[ext_resource type="Texture2D" uid="uid://baw530r74dnhn" path="res://assets/effect/black_screen.png" id="2_d6tn3"]
 [ext_resource type="Script" uid="uid://dpdj08mxmdrwe" path="res://scripts/systems/camera_2d.gd" id="4_a27i8"]
 [ext_resource type="Script" uid="uid://dqptx2gfdmfhy" path="res://scripts/systems/area_2D_free.gd" id="6_4ww3g"]
+[ext_resource type="Texture2D" uid="uid://l84xhp2wls56" path="res://assets/tilesets/desert/pont.png" id="7_d6tn3"]
 [ext_resource type="Texture2D" uid="uid://bvuiubvknv0eq" path="res://assets/tilesets/desert/sable.png" id="7_egpq4"]
+[ext_resource type="PackedScene" uid="uid://df7dn6w523xs" path="res://scenes/characters/elements/pancarte.tscn" id="8_qsp15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp15"]
 texture = ExtResource("7_egpq4")
@@ -19,8 +22,44 @@ sources/1 = SubResource("TileSetAtlasSource_qsp15")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a27i8"]
 size = Vector2(4000, 3008)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_la8w1"]
+atlas = ExtResource("7_d6tn3")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kmx5"]
+atlas = ExtResource("7_d6tn3")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awevb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la8w1")
+}],
+"loop": true,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kmx5")
+}],
+"loop": true,
+"name": &"repared",
+"speed": 5.0
+}]
+
 [node name="Desert" type="Node2D"]
 script = ExtResource("1_cfq1l")
+node_path = NodePath("AnimatedSprite/Pancartes")
+
+[node name="BlackScreen" type="TextureRect" parent="."]
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(4000, 3000)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_d6tn3")
 
 [node name="MapDesert" parent="." instance=ExtResource("1_ne4hm")]
 
@@ -28,6 +67,10 @@ script = ExtResource("1_cfq1l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.75, 1.75)
+limit_left = 0
+limit_top = 0
+limit_right = 4000
+limit_bottom = 3000
 script = ExtResource("4_a27i8")
 
 [node name="repere" type="TileMapLayer" parent="."]
@@ -37,6 +80,7 @@ tile_map_data = PackedByteArray(0, 0, 59, 166, 134, 226, 1, 0, 0, 0, 0, 0, 0, 0,
 tile_set = SubResource("TileSet_d6tn3")
 
 [node name="Area" type="Node2D" parent="."]
+visible = false
 
 [node name="Area_free" type="Area2D" parent="Area"]
 script = ExtResource("6_4ww3g")
@@ -44,3 +88,43 @@ script = ExtResource("6_4ww3g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area_free"]
 position = Vector2(2000, 1504)
 shape = SubResource("RectangleShape2D_a27i8")
+
+[node name="AnimatedSprite" type="Node2D" parent="."]
+
+[node name="Pont" type="AnimatedSprite2D" parent="AnimatedSprite"]
+position = Vector2(3057, 220)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_awevb")
+animation = &"break"
+
+[node name="Pancartes" type="Node2D" parent="AnimatedSprite"]
+
+[node name="Pancarte1" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(3200, 91)
+
+[node name="Pancarte2" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(3206, 680)
+
+[node name="Pancarte3" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(3136, 1654)
+
+[node name="Pancarte4" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(2015, 2422)
+
+[node name="Pancarte5" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(1964, 1972)
+
+[node name="Pancarte6" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(1168, 2247)
+
+[node name="Pancarte7" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(805, 1419)
+
+[node name="Pancarte8" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(734, 338)
+
+[node name="Pancarte9" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(1998, 528)
+
+[node name="Pancarte10" parent="AnimatedSprite/Pancartes" instance=ExtResource("8_qsp15")]
+position = Vector2(1993, 1013)

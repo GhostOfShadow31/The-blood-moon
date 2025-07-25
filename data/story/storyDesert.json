@@ -1,0 +1,62 @@
+[
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 0, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 1, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 2, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 3, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 4, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 5, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 6, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 7, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 8, 
+		"owner": "Hero"
+	},
+	{
+		"type": "monologue", 
+		"path": "res://data/dialogues/pancarte.json", 
+		"index": 9, 
+		"owner": "Hero"
+	},
+]
