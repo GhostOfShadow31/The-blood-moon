@@ -59,4 +59,22 @@
 		"index": 9, 
 		"owner": "Hero"
 	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 0, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 1, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 2, 
+		"owner": "Hero"
+	},
 ]

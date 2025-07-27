@@ -38,6 +38,6 @@ func _on_body_exited(body: Node2D) -> void:
 
 func start_dialogue():
 	# On veut démarrer un dialogue
-	var name_as_string: String = name
-	var index: int = int(name_as_string[name_as_string.length() - 1]) - 1
+	var name_as_string: String = name.split("_")[1]
+	var index: int = int(name_as_string) - 1
 	emit_signal("start_new_dialogue", index)

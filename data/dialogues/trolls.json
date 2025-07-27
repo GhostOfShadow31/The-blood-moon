@@ -1,0 +1,29 @@
+[
+	{
+		"character": "Troll pnj",
+		"text": "Première étape de la quête",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Deuxième étape de la quête",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Fin de la quête",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+]
