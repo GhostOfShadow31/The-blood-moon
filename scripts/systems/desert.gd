@@ -36,7 +36,6 @@ func _process(delta: float) -> void:
 			black_screen.modulate.a = 0.0
 
 func play_scene(index: int):
-	print(index)
 	StoryManager.play_story(desert_steps, index)
 
 func play_scene_quest(quest_name: String, index: int):

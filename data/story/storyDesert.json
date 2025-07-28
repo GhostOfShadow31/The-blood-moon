@@ -68,13 +68,13 @@
 	{
 		"type": "dialogue", 
 		"path": "res://data/dialogues/trolls.json", 
-		"index": 1, 
+		"index": 3, 
 		"owner": "Hero"
 	},
 	{
 		"type": "dialogue", 
 		"path": "res://data/dialogues/trolls.json", 
-		"index": 2, 
+		"index": 5, 
 		"owner": "Hero"
 	},
 ]

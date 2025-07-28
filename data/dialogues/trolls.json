@@ -1,7 +1,25 @@
 [
 	{
 		"character": "Troll pnj",
-		"text": "Première étape de la quête",
+		"text": "Salut, ça serait cool que tu ailles chercher des planches",
+		"choices": [],
+		"responses": {
+			"following": 1
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Cela me permettrait de réparer ce vieu pont",
+		"choices": [],
+		"responses": {
+			"following": 2
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Va donc à la scierie dans le Bastion Sableau",
 		"choices": [],
 		"responses": {
 			"following": 0
@@ -10,7 +28,16 @@
 	},
 	{
 		"character": "Troll pnj",
-		"text": "Deuxième étape de la quête",
+		"text": "Tu cheches du bois pour réparer le vieu pont ?",
+		"choices": [],
+		"responses": {
+			"following": 4
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Tiens, fais-en bon usage !",
 		"choices": [],
 		"responses": {
 			"following": 0
@@ -19,7 +46,16 @@
 	},
 	{
 		"character": "Troll pnj",
-		"text": "Fin de la quête",
+		"text": "Super ! Tu as trouvé les planches",
+		"choices": [],
+		"responses": {
+			"following": 6
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Grâce à toi, les trolls pourront livrer leurs exportations plus rapidemment",
 		"choices": [],
 		"responses": {
 			"following": 0

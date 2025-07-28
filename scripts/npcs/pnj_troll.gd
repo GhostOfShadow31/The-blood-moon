@@ -32,13 +32,12 @@ func _process(_delta: float) -> void:
 						break
 					elif i < quest_node.step:
 						found_index = i # Garde le dernier match avant le step
-				
-				if found_index == quest_node.step: # C'est son tour
-					quest_node.advance()
-				elif found_index < quest_node.step and quest_node.steps.size() != quest_node.max_step: # Il est déjà passé, il répète
-					quest_node.repeat(found_index)
-				elif quest_node.steps.size() == quest_node.max_step:
+				if quest_node.step == quest_node.max_step: # La quête est finie
 					print("Cas 1")
+				elif found_index == quest_node.step: # C'est son tour
+					quest_node.advance()
+				elif found_index < quest_node.step: # Il est déjà passé, il répète
+					quest_node.repeat(found_index)
 			else:
 				print("Cas 2")
 
