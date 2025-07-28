@@ -22,7 +22,8 @@ func _ready() -> void:
 		pancarte.start_new_dialogue.connect(play_scene)
 	
 	for pnj in pnjs.get_children():
-		pnj.start_new_dialogue.connect(play_scene_quest)
+		pnj.start_new_dialogue_quest.connect(play_scene_quest)
+		pnj.start_new_dialogue.connect(play_scene)
 	
 	black_screen.visible = true
 	

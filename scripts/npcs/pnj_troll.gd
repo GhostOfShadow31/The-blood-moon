@@ -5,7 +5,8 @@ extends Node2D
 @onready var bubble = $Bubble
 @onready var talk_zone = $TalkZone
 
-signal start_new_dialogue(quest_name: String, index: int)
+signal start_new_dialogue(index: int)
+signal start_new_dialogue_quest(quest_name: String, index: int)
 
 var player_in_range = false
 
@@ -32,14 +33,21 @@ func _process(_delta: float) -> void:
 						break
 					elif i < quest_node.step:
 						found_index = i # Garde le dernier match avant le step
+				
 				if quest_node.step == quest_node.max_step: # La quête est finie
 					print("Cas 1")
+				elif found_index == -1: # Le pnj fait parti de la quête mais il n'est ce n'est pas encore sont tour, il fait comme s'il n'avait pas de quête
+					var array_name = name.split("_")
+					var function_of_pnj = array_name[1]
+					start_dialogue(function_of_pnj)
 				elif found_index == quest_node.step: # C'est son tour
 					quest_node.advance()
 				elif found_index < quest_node.step: # Il est déjà passé, il répète
 					quest_node.repeat(found_index)
-			else:
-				print("Cas 2")
+			else: # Il n'a pas de quête
+				var array_name = name.split("_")
+				var function_of_pnj = array_name[1]
+				start_dialogue(function_of_pnj)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -56,4 +64,21 @@ func _on_body_exited(body: Node2D) -> void:
 		player_in_range = false
 
 func quest(quest_name: String, index: int) -> void:
-	emit_signal("start_new_dialogue", quest_name, index)
+	emit_signal("start_new_dialogue_quest", quest_name, index)
+
+func start_dialogue(function: String) -> void:
+	var index: int
+	match function:
+		"Pont":
+			pass
+		"Scierie":
+			index = 13
+		"AVP1":
+			index = 14
+		"AVP2":
+			index = 15
+		"Arene":
+			index = 16
+		_:
+			push_warning("Fonction du pnj inconnue: ", function)
+	emit_signal("start_new_dialogue", index)

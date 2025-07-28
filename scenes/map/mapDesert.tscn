@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dy1vp2gakqt2q" path="res://assets/tilesets/desert/Desert_tileset.png" id="1_arfxk"]
 [ext_resource type="Texture2D" uid="uid://1gvjpfdcxrct" path="res://assets/tilesets/desert/desert_details.png" id="2_bq2ax"]
 [ext_resource type="Texture2D" uid="uid://bvuiubvknv0eq" path="res://assets/tilesets/desert/sable.png" id="3_arsri"]
-[ext_resource type="Texture2D" uid="uid://lxkl6p5rm6is" path="res://assets/tilesets/desert/hameaux.png" id="3_x47lb"]
+[ext_resource type="Texture2D" uid="uid://d0ijnaqo1ny5g" path="res://assets/tilesets/desert/hameaux.png" id="3_x47lb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne4hm"]
 texture = ExtResource("1_arfxk")
@@ -124,6 +124,22 @@ texture_region_size = Vector2i(128, 128)
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+6:3/0 = 0
+5:2/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+4:2/0 = 0
+7:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hm5di"]
 tile_size = Vector2i(128, 128)

@@ -62,4 +62,76 @@
 		},
 		"end": true
 	},
+	{
+		"character": "Troll pnj",
+		"text": "Hé toi, l’Orc ! Pas la peine de traîner près de ma scierie.",
+		"choices": [],
+		"responses": {
+			"following": 8
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "J’te vends rien, de toute façon ta race n’a jamais su quoi faire du bon bois, sauf le brûler pour vos feux de bivouac. Allez, circule !",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+	{
+		"character": "Troll pnj",
+		"text": "T’as pas l’air bien large pour un Orc… et t’as le teint un peu pâle.",
+		"choices": [],
+		"responses": {
+			"following": 10
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Ça pue l’embrouille, ton genre. Garde tes distances, j’te surveille.",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Qu’est-ce que tu fais là, Orc ? Retourne dans tes montagnes avant qu’on te traîne par la peau jusqu’à tes chefs.",
+		"choices": [],
+		"responses": {
+			"following": 12
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Pour rappel : Ici, c’est pas votre territoire !",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Halte-là, Orc ! L’arène est sacrée. Tes pieds n’ont rien à y traîner. Un pas de plus et tu fouleras le sang de nos ancêtres…",
+		"choices": [],
+		"responses": {
+			"following": 14
+		},
+		"end": false
+	},
+	{
+		"character": "Troll pnj",
+		"text": "Fais ça, et on rallumera les feux de la guerre pour te renvoyer dans tes montagnes. Compris ?",
+		"choices": [],
+		"responses": {
+			"following": 0
+		},
+		"end": true
+	},
 ]

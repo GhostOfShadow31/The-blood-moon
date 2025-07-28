@@ -104,22 +104,28 @@ animation = &"break"
 
 [node name="QuetePontCasse" type="Node2D" parent="AnimatedSprite/Quetes" node_paths=PackedStringArray("steps", "pont", "transition")]
 script = ExtResource("10_xlkpf")
-steps = [NodePath("../../PNJ/PnjTroll1"), NodePath("../../PNJ/PnjTroll2"), NodePath("../../PNJ/PnjTroll1")]
+steps = [NodePath("../../PNJ/PnjTroll_Pont"), NodePath("../../PNJ/PnjTroll_Scierie"), NodePath("../../PNJ/PnjTroll_Pont")]
 pont = NodePath("../../Pont")
 transition = NodePath("../../../BlackScreen")
 
 [node name="PNJ" type="Node2D" parent="AnimatedSprite"]
 
-[node name="PnjTroll1" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
+[node name="PnjTroll_Pont" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
 position = Vector2(2826, 249)
 quest_node = NodePath("../../Quetes/QuetePontCasse")
 
-[node name="PnjTroll2" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
+[node name="PnjTroll_Scierie" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
 position = Vector2(3136, 1778)
 quest_node = NodePath("../../Quetes/QuetePontCasse")
 
-[node name="PnjTroll3" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
+[node name="PnjTroll_AVP1" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
 position = Vector2(3375, 1988)
+
+[node name="PnjTroll_AVP2" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
+position = Vector2(3156, 2208)
+
+[node name="PnjTroll_Arene" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
+position = Vector2(1159, 2318)
 
 [node name="Pancartes" type="Node2D" parent="AnimatedSprite"]
 

@@ -77,4 +77,28 @@
 		"index": 5, 
 		"owner": "Hero"
 	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 7, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 9, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 11, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 13, 
+		"owner": "Hero"
+	},
 ]
