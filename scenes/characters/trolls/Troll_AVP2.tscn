@@ -1,14 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dony7i3cnoyna"]
+[gd_scene load_steps=13 format=3 uid="uid://d03ervecjr87e"]
 
-[ext_resource type="Texture2D" uid="uid://bby3ynjd8j84k" path="res://assets/characters/npcs/BaseCharacter.png" id="1_27san"]
-[ext_resource type="Script" uid="uid://wrywy6tojn6p" path="res://scripts/npcs/pnj_troll.gd" id="1_q22rc"]
-[ext_resource type="Texture2D" uid="uid://d18llffnlj2c1" path="res://assets/effect/bubbles/bubbles.png" id="2_q22rc"]
+[ext_resource type="Script" uid="uid://s7nony8eromt" path="res://scripts/npcs/trolls/troll_avp_2.gd" id="1_fif7x"]
+[ext_resource type="Texture2D" uid="uid://bby3ynjd8j84k" path="res://assets/characters/npcs/BaseCharacter.png" id="2_f6mfo"]
+[ext_resource type="Texture2D" uid="uid://d18llffnlj2c1" path="res://assets/effect/bubbles/bubbles.png" id="3_fnaff"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkd4n"]
-atlas = ExtResource("1_27san")
+atlas = ExtResource("2_f6mfo")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_buw33"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ghb7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -27,19 +27,19 @@ height = 18.0
 size = Vector2(60, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxgvp"]
-atlas = ExtResource("2_q22rc")
+atlas = ExtResource("3_fnaff")
 region = Rect2(0, 0, 16, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0gaq"]
-atlas = ExtResource("2_q22rc")
+atlas = ExtResource("3_fnaff")
 region = Rect2(16, 0, 16, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ssx6"]
-atlas = ExtResource("2_q22rc")
+atlas = ExtResource("3_fnaff")
 region = Rect2(32, 0, 16, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xomj0"]
-atlas = ExtResource("2_q22rc")
+atlas = ExtResource("3_fnaff")
 region = Rect2(48, 0, 16, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t3iki"]
@@ -63,10 +63,10 @@ animations = [{
 }]
 
 [node name="PnjTroll" type="Node2D"]
-script = ExtResource("1_q22rc")
+script = ExtResource("1_fif7x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_buw33")
+sprite_frames = SubResource("SpriteFrames_8ghb7")
 
 [node name="CollisionZone" type="Area2D" parent="."]
 

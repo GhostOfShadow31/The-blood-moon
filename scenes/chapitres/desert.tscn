@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mt22ij73r4tu"]
+[gd_scene load_steps=22 format=3 uid="uid://mt22ij73r4tu"]
 
 [ext_resource type="Script" uid="uid://ce5wloadk7cnf" path="res://scripts/systems/desert.gd" id="1_cfq1l"]
 [ext_resource type="PackedScene" uid="uid://brpocs5ow8l61" path="res://scenes/map/mapDesert.tscn" id="1_ne4hm"]
@@ -9,8 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://l84xhp2wls56" path="res://assets/tilesets/desert/pont.png" id="7_d6tn3"]
 [ext_resource type="Texture2D" uid="uid://bvuiubvknv0eq" path="res://assets/tilesets/desert/sable.png" id="7_egpq4"]
 [ext_resource type="PackedScene" uid="uid://df7dn6w523xs" path="res://scenes/elements/pancarte.tscn" id="8_qsp15"]
-[ext_resource type="PackedScene" uid="uid://dony7i3cnoyna" path="res://scenes/characters/trolls/PNJTroll.tscn" id="10_nqon1"]
-[ext_resource type="Script" uid="uid://b7i1ong3e5wuh" path="res://scripts/systems/quete_pont_casse.gd" id="10_xlkpf"]
+[ext_resource type="Script" uid="uid://k0jmtut0fybn" path="res://scripts/quests/quete_pont_casse.gd" id="9_xlkpf"]
+[ext_resource type="PackedScene" uid="uid://dony7i3cnoyna" path="res://scenes/characters/trolls/Troll_Pont.tscn" id="10_xlkpf"]
+[ext_resource type="PackedScene" uid="uid://cehfdtu1ij7j6" path="res://scenes/characters/trolls/Troll_Scierie.tscn" id="11_la8w1"]
+[ext_resource type="PackedScene" uid="uid://blnx3s3jwuwbe" path="res://scenes/characters/trolls/Troll_AVP1.tscn" id="12_awevb"]
+[ext_resource type="PackedScene" uid="uid://d03ervecjr87e" path="res://scenes/characters/trolls/Troll_AVP2.tscn" id="13_mibha"]
+[ext_resource type="PackedScene" uid="uid://bq4ey00kaopoh" path="res://scenes/characters/trolls/Troll_Arene.tscn" id="14_mibha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp15"]
 texture = ExtResource("7_egpq4")
@@ -102,30 +106,30 @@ animation = &"break"
 
 [node name="Quetes" type="Node2D" parent="AnimatedSprite"]
 
-[node name="QuetePontCasse" type="Node2D" parent="AnimatedSprite/Quetes" node_paths=PackedStringArray("steps", "pont", "transition")]
-script = ExtResource("10_xlkpf")
-steps = [NodePath("../../PNJ/PnjTroll_Pont"), NodePath("../../PNJ/PnjTroll_Scierie"), NodePath("../../PNJ/PnjTroll_Pont")]
+[node name="QuetePontCasse" type="Node2D" parent="AnimatedSprite/Quetes" node_paths=PackedStringArray("pnjs", "pont", "blackscreen")]
+script = ExtResource("9_xlkpf")
+pnjs = [NodePath("../../PNJ/Troll_Pont"), NodePath("../../PNJ/Troll_Scierie"), NodePath("../../PNJ/Troll_Pont")]
 pont = NodePath("../../Pont")
-transition = NodePath("../../../BlackScreen")
+blackscreen = NodePath("../../../BlackScreen")
 
 [node name="PNJ" type="Node2D" parent="AnimatedSprite"]
 
-[node name="PnjTroll_Pont" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
-position = Vector2(2826, 249)
-quest_node = NodePath("../../Quetes/QuetePontCasse")
+[node name="Troll_Pont" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest") instance=ExtResource("10_xlkpf")]
+position = Vector2(2815, 225)
+quest = NodePath("../../Quetes/QuetePontCasse")
 
-[node name="PnjTroll_Scierie" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest_node") instance=ExtResource("10_nqon1")]
-position = Vector2(3136, 1778)
-quest_node = NodePath("../../Quetes/QuetePontCasse")
+[node name="Troll_Scierie" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest") instance=ExtResource("11_la8w1")]
+position = Vector2(3129, 1792)
+quest = NodePath("../../Quetes/QuetePontCasse")
 
-[node name="PnjTroll_AVP1" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
-position = Vector2(3375, 1988)
+[node name="Troll_AVP1" parent="AnimatedSprite/PNJ" instance=ExtResource("12_awevb")]
+position = Vector2(3363, 2011)
 
-[node name="PnjTroll_AVP2" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
-position = Vector2(3156, 2208)
+[node name="Troll_AVP2" parent="AnimatedSprite/PNJ" instance=ExtResource("13_mibha")]
+position = Vector2(3169, 2236)
 
-[node name="PnjTroll_Arene" parent="AnimatedSprite/PNJ" instance=ExtResource("10_nqon1")]
-position = Vector2(1159, 2318)
+[node name="Troll_Arene" parent="AnimatedSprite/PNJ" instance=ExtResource("14_mibha")]
+position = Vector2(1061, 2315)
 
 [node name="Pancartes" type="Node2D" parent="AnimatedSprite"]
 

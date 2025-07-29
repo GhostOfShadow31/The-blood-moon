@@ -7,7 +7,7 @@ extends Node2D
 @onready var pancartes = get_node(node_path_pancartes)
 @onready var pnjs = get_node(node_path_pnj)
 
-signal player_position(Vector2)
+signal player_position(pos: Vector2)
 
 var fade_speed = 0.25
 var desert_steps = ""
@@ -22,13 +22,15 @@ func _ready() -> void:
 		pancarte.start_new_dialogue.connect(play_scene)
 	
 	for pnj in pnjs.get_children():
-		pnj.start_new_dialogue_quest.connect(play_scene_quest)
+		if pnj.name == "Troll_Arene":
+			pnj.replace_player.connect(set_player_position)
 		pnj.start_new_dialogue.connect(play_scene)
 	
 	black_screen.visible = true
 	
 	# On envoie l aposition au joueur
-	emit_signal("player_position", Vector2(3280, 20))
+	#set_player_position(Vector2(3280, 20))
+	set_player_position(Vector2(1200, 2300))
 
 func _process(delta: float) -> void:
 	if black_screen.modulate.a > 0.0:
@@ -39,12 +41,5 @@ func _process(delta: float) -> void:
 func play_scene(index: int):
 	StoryManager.play_story(desert_steps, index)
 
-func play_scene_quest(quest_name: String, index: int):
-	var real_index: int = index
-	match quest_name:
-		"PontCasse":
-			real_index += 10
-		_:
-			push_warning("quete inconnue: ", quest_name)
-	
-	play_scene(real_index)
+func set_player_position(pos: Vector2) -> void:
+	emit_signal("player_position", pos)
