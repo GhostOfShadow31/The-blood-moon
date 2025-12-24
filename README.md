@@ -7,61 +7,20 @@ https://godotengine.org/download/
 
 L'arborescence de ce projet n'est pas absolue, elle peut être amenée à changer si le moment y est propice.
 
-Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_repo>.git`
+Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_repo>.gitudios (sprites, tuilesets...)
 
-## Comment fonctionne chaque répertoire
-### asset
-Contient toutes les ressources graphiques et audios (sprites, tuilesets...)
+Le fichier **LICENCE.md** per mettra de garder une trace des licence utilisées
+Pour rappel, voici les deux type de licence gratuite :
 
-Contient les dossier suivant :
+- COO (domaine public)
+- CC-BY-XX x.0 (utilisation libre sous couvert de siter l'auteur.e)
 
-- Character
-- Effect
-- Fonts
-- Items
-- TileSet
-- Ui
+Le fichier **Architecture.md** permettra de gérer l'architecture du projet, il serait efficace de mettre à jour ce fichier quand l'architecture du projet évolue
 
-Et contient le fichier des Credits
+Certains de ces fichiers ne sont peut-être pas encore créé car pas nécessaire pour l'instant, il faut seulement les placer à la racine (au même endroit que **README.md**)
 
-### dialogue
-Contient les dialogues de chaque pnj du jeu :
+Ce README à pour but de simplifier la compréhension, du projet pour toute nouvelle personne.
+Toute imprécision ou question pourra être posée auprès de :
 
-- un fichier par pnj, tous les dialogues sont stockés à la suite
-
-### scene
-Contient toutes les scenes du jeu (mis à part l'UI)
-
-Contient les dossier suivants:
-
-- Chapitre
-- Characters
-- Map
-- Ui / dialogue
-
-### script
-Contient tous les scripts du projet
-
-Contient les dossier suivants:
-
-- Managers
-- Npcs
-- Player
-- Systems
-
-### story
-Contient la story de chaque chapitre du jeu
-
-### ui
-Contient Tous les éléments relatifs à l'UI (scene comprise)
-
-# Crédits du jeu
-
-## Tilesets
-- Rien pour l'instant
-
-## Sprites
-- Rien pour l'instant
-
-## UI
-- Rien pour l'instant
+- **Severinvlm**  - Séverin
+- **GhostOfShadow31** - Max
