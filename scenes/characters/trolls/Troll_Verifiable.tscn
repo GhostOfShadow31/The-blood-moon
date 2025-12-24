@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://v4mwidnv6g1g"]
+
+[ext_resource type="Script" uid="uid://dd3ha3fi46vl1" path="res://scripts/npcs/trolls/troll_verifiable.gd" id="1_s7i84"]
+[ext_resource type="Texture2D" uid="uid://bby3ynjd8j84k" path="res://assets/characters/npcs/BaseCharacter.png" id="2_b3a31"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkd4n"]
+atlas = ExtResource("2_b3a31")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3a31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkd4n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hlbg"]
+radius = 7.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndh06"]
+size = Vector2(60, 60)
+
+[node name="PnjTroll" type="Node2D"]
+script = ExtResource("1_s7i84")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b3a31")
+
+[node name="CollisionZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionZone"]
+shape = SubResource("CapsuleShape2D_5hlbg")
+
+[node name="TalkZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkZone"]
+shape = SubResource("RectangleShape2D_ndh06")

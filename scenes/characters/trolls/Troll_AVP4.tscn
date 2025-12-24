@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://tyjcsgmgawo2"]
+
+[ext_resource type="Script" uid="uid://bd8m2wsqbr57p" path="res://scripts/npcs/trolls/troll_avp_4.gd" id="1_16rjg"]
+[ext_resource type="Texture2D" uid="uid://bby3ynjd8j84k" path="res://assets/characters/npcs/BaseCharacter.png" id="2_f167m"]
+[ext_resource type="Texture2D" uid="uid://d18llffnlj2c1" path="res://assets/effect/bubbles/bubbles.png" id="3_8q5n2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkd4n"]
+atlas = ExtResource("2_f167m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f167m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkd4n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hlbg"]
+radius = 7.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndh06"]
+size = Vector2(60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxgvp"]
+atlas = ExtResource("3_8q5n2")
+region = Rect2(0, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0gaq"]
+atlas = ExtResource("3_8q5n2")
+region = Rect2(16, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ssx6"]
+atlas = ExtResource("3_8q5n2")
+region = Rect2(32, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xomj0"]
+atlas = ExtResource("3_8q5n2")
+region = Rect2(48, 0, 16, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3iki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxgvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0gaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ssx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xomj0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="PnjTroll" type="Node2D"]
+script = ExtResource("1_16rjg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f167m")
+
+[node name="CollisionZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionZone"]
+shape = SubResource("CapsuleShape2D_5hlbg")
+
+[node name="TalkZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkZone"]
+shape = SubResource("RectangleShape2D_ndh06")
+
+[node name="Bubble" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_t3iki")
+frame_progress = 0.409875

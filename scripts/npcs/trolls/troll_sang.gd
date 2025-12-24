@@ -1,17 +1,13 @@
 extends Node2D
 
-@export var blackscreen: TextureRect
+@export var quest: Node2D
 
 @onready var talk_zone = $TalkZone
-@onready var talk_zone_force = $TalkZoneForce
 @onready var bubble = $Bubble
 
 signal start_new_dialogue(index: int)
-signal replace_player(pos: Vector2)
 
 var player_in_range: bool = false
-var blackscreen_on: bool = false
-var blackscreen_off: bool = false
 
 func _ready() -> void:
 	# On arrête et on cache l'animation de la bulle
@@ -21,28 +17,25 @@ func _ready() -> void:
 	# On connecte les signaux
 	talk_zone.body_entered.connect(on_body_entered)
 	talk_zone.body_exited.connect(on_body_exited)
-	talk_zone_force.body_entered.connect(on_body_entered_force)
+	if quest == null:
+		push_warning("Le pnj ne possède pas de quête")
+		set_process(false)
+		return
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("ui_accept") and not Inventaire.is_inventory_active:
 		if StoryManager.is_playing:
 			DialogueUi.advance_or_close()
 		else:
-			emit_signal("start_new_dialogue", 16)
-	if blackscreen_on:
-		if blackscreen.modulate.a < 1.0:
-			blackscreen.modulate.a += delta
-			if blackscreen.modulate.a > 1.0:
-				blackscreen.modulate.a = 1.0
-				emit_signal("replace_player", global_position + Vector2(30, 0))
-				blackscreen_on = false
-				blackscreen_off = true
-	if blackscreen_off:
-		if blackscreen.modulate.a > 0.0:
-			blackscreen.modulate.a -= delta
-			if blackscreen.modulate.a < 0.0:
-				blackscreen.modulate.a = 0.0
-				blackscreen_off = false
+			if quest.step == 0 or not quest.is_arene_visited:
+				emit_signal("start_new_dialogue", 19)
+				quest.advance_step()
+			elif quest.step >= 1 and quest.step < quest.step_max and quest.is_arene_visited:
+				emit_signal("start_new_dialogue", 20)
+				if quest.step == 1:
+					quest.advance_step()
+			elif quest.step == quest.step_max:
+				print("La qiête est finie, je peux agir normalement")
 
 # Action à faire quand un joueur rentre dans la TalkZone
 func on_body_entered(body: Node2D) -> void:
@@ -61,9 +54,3 @@ func on_body_exited(body: Node2D) -> void:
 		# On arrête et on cache l'animation de la bulle
 		bubble.visible = false
 		bubble.stop()
-
-# Action à faire quand un joueur rentre dans la TalkZoneForce
-func on_body_entered_force(body: Node2D) -> void:
-	if body.name == "Player":
-		blackscreen_on = true
-		emit_signal("start_new_dialogue", 16)

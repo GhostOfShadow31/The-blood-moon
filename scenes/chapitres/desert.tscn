@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://mt22ij73r4tu"]
+[gd_scene load_steps=30 format=3 uid="uid://mt22ij73r4tu"]
 
 [ext_resource type="Script" uid="uid://ce5wloadk7cnf" path="res://scripts/systems/desert.gd" id="1_cfq1l"]
 [ext_resource type="PackedScene" uid="uid://brpocs5ow8l61" path="res://scenes/map/mapDesert.tscn" id="1_ne4hm"]
@@ -11,10 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://df7dn6w523xs" path="res://scenes/elements/pancarte.tscn" id="8_qsp15"]
 [ext_resource type="Script" uid="uid://k0jmtut0fybn" path="res://scripts/quests/quete_pont_casse.gd" id="9_xlkpf"]
 [ext_resource type="PackedScene" uid="uid://dony7i3cnoyna" path="res://scenes/characters/trolls/Troll_Pont.tscn" id="10_xlkpf"]
+[ext_resource type="Script" uid="uid://d36ypt28r4fq5" path="res://scripts/quests/quete_recolter_sang.gd" id="10_yhn2p"]
 [ext_resource type="PackedScene" uid="uid://cehfdtu1ij7j6" path="res://scenes/characters/trolls/Troll_Scierie.tscn" id="11_la8w1"]
 [ext_resource type="PackedScene" uid="uid://blnx3s3jwuwbe" path="res://scenes/characters/trolls/Troll_AVP1.tscn" id="12_awevb"]
+[ext_resource type="PackedScene" uid="uid://bp4gxa2mp4yfm" path="res://scenes/characters/trolls/Troll_Sang.tscn" id="13_e06o3"]
 [ext_resource type="PackedScene" uid="uid://d03ervecjr87e" path="res://scenes/characters/trolls/Troll_AVP2.tscn" id="13_mibha"]
 [ext_resource type="PackedScene" uid="uid://bq4ey00kaopoh" path="res://scenes/characters/trolls/Troll_Arene.tscn" id="14_mibha"]
+[ext_resource type="PackedScene" uid="uid://ds6gvgpkt0roe" path="res://scenes/characters/trolls/Troll_Intermediaire.tscn" id="14_nru57"]
+[ext_resource type="PackedScene" uid="uid://cyn75w1s3ug6l" path="res://scenes/characters/trolls/Troll_AVP3.tscn" id="15_k5d11"]
+[ext_resource type="PackedScene" uid="uid://v4mwidnv6g1g" path="res://scenes/characters/trolls/Troll_Verifiable.tscn" id="15_mrgkt"]
+[ext_resource type="PackedScene" uid="uid://tyjcsgmgawo2" path="res://scenes/characters/trolls/Troll_AVP4.tscn" id="16_nxcm4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp15"]
 texture = ExtResource("7_egpq4")
@@ -27,6 +33,12 @@ sources/1 = SubResource("TileSetAtlasSource_qsp15")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a27i8"]
 size = Vector2(4000, 3008)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhn2p"]
+size = Vector2(800, 800)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxl1"]
+size = Vector2(45, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_la8w1"]
 atlas = ExtResource("7_d6tn3")
@@ -87,14 +99,28 @@ tile_map_data = PackedByteArray(0, 0, 59, 166, 134, 226, 1, 0, 0, 0, 0, 0, 0, 0,
 tile_set = SubResource("TileSet_d6tn3")
 
 [node name="Area" type="Node2D" parent="."]
-visible = false
 
 [node name="Area_free" type="Area2D" parent="Area"]
+visible = false
 script = ExtResource("6_4ww3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area_free"]
 position = Vector2(2000, 1504)
 shape = SubResource("RectangleShape2D_a27i8")
+
+[node name="Arene" type="Area2D" parent="Area"]
+visible = false
+position = Vector2(750, 2000)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area/Arene"]
+shape = SubResource("RectangleShape2D_yhn2p")
+
+[node name="Troll_Intermediaire_Interposition" type="Area2D" parent="Area"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Troll_Intermediaire_Interposition"]
+position = Vector2(2016, 1470)
+shape = SubResource("RectangleShape2D_ycxl1")
 
 [node name="AnimatedSprite" type="Node2D" parent="."]
 
@@ -112,6 +138,11 @@ pnjs = [NodePath("../../PNJ/Troll_Pont"), NodePath("../../PNJ/Troll_Scierie"), N
 pont = NodePath("../../Pont")
 blackscreen = NodePath("../../../BlackScreen")
 
+[node name="QueteRecolterSang" type="Node2D" parent="AnimatedSprite/Quetes" node_paths=PackedStringArray("pnjs", "zone")]
+script = ExtResource("10_yhn2p")
+pnjs = [NodePath("../../PNJ/Troll_Sang"), NodePath("../../PNJ/Troll_Sang"), NodePath("../../PNJ/Troll_Intermediaire"), NodePath("../../PNJ/Troll_Verifiable")]
+zone = NodePath("../../../Area/Arene")
+
 [node name="PNJ" type="Node2D" parent="AnimatedSprite"]
 
 [node name="Troll_Pont" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest") instance=ExtResource("10_xlkpf")]
@@ -122,14 +153,34 @@ quest = NodePath("../../Quetes/QuetePontCasse")
 position = Vector2(3129, 1792)
 quest = NodePath("../../Quetes/QuetePontCasse")
 
+[node name="Troll_Arene" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("blackscreen") instance=ExtResource("14_mibha")]
+position = Vector2(1061, 2315)
+blackscreen = NodePath("../../../BlackScreen")
+
+[node name="Troll_Sang" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest") instance=ExtResource("13_e06o3")]
+position = Vector2(1808, 1537)
+quest = NodePath("../../Quetes/QueteRecolterSang")
+
+[node name="Troll_Intermediaire" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest", "talk_zone") instance=ExtResource("14_nru57")]
+position = Vector2(1984, 1470)
+quest = NodePath("../../Quetes/QueteRecolterSang")
+talk_zone = NodePath("../../../Area/Troll_Intermediaire_Interposition")
+
+[node name="Troll_Verifiable" parent="AnimatedSprite/PNJ" node_paths=PackedStringArray("quest") instance=ExtResource("15_mrgkt")]
+position = Vector2(2049, 1470)
+quest = NodePath("../../Quetes/QueteRecolterSang")
+
 [node name="Troll_AVP1" parent="AnimatedSprite/PNJ" instance=ExtResource("12_awevb")]
 position = Vector2(3363, 2011)
 
 [node name="Troll_AVP2" parent="AnimatedSprite/PNJ" instance=ExtResource("13_mibha")]
 position = Vector2(3169, 2236)
 
-[node name="Troll_Arene" parent="AnimatedSprite/PNJ" instance=ExtResource("14_mibha")]
-position = Vector2(1061, 2315)
+[node name="Troll_AVP3" parent="AnimatedSprite/PNJ" instance=ExtResource("15_k5d11")]
+position = Vector2(689, 1327)
+
+[node name="Troll_AVP4" parent="AnimatedSprite/PNJ" instance=ExtResource("16_nxcm4")]
+position = Vector2(755, 781)
 
 [node name="Pancartes" type="Node2D" parent="AnimatedSprite"]
 

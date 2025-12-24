@@ -11,6 +11,8 @@ var current_owner = ""
 
 var is_dialogue_active = false
 
+var expecting_choice: bool
+
 # Permet de faire un dialogue
 func load_dialogue(path: String, index: int, own: String):
 	# Va chercher le dialogue
@@ -25,6 +27,8 @@ func load_dialogue(path: String, index: int, own: String):
 
 # Emet le dialogue courant
 func emit_current():
+	expecting_choice = not dialogues[current_index].choices.is_empty()
+	
 	if dialogues.is_empty():
 		return
 	
@@ -48,6 +52,7 @@ func next(response_idx = null):
 		current_index = current.responses["following"]
 	
 	_update_current_text()
+	expecting_choice = not dialogues[current_index].choices.is_empty()
 	emit_current()
 
 # Renvoie le texte de tout le dialogue

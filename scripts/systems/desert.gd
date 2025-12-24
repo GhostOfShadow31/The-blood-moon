@@ -24,13 +24,15 @@ func _ready() -> void:
 	for pnj in pnjs.get_children():
 		if pnj.name == "Troll_Arene":
 			pnj.replace_player.connect(set_player_position)
+		elif pnj.name == "Troll_Intermediaire" or pnj.name == "Troll_Verifiable":
+			pnj.start_new_cinematique.connect(play_scene)
 		pnj.start_new_dialogue.connect(play_scene)
 	
 	black_screen.visible = true
 	
 	# On envoie l aposition au joueur
 	#set_player_position(Vector2(3280, 20))
-	set_player_position(Vector2(1200, 2300))
+	set_player_position(Vector2(2000, 1500))
 
 func _process(delta: float) -> void:
 	if black_screen.modulate.a > 0.0:

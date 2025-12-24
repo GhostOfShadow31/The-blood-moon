@@ -101,4 +101,120 @@
 		"index": 13, 
 		"owner": "Hero"
 	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 15, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 18, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 20, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 23, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 25, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 31, 
+		"owner": "Hero"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 33, 
+		"owner": "Hero"
+	},
+	{
+		"type": "cinematics",
+		"name": "troll_interlediaire_interposition",
+		"wait_before": 0.0,
+		"actions": [
+			{
+				"actor": "/root/Desert/AnimatedSprite/PNJ/Troll_Intermediaire",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [2016, 1470],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Root"
+	},
+	{
+		"type": "cinematics",
+		"name": "troll_interlediaire_get_out",
+		"wait_before": 0.0,
+		"actions": [
+			{
+				"actor": "/root/Desert/AnimatedSprite/PNJ/Troll_Intermediaire",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [2016, 1150],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Root"
+	},
+	{
+		"type": "cinematics",
+		"name": "troll_verifiable_get_in",
+		"wait_before": 0.0,
+		"actions": [
+			{
+				"actor": "/root/Desert/AnimatedSprite/PNJ/Troll_Verifiable",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [2016, 1470],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Troll_Verifiable"
+	},
+	{
+		"type": "cinematics",
+		"name": "troll_interlediaire_get_out",
+		"wait_before": 0.0,
+		"actions": [
+			{
+				"actor": "/root/Desert/AnimatedSprite/PNJ/Troll_Verifiable",
+				"method": "walk_to",
+				"params":
+					{
+						"target_position": [2016, 1150],
+						"speed": 100
+					}
+			}
+		],
+		"owner": "Root"
+	},
+	{
+		"type": "dialogue", 
+		"path": "res://data/dialogues/trolls.json", 
+		"index": 34, 
+		"owner": "Hero"
+	}
 ]

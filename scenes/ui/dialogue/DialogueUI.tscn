@@ -73,6 +73,7 @@ autowrap_mode = 2
 clip_text = true
 
 [node name="ButtonContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/DialogueRect/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(432, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -80,13 +81,11 @@ size_flags_vertical = 8
 alignment = 1
 
 [node name="Button 1" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/DialogueRect/MarginContainer/VBoxContainer/ButtonContainer"]
-visible = false
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button 2" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/DialogueRect/MarginContainer/VBoxContainer/ButtonContainer"]
-visible = false
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_horizontal = 3
