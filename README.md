@@ -1,4 +1,5 @@
 # Informations importantes
+
 Quelques petites informations mais importantes sur le fonctionnement, l'arobrescence de ce projet
 
 Le developpement de ce jeu se fait sur **Godot 4.4.1 (stable)**
@@ -9,7 +10,7 @@ L'arborescence de ce projet n'est pas absolue, elle peut être amenée à change
 
 Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_repo>.gitudios (sprites, tuilesets...)
 
-Le fichier **LICENCE.md** per mettra de garder une trace des licence utilisées
+Le fichier **License.md** permettra de garder une trace des licence utilisées
 Pour rappel, voici les deux type de licence gratuite :
 
 - COO (domaine public)
@@ -22,5 +23,5 @@ Certains de ces fichiers ne sont peut-être pas encore créé car pas nécessair
 Ce README à pour but de simplifier la compréhension, du projet pour toute nouvelle personne.
 Toute imprécision ou question pourra être posée auprès de :
 
-- **Severinvlm**  - Séverin
+- **Severinvlm** - Séverin
 - **GhostOfShadow31** - Max

@@ -1,0 +1,8 @@
+{
+	"intro_scene": [
+		{"speaker": "Narrator", "text": "500 ans se sont écoulés...", "auto": true},
+		{"speaker": "Narrator", "text": "Une fois de plus, la Lune de Sang s’élève dans le ciel.", "auto": true, "pause_after": 5.0},
+		{"speaker": "Narrator", "text": "Quelque chose, enfoui depuis trop longtemps, remue dans l’ombre...", "auto": true},
+		{"speaker": "Narrator", "text": "Et avec ce réveil, un destin oublié reprend forme.", "auto": true}
+	]
+}
