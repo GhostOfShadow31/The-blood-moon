@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://m0mfi1b8glm3"]
+[gd_scene load_steps=8 format=3 uid="uid://m0mfi1b8glm3"]
 
 [ext_resource type="Script" uid="uid://1qx34r53qu2i" path="res://scripts/game_root.gd" id="1_a1rh6"]
 [ext_resource type="PackedScene" uid="uid://1576klnb6rhy" path="res://scenes/intro/intro_scene.tscn" id="1_jb3nc"]
 [ext_resource type="PackedScene" uid="uid://d2klsnkc42u7k" path="res://scenes/levels/cave_scene.tscn" id="2_iusj4"]
 [ext_resource type="PackedScene" uid="uid://cgy3c0dem2dky" path="res://scenes/characters/hero.tscn" id="3_a1rh6"]
 [ext_resource type="PackedScene" uid="uid://dueryo5pmmw13" path="res://scenes/ui/DialogueUI.tscn" id="4_j7aru"]
+[ext_resource type="Script" uid="uid://c7wiudvpwoy1" path="res://scripts/camera_2d.gd" id="5_j7aru"]
 [ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://scenes/ui/fadeOverlay.tscn" id="6_j7aru"]
 
 [node name="GameRoot" type="Node2D"]
@@ -14,6 +15,9 @@ cave_scene = ExtResource("2_iusj4")
 hero_scene = ExtResource("3_a1rh6")
 
 [node name="WorldRoot" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="WorldRoot"]
+script = ExtResource("5_j7aru")
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 

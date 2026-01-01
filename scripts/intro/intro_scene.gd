@@ -2,6 +2,7 @@ extends Node
 
 @onready var mainAnimation: AnimationPlayer = $MainAnimation
 @onready var pulseAnimation: AnimationPlayer = $PulseAnimation
+@onready var camera_focus: Marker2D = $Camera_focus
 
 var is_intro_start_finished: bool = false
 var intro_dialogues: Array = []
@@ -44,3 +45,6 @@ func play_next_animation(anim_name: StringName) -> void:
 			pulseAnimation.stop()
 			emit_signal("intro_finished")
 			self.visible = false
+
+func get_camera_focus() -> Marker2D:
+	return camera_focus

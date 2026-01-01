@@ -3,6 +3,10 @@
 - Sprites du héro: https://craftpix.net/file-licenses/
 - Sprites des potions: https://creativecommons.org/licenses/by/4.0/ -- Alex
 - Texture de base de la grotte: https://odiurd.itch.io/tileset -- Odiurd
+- Texture des piques: https://omniclause.itch.io/spikes --Omniclause
+- Texture des torches: https://pixleroy.itch.io/pixel-torches -- PixLeroy
+
+
 - UI du fond pour les dialogues: Mixe de:
   - ruled_paper_01: https://openclipart.org/detail/16004
   - blank_parchment_01: https://openclipart.org/detail/57367

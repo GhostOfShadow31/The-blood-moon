@@ -303,7 +303,7 @@ z_index = -10
 
 [node name="Sky" type="ColorRect" parent="World/Background"]
 offset_right = 320.0
-offset_bottom = 180.0
+offset_bottom = 192.0
 color = Color(0.286275, 0.447059, 0.760784, 1)
 
 [node name="Clouds" type="Node2D" parent="World/Background"]
@@ -385,5 +385,8 @@ libraries = {
 libraries = {
 &"": SubResource("AnimationLibrary_tkcp6")
 }
+
+[node name="Camera_focus" type="Marker2D" parent="."]
+position = Vector2(160, 90)
 
 [connection signal="animation_finished" from="MainAnimation" to="." method="_on_main_animation_animation_finished"]
