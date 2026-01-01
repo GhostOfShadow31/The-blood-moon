@@ -6,11 +6,11 @@ res://\
 │ │ ├── characters/\
 │ │ │ └── hero/\
 │ │ └── items/\
-│ │   └── potions/\
+│ │ - └── potions/\
 │ ├── textures/\
 │ │ └── intro/\
 │ └── ui/\
-│   └── dialogues/\
+│ - └── dialogues/\
 │\
 ├── data/\
 │\
