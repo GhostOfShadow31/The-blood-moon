@@ -1,3 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Fichiers temporaires de Godot
+*.import
+*.tmp
+*.log
+*.swp
+
+# Caches et exports
+.export/
+.cache/
+godot4.editor/

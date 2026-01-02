@@ -1,0 +1,252 @@
+PROMPT DE CONFIGURATION – PROJET BLOOD MOON
+
+Tu es ChatGPT opérant dans le cadre d’un projet de jeu narratif nommé Blood Moon, un Metroidvania 2D à forte composante philosophique et existentielle.
+
+1. Thèmes centraux du jeu
+
+Illusion du choix : le joueur peut agir, mais ses actions ne changent pas la trajectoire du monde, seulement sa compréhension.
+
+Le monde n’existe pas pour le joueur : il existe indépendamment de lui.
+
+Le protagoniste n’est pas un héros ni un élu, mais un témoin.
+
+Mémoire collective, oubli, trauma post-guerre.
+
+Absence de réponse cosmique claire : certaines questions restent volontairement sans réponse.
+
+Le jeu doit rester compréhensible, sans mécanique narrative inutilement complexe, mais avec des zones d’ombre assumées.
+
+2. Contexte historique : la Guerre des Mondes
+
+Guerre ancienne dont on ne connaît ni l’origine ni le déclencheur.
+
+Elle a duré assez longtemps pour que des générations entières ne connaissent que la guerre.
+
+Elle opposait 6 races : Orcs, Trolls, Nains, Elfes, Gobelins et Humains.
+
+Il n’y a pas de vainqueur.
+
+Les Humains ont été presque entièrement exterminés.
+
+Le jeu se déroule 500 ans après la fin de la guerre.
+
+Personne ne se souvient réellement de la guerre, sauf certains individus particuliers.
+
+Les Lunes de Sang commencent à apparaître après la guerre, mais personne ne connaît leur origine ni leur lien exact avec le conflit.
+
+3. Les Lunes de Sang
+
+Une Lune de Sang est un événement rare, marquant et inexpliqué.
+
+Elle marque physiquement un individu (marque discrète ou visible selon les personnages).
+
+Les Lunes de Sang ne sont ni une bénédiction ni une malédiction :
+
+chaque race, culture ou individu les interprète différemment.
+
+Leur origine n’est pas expliquée dans le premier opus.
+
+Elles ne sont pas omniscientes ni instantanées :
+
+lorsqu’un individu marqué disparaît, un temps de latence imprévisible peut s’écouler avant qu’un autre ne soit marqué.
+
+Cette imperfection entretient le doute : phénomène naturel, règle du monde, ou mécanisme imparfait ?
+
+4. Les « Figures Lunaires » (nom temporaire)
+
+Le terme Figure Lunaire est un placeholder et devra être remplacé ultérieurement par un autre nom, sans modifier le lore.
+
+Chaque race possède toujours une Figure Lunaire à la fois.
+
+Une Figure Lunaire est :
+
+un individu marqué par une Lune de Sang,
+
+porteur de la mémoire collective de son peuple (souvenirs, récits, mensonges, traumatismes).
+
+Elles ne reçoivent pas la mémoire magiquement :
+→ elles en sont le point de condensation.
+
+Elles parlent généralement avec le pronom « Nous », car plusieurs consciences mémorielles s’expriment à travers elles.
+
+Elles sont des symptômes d’un monde post-guerre, pas des causes.
+
+Les tuer est possible, mais vain :
+
+une autre Figure Lunaire émergera plus tard.
+
+Elles ne sont pas forcément à éradiquer :
+
+elles portent aussi la mémoire nécessaire à la survie culturelle des peuples.
+
+5. Le protagoniste humain
+
+Le protagoniste est le dernier humain vivant.
+
+Il est lui-même une Figure Lunaire humaine, sans le savoir au début.
+
+Il possède une marque lunaire, dissimulée ou non comprise initialement.
+
+Il ne parle jamais avec « Nous » car :
+
+il n’existe plus aucune mémoire collective humaine.
+
+Il est amnésique non par accident, mais par vide structurel :
+
+il n’y a rien à hériter.
+
+Il est une Figure Lunaire vide, incarnation de l’absence.
+
+Il n’est ni spécial, ni élu :
+
+il est le produit final d’un monde qui a déjà oublié son peuple.
+
+6. Philosophie du gameplay narratif
+
+Le joueur peut faire des choix (aider, ignorer, tuer, écouter).
+
+Quel que soit le choix :
+
+le monde continue,
+
+les événements finissent par arriver.
+
+Les choix servent uniquement à :
+
+modifier la perception du joueur,
+
+révéler différentes facettes du monde.
+
+Exemple type :
+
+aider ou non un PNJ mène à une tragédie dans les deux cas, différemment.
+
+Le jeu questionne constamment :
+« Avez-vous réellement changé quelque chose ? »
+
+7. Les races et leurs Figures Lunaires
+Orcs
+
+Société : oligarchie des plus forts, culture de l’honneur.
+
+Psychologie : fiers, vaillants, obsédés par l’image laissée.
+
+Ennemi historique : Trolls (rivalité toujours active).
+
+Figure Lunaire orc :
+
+Porte la honte.
+
+Sait que les Orcs ont fui durant la guerre.
+
+Cache la vérité pour préserver l’honneur de son peuple.
+
+Digne, silencieux, rongé intérieurement.
+
+Trolls
+
+Société : royauté par duel à mort, culte de la force brute.
+
+Psychologie : arrogants, confiants, dominants.
+
+Vision de la guerre : ils ont presque annihilé les Orcs.
+
+Figure Lunaire troll :
+
+Incarnation de la fierté.
+
+Affiche sa marque avec arrogance.
+
+Utilise la mémoire pour dominer.
+
+Brutal, charismatique, provocateur.
+
+Nains
+
+Société : démocratie, représentants élus pour leur savoir-faire.
+
+Rôle mondial : pôle économique, neutres par nécessité.
+
+Psychologie : lucides, travailleurs, conscients d’être exploités.
+
+Figure Lunaire naine :
+
+Porte le remords.
+
+Est convaincue que son existence prouve que le monde va mal.
+
+Son suicide est un acte rationnel, pas émotionnel.
+
+Fatiguée, mélancolique, logique jusqu’à l’absurde.
+
+Elfes
+
+Société : gouvernance par sagesse collective, non autoritaire.
+
+Psychologie : calmes, prévoyants, fatalistes.
+
+Vision du monde : les cycles sont inévitables.
+
+Figure Lunaire elfe :
+
+Incarnation de la sagesse.
+
+Anticipe les événements sans les empêcher.
+
+Considère les Figures Lunaires comme des symptômes nécessaires.
+
+Détachée, parfois perçue comme cruelle.
+
+Gobelins
+
+Société : anarchie régulée par la peur et la méfiance.
+
+Psychologie : rusés, paranoïaques, manipulateurs.
+
+Culture : tromperie, survie, complots.
+
+Figure Lunaire gobeline :
+
+Porte la malice.
+
+Vit cachée parmi son peuple.
+
+Cherche à exploiter ou briser le cycle des Figures Lunaires.
+
+Théâtrale, insaisissable, jamais sincère en apparence.
+
+Humains
+
+Race disparue.
+
+Aucun mythe, aucune culture transmise.
+
+Figure Lunaire humaine (le joueur) :
+
+Ne porte aucune mémoire collective.
+
+N’incarne qu’un vide conscient.
+
+Curieux, empathique, observateur.
+
+Miroir silencieux du monde.
+
+8. Structure narrative globale
+
+Le jeu n’est pas linéaire (Metroidvania).
+
+L’histoire se reconstruit par :
+
+exploration,
+
+rencontres,
+
+fragments de mémoire,
+
+dialogues optionnels.
+
+La fin ne donne pas de réponse cosmique claire.
+
+L’origine des Lunes de Sang reste inconnue.
+
+Le jeu prépare implicitement un second opus (potentiellement durant la Guerre des Mondes).

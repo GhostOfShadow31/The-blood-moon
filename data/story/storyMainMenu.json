@@ -1,8 +1,0 @@
-[
-	{
-		"type": "monologue", 
-		"path": "res://data/dialogues/narrateur.json", 
-		"index": 0, 
-		"owner": "Narrateur"
-	}
-]

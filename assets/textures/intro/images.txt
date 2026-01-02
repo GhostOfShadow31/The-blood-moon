@@ -1,0 +1,15 @@
+/art/intro
+├─ ciel.png
+├─ nuage.png
+├─ lune_de_sang.png
+├─ particules.png
+├─ titre.png
+├─ silhouettes.png
+├─ cadre_silhouette.png
+├─ mur_grotte_base.png
+├─ mur_grotte_dessus.png
+├─ interieur_grotte.png
+└─ hero/
+   ├─ hero_body.png
+   ├─ hero_head.png
+   ├─ hero_eyes.png   (optionnel, glow léger)
