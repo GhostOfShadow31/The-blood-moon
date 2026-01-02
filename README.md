@@ -13,7 +13,7 @@ Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_re
 Le fichier **License.md** permettra de garder une trace des licence utilisées
 Pour rappel, voici les deux type de licence gratuite :
 
-- COO (domaine public)
+- CCO (domaine public)
 - CC-BY-XX x.0 (utilisation libre sous couvert de siter l'auteur.e)
 
 Le fichier **Architecture.md** permettra de gérer l'architecture du projet, il serait efficace de mettre à jour ce fichier quand l'architecture du projet évolue
