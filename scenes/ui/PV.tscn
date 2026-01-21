@@ -1,9 +1,10 @@
-[gd_scene load_steps=62 format=3 uid="uid://cfoqxjumxtfx4"]
+[gd_scene load_steps=63 format=3 uid="uid://cfoqxjumxtfx4"]
 
 [ext_resource type="Script" uid="uid://85q86fpf5buf" path="res://scripts/ui/pv.gd" id="1_30g6s"]
 [ext_resource type="Texture2D" uid="uid://c4x5bp41jr8qo" path="res://assets/ui/pv/Anchor_point.png" id="2_mg2j8"]
 [ext_resource type="Texture2D" uid="uid://bjhlmksqbts1b" path="res://assets/ui/pv/health_point.png" id="3_4lmlh"]
 [ext_resource type="Texture2D" uid="uid://bxqttcawstb1x" path="res://assets/ui/pv/light_effect.tres" id="3_shvlg"]
+[ext_resource type="Texture2D" uid="uid://cpn68o1ra5etd" path="res://assets/ui/pv/low_hp.tres" id="5_shvlg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2knrs"]
 atlas = ExtResource("3_4lmlh")
@@ -497,7 +498,7 @@ scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(40, 40)
 texture = ExtResource("2_mg2j8")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="shine_effect" type="PointLight2D" parent="."]
 position = Vector2(24, 21)
 texture = ExtResource("3_shvlg")
 
@@ -505,6 +506,12 @@ texture = ExtResource("3_shvlg")
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_p1kkl")
-animation = &"state_5"
+animation = &"state_2"
 centered = false
 offset = Vector2(16, 9)
+
+[node name="low_hp_effect" type="PointLight2D" parent="."]
+position = Vector2(160, 90)
+scale = Vector2(5, 2.82)
+energy = 0.0
+texture = ExtResource("5_shvlg")

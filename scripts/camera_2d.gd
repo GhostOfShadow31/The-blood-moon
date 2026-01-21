@@ -8,11 +8,15 @@ const ZONE_SIZE: Vector2 = Vector2(320, 192)
 @export_range(0.0, 1.0) var bias_x: float = 0.4
 @export_range(0.0, 1.0) var bias_y: float = 0.1
 
+@export var shake_decay: float = 20.0
+
 var follow: Node2D
 
 var current_zone: Vector2i = Vector2i(-1, -1)
 var current_zone_center: Vector2 = Vector2.ZERO
 var target_zone_center: Vector2 = Vector2.ZERO
+
+var shake_strength: float = 0.0
 
 func set_context(f: Node) -> void:
 	follow = f
@@ -28,6 +32,16 @@ func set_context(f: Node) -> void:
 	self.global_position = follow.global_position
 
 func _process(delta: float) -> void:
+	if shake_strength > 0.0:
+		shake_strength = max(shake_strength - shake_decay * delta, 0.0)
+		
+		self.offset = Vector2(
+			randf_range(-shake_strength, shake_strength),
+			randf_range(-shake_strength, shake_strength)
+		)
+	else:
+		self.offset = Vector2.ZERO
+	
 	if follow == null:
 		return
 	
@@ -66,3 +80,6 @@ func get_zone_center(zone: Vector2i) -> Vector2:
 		(zone.x + 0.5) * ZONE_SIZE.x,
 		(zone.y + 0.5) * ZONE_SIZE.y,
 	)
+
+func shake(strength: float) -> void:
+	shake_strength = max(shake_strength, strength)

@@ -9,7 +9,7 @@ extends Node
 
 @onready var overlay: ColorRect = $UIRoot/FadeOverlay
 @onready var dialogue_ui: DialogueUI = $UIRoot/DialogueUI
-@onready var healt_ui: Control = $UIRoot/Pv
+@onready var health_ui: Control = $UIRoot/Pv
 
 var intro_instance: Node2D
 var cave_instance: Node2D
@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func start_intro() -> void:
 	# On cache ce qui n'est pas essentiel
-	healt_ui.visible = false
+	health_ui.visible = false
 	
 	# Intro
 	intro_instance = intro_scene.instantiate()
@@ -39,10 +39,6 @@ func start_intro() -> void:
 
 func start_gameplay() -> void:
 	
-	# Netoyage de l'intro
-	if intro_instance != null:
-		intro_instance.queue_free()
-	
 	# Cave
 	cave_instance = cave_scene.instantiate()
 	world_root.add_child(cave_instance)
@@ -53,7 +49,7 @@ func start_gameplay() -> void:
 	world_root.add_child(hero_instance)
 	
 	# Placement du héro
-	hero_instance.global_position = Vector2(608, 532)
+	hero_instance.global_position = Vector2(608, 534)
 	
 	# On donne le hero à la camera
 	camera.set_context(hero_instance)
@@ -67,10 +63,21 @@ func start_gameplay() -> void:
 	
 	# Connecter les signaux du héro
 	hero_instance.environment_damage.connect(_on_hero_environment_damage)
+	hero_instance.hero_died.connect(_on_hero_died)
 	
 	# Affichage de la vie
-	healt_ui.visible = true
-	healt_ui.set_health(hero_instance.hp)
+	health_ui.visible = true
+	health_ui.set_health(hero_instance.hp)
+	
+	# Netoyage de l'intro
+	if intro_instance != null:
+		intro_instance.queue_free()
+		print("start")
+		hero_instance.stop_hero("sleep")
+		await get_tree().create_timer(7.0).timeout
+		hero_instance.stop_hero("wake_up")
+		await get_tree().create_timer(1.0).timeout
+		hero_instance.allow_hero()
 
 func _on_request_fade_in_out(duration_fade: float, duration_active: float) -> void:
 	overlay.fade_in_out(duration_fade, duration_active)
@@ -82,11 +89,24 @@ func _on_hero_environment_damage() -> void:
 	if hero_instance == null:
 		return
 	
-	healt_ui.change_health(hero_instance.hp)
+	health_ui.change_health(hero_instance.hp)
 	
-	hero_instance.stop_hero("hurt_front")
+	hero_instance.stop_hero("hurt")
+	camera.shake(1.0)
 	overlay.fade_in_out(0.6, 0.2)
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.6).timeout
+	hero_instance.global_position = current_environnement.get_safe_position(hero_instance.global_position) + Vector2(0, -12)
+	hero_instance.allow_hero()
+
+func _on_hero_died() -> void:
+	if hero_instance == null:
+		return
 	
-	hero_instance.global_position = current_environnement.get_safe_positions(hero_instance.global_position) + Vector2(0, -12)
+	health_ui.change_health(hero_instance.hp)
+	overlay.fade_in_out(2.0, 1.0)
+	await get_tree().create_timer(3.0).timeout
+	
+	hero_instance.global_position = current_environnement.get_checkpoint(hero_instance.global_position) + Vector2(0, -12)
+	hero_instance.revive()
+	health_ui.set_health(hero_instance.hp)
 	hero_instance.allow_hero()
