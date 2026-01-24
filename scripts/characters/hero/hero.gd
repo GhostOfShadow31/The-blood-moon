@@ -7,10 +7,15 @@ class_name Hero
 signal hero_died
 signal environment_damage
 
+### -- Variables exportées -- ###
 @export var invicibility_time: float = 1.0
 @export var hp: int = 5
 
+### -- Variables internes -- ###
 var invincible: bool = false
+var interactables: Array[Node] = []
+
+var has_sword: bool = false
 
 ### -- Modifier l'état du héro -- ###
 func is_moving() -> bool:
@@ -84,3 +89,39 @@ func hit_stop(duration: float = 0.05) -> void:
 	await get_tree().create_timer(duration, true, false, true).timeout
 	
 	Engine.time_scale = 1.0
+
+### -- Gestion de l'interaction -- ###
+func register_interactable(node: Node) -> void:
+	if node not in interactables:
+		interactables.append(node)
+
+func unregister_interactable(node: Node) -> void:
+	interactables.erase(node)
+
+func get_current_interactable() -> Node:
+	if interactables.is_empty():
+		return null
+	
+	var best: Node = null
+	var best_distance: float = INF
+	
+	for i: Node in interactables:
+		var distance = self.global_position.distance_to(i.global_position)
+		
+		if distance < best_distance:
+			best_distance = distance
+			best = i
+	return best
+
+### -- Obetnir l'épée -- ###
+func enable_sword(value: bool = true) -> void:
+	has_sword = value
+
+### -- Gérer les inputs (sauf déplacements) -- ###
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_up"):
+		var target: Node = get_current_interactable()
+		if target:
+			target.interact()
+	if event.is_action_pressed("ui_attack") and has_sword:
+		character_body_2D.start_attack()

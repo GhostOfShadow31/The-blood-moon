@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://btr12l074e5d7"]
+
+[ext_resource type="Script" uid="uid://d4agxpoepq50" path="res://scripts/characters/pnjs/cave/dead_slime.gd" id="1_53s6k"]
+[ext_resource type="Texture2D" uid="uid://d1drnvk43owgo" path="res://assets/sprites/characters/pnjs/dead_slime/slime.png" id="2_ys460"]
+[ext_resource type="Texture2D" uid="uid://b63nv1clsyfrh" path="res://assets/sprites/characters/pnjs/dead_slime/arrow_icon.png" id="3_rbb6l"]
+[ext_resource type="Texture2D" uid="uid://c5nxqluhkb84i" path="res://assets/sprites/characters/pnjs/dead_slime/shine_effect.tres" id="4_ys460"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn260"]
+atlas = ExtResource("2_ys460")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvl6h"]
+atlas = ExtResource("2_ys460")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ca0gb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn260")
+}],
+"loop": true,
+"name": &"idle_with_sword",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvl6h")
+}],
+"loop": true,
+"name": &"idle_without_sword",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvbps"]
+atlas = ExtResource("3_rbb6l")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cik3"]
+atlas = ExtResource("3_rbb6l")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cts6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvbps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cik3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qixvv"]
+
+[node name="DeadSlime" type="Node2D"]
+script = ExtResource("1_53s6k")
+
+[node name="Slime" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ca0gb")
+animation = &"idle_with_sword"
+
+[node name="Indicator" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_cts6n")
+animation = &"idle"
+frame = 1
+frame_progress = 0.586137
+
+[node name="Interact_zone" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_zone"]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_qixvv")
+
+[node name="Shine_effect" type="PointLight2D" parent="."]
+energy = 0.5
+texture = ExtResource("4_ys460")
+
+[connection signal="body_entered" from="Interact_zone" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Interact_zone" to="." method="_on_area_2d_body_exited"]

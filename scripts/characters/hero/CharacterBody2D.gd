@@ -24,7 +24,7 @@ var jump_buffer: float = 0.0
 ### -- Etats possibles -- ###
 enum Stance { UNARMED, ARMED }
 enum Facing { LEFT, RIGHT }
-enum MoveState { IDLE, WALK, AIR, BLOCKED }
+enum MoveState { IDLE, WALK, ATTACK, AIR, BLOCKED }
 
 ### -- Variables internes -- ###
 var stance: Stance = Stance.UNARMED
@@ -36,7 +36,6 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 
 var can_move: bool = true
 var forced_animation: String = ""
-var forced_animation_locked: bool = false
 var current_animation: String = ""
 var is_dead: bool = false
 
@@ -65,6 +64,8 @@ func get_animation_key() -> String:
 			return "idle"
 		MoveState.WALK:
 			return "walk"
+		MoveState.ATTACK:
+			return "attack"
 		MoveState.AIR:
 			return "idle" # Changer ici pour animation dans les airs
 		MoveState.BLOCKED:
@@ -108,8 +109,7 @@ func play_animation() -> void:
 
 func play_forced_animation(anim_name: String, lock: bool = true) -> void:
 	forced_animation = anim_name
-	forced_animation_locked = lock
-	can_move = false
+	can_move = not lock
 	
 	if sprite.animation != anim_name:
 		current_animation = anim_name
@@ -117,7 +117,6 @@ func play_forced_animation(anim_name: String, lock: bool = true) -> void:
 
 func clear_forced_animation() -> void:
 	forced_animation = ""
-	forced_animation_locked = false
 	can_move = true
 
 func die() -> void:
@@ -211,6 +210,19 @@ func apply_knockback(from_position: Vector2) -> void:
 	
 	knockback_timer = knockback_duration
 
+### -- Attaquer -- ###
+func start_attack() -> void:
+	if forced_animation == "":
+		match facing:
+			Facing.RIGHT:
+				play_forced_animation("armed_attack_right", false)
+			Facing.LEFT:
+				play_forced_animation("armed_attack_left", false)
+			_:
+				return
+		await sprite.animation_finished
+		clear_forced_animation()
+
 ### -- Fonctions utilitaires -- ###
 func get_move() -> bool:
 	return can_move
@@ -236,8 +248,11 @@ func set_can_move(value: bool, anim_type: String = "") -> void:
 	elif value:
 		# Débloque l'animation forcée si on reprend le contrôle
 		forced_animation = ""
-		forced_animation_locked = false
 
 # -- Déplacer le noeud racine de la scène -- #
 func get_motion_delta() -> Vector2:
 	return last_motion
+
+# -- Obetnir la direction du sprite -- #
+func get_direction() -> int:
+	return -1 if facing == Facing.LEFT else 1

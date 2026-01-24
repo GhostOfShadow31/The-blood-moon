@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var safe_positions: Node2D = $safe_positions
-@onready var checkpoints: Node2D = $checkpoints
+@onready var safe_positions: Node2D = $Safe_positions
+@onready var checkpoints: Node2D = $Checkpoints
 
 @export var camera_bound: Rect2 = Rect2(
 	Vector2.ZERO,

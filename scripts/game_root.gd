@@ -72,9 +72,8 @@ func start_gameplay() -> void:
 	# Netoyage de l'intro
 	if intro_instance != null:
 		intro_instance.queue_free()
-		print("start")
 		hero_instance.stop_hero("sleep")
-		await get_tree().create_timer(7.0).timeout
+		await get_tree().create_timer(6.0).timeout
 		hero_instance.stop_hero("wake_up")
 		await get_tree().create_timer(1.0).timeout
 		hero_instance.allow_hero()
