@@ -7,7 +7,7 @@ Ils privilégient l’analyse et la stratégie plutôt que les confrontations di
 Physiquement plus fragiles que d’autres races, ils compensent par une grande maîtrise des situations sociales et politiques.
 Ils sont souvent perçus comme distants, voire manipulateurs, bien que cela relève principalement de leur mode de survie.
 
-[Voir le lore plus en détails](./elfes_civilisation.md)
+[Voir le lore plus en détails](./elfes/elfes_civilisation.md)
 
 
 ## Gobelins
@@ -17,7 +17,7 @@ Leur organisation est instable, parfois proche de l'anomie, mais hautement adapt
 Ils privilégient la survie individuelle et les opportunités immédiates plutôt que les structures durables.
 Leur perception des autres races est majoritairement négative ou utilitariste.
 
-[Voir le lore plus en détails](./gobelins_civilisation.md)
+[Voir le lore plus en détails](./gobelins/gobelins_civilisation.md)
 
 
 ## Humains
@@ -27,7 +27,7 @@ Un seul survivant est actuellement identifié, considéré comme une anomalie pa
 Leur rôle historique reste lié à des événements majeurs du passé, notamment la Guerre des Mondes.
 Leur situation actuelle est entourée de mystère.
 
-[Voir le lore plus en détails](./humains_civilisation.md)
+[Voir le lore plus en détails](./humains/humains_civilisation.md)
 
 
 ## Nains
@@ -36,7 +36,7 @@ Peuple vivant principalement sous terre, spécialisé dans l’extraction et la 
 Ils occupent une position économique centrale dans le monde, contrôlant une grande partie des matériaux essentiels.
 Leur stabilité et leur neutralité relative leur permettent de maintenir des relations commerciales avec plusieurs autres races, malgré les tensions globales.
 
-[Voir le lore plus en détails](./nains_civilisation.md)
+[Voir le lore plus en détails](./nains/nains_civilisation.md)
 
 
 ## Orcs
@@ -46,7 +46,7 @@ Leur culture valorise le combat et la domination, ce qui les place fréquemment 
 Ils entretiennent une rivalité historique profonde avec les Trolls.
 Ils occupent une place majeure dans les équilibres militaires du monde.
 
-[Voir le lore plus en détails](./orcs_civilisation.md)
+[Voir le lore plus en détails](./orcs/orcs_civilisation.md)
 
 
 ## Trolls
@@ -56,4 +56,4 @@ Leur société est fortement marquée par la fierté et une perception élevée 
 Ils partagent une rivalité ancienne et persistante avec les Orcs, souvent décrite comme structurelle et non circonstancielle.
 Leur endurance en fait une force majeure dans les conflits prolongés.
 
-[Voir le lore plus en détails](./trolls_civilisation.md)
+[Voir le lore plus en détails](./trolls/trolls_civilisation.md)
