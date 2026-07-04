@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bcpo6eeew1yem"]
+
+[ext_resource type="Script" uid="uid://dxpwve6omxnqj" path="res://game/levels/cave/CaveLevel.gd" id="1_euq7w"]
+[ext_resource type="PackedScene" uid="uid://d2klsnkc42u7k" path="res://game/levels/cave/CaveMap.tscn" id="2_4ycf7"]
+
+[node name="CaveLevel" type="Node2D" unique_id=936522183]
+script = ExtResource("1_euq7w")
+
+[node name="CaveMap" parent="." unique_id=569437122 instance=ExtResource("2_4ycf7")]

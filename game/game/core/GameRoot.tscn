@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://m0mfi1b8glm3"]
+
+[ext_resource type="Script" uid="uid://1qx34r53qu2i" path="res://game/core/GameRoot.gd" id="1_cf6bx"]
+[ext_resource type="PackedScene" uid="uid://cgy3c0dem2dky" path="res://game/player/Player.tscn" id="4_vxf6d"]
+[ext_resource type="Script" uid="uid://c7wiudvpwoy1" path="res://game/systems/CameraController.gd" id="5_ial4j"]
+[ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://game/ui/fadeOverlay.tscn" id="6_7o2vy"]
+[ext_resource type="PackedScene" uid="uid://dueryo5pmmw13" path="res://game/ui/DialogueUI.tscn" id="7_iaa7i"]
+[ext_resource type="PackedScene" uid="uid://cfoqxjumxtfx4" path="res://game/ui/PV.tscn" id="8_kdgru"]
+
+[node name="GameRoot" type="Node2D" unique_id=2089132566]
+script = ExtResource("1_cf6bx")
+
+[node name="World" type="Node2D" parent="." unique_id=103285618]
+
+[node name="Player" parent="." unique_id=393644728 instance=ExtResource("4_vxf6d")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1015770665]
+script = ExtResource("5_ial4j")
+
+[node name="UIRoot" type="CanvasLayer" parent="." unique_id=770079488]
+visible = false
+
+[node name="FadeOverlay" parent="UIRoot" unique_id=375660642 instance=ExtResource("6_7o2vy")]
+
+[node name="DialogueUI" parent="UIRoot" unique_id=1394166893 instance=ExtResource("7_iaa7i")]
+
+[node name="Pv" parent="UIRoot" unique_id=139383208 instance=ExtResource("8_kdgru")]
+
+[node name="UI" type="Node2D" parent="." unique_id=904772868]

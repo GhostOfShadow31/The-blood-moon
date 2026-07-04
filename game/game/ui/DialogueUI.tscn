@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dueryo5pmmw13"]
+
+[ext_resource type="Texture2D" uid="uid://bnryw3bdqvvtc" path="res://assets/ui/dialogues/fond_frame.png" id="1_6snq5"]
+[ext_resource type="Script" uid="uid://p4fbbo7hk8k2" path="res://game/ui/DialogueUI.gd" id="1_wjgy6"]
+
+[node name="DialogueUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wjgy6")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.752941)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 120.0
+offset_right = 655.0
+offset_bottom = 270.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_6snq5")
+
+[node name="SpeakerLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 55.0
+offset_top = 120.0
+offset_right = 2155.0
+offset_bottom = 645.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Hello World!"
+scroll_following = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NextIndicator" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
