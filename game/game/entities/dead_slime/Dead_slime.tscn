@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btr12l074e5d7"]
 
-[ext_resource type="Script" uid="uid://d4agxpoepq50" path="res://game/entities/dead_slime/dead_slime.gd" id="1_53s6k"]
+[ext_resource type="Script" uid="uid://d4agxpoepq50" path="res://game/entities/dead_slime/Dead_slime.gd" id="1_53s6k"]
 [ext_resource type="Texture2D" uid="uid://8yemkcd4dem4" path="res://assets/sprites/characters/pnjs/dead_slime/slime.png" id="2_ys460"]
 [ext_resource type="Texture2D" uid="uid://b8lhxhn630uf4" path="res://assets/sprites/characters/pnjs/dead_slime/arrow_icon.png" id="3_rbb6l"]
 [ext_resource type="Texture2D" uid="uid://c5nxqluhkb84i" path="res://assets/sprites/characters/pnjs/dead_slime/shine_effect.tres" id="4_ys460"]

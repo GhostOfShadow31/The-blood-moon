@@ -37,6 +37,12 @@ var knockback_timer: float = 0.0
 # Direction
 var facing: int = 1
 
+# Interaction
+var interactable: Interactable = null
+
+# Combat
+var has_sword: bool = false
+
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
 	
@@ -94,12 +100,22 @@ func handle_jump() -> void:
 func can_jump() -> bool:
 	return (jump_buffer_timer > 0.0 and coyote_timer > 0.0)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_attack"):
+func _input(event: InputEvent) -> void:
+	# Interaction du joueur un Interactable (pnj..)
+	if event.is_action_pressed("ui_interact"):
 		interact()
+	# Attaque, nécessite d'avoir une épée
+	if event.is_action_pressed("ui_attack"):
+		attack()
 
 func interact() -> void:
-	pass
+	if interactable:
+		interactable.interact()
+
+func attack() -> void:
+	if not has_sword:
+		return
+	play_attack_animation()
 
 func update_animation() -> void:
 	if not is_on_floor():
@@ -143,6 +159,12 @@ func play_die_animation() -> void:
 		animated_sprite.play("die_left")
 	else:
 		animated_sprite.play("die_right")
+
+func play_attack_animation() -> void:
+	if facing < 0:
+		animated_sprite.play("attack_left")
+	else:
+		animated_sprite.play("attack_right")
 
 func take_damage(damage: int, source_position: Vector2) -> void:
 	health -= damage
