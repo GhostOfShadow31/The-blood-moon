@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4mmkowbkn2a4"]
 
-[ext_resource type="Script" uid="uid://dx2pdxbfe3o3a" path="res://game/entities/temple/temple.gd" id="1_2j2kv"]
+[ext_resource type="Script" uid="uid://dx2pdxbfe3o3a" path="res://game/entities/temple/Temple.gd" id="1_2j2kv"]
 [ext_resource type="Texture2D" uid="uid://bnwc5b3405sib" path="res://assets/textures/objects/temple/temple.png" id="1_hriuu"]
 [ext_resource type="Texture2D" uid="uid://dt3la70hjhi1f" path="res://assets/textures/objects/temple/temple_effect.tres" id="3_kmr23"]
 
