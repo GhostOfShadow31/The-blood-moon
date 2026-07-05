@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b8i1or8nw2wn8" path="res://assets/textures/cave/details.png" id="5_ogvxq"]
 [ext_resource type="Texture2D" uid="uid://wg65fsvlxu7c" path="res://assets/textures/cave/torches.png" id="5_vd7jv"]
 [ext_resource type="Texture2D" uid="uid://c5knsso8swdbr" path="res://assets/textures/cave/lights/torchlight.tres" id="7_vd7jv"]
-[ext_resource type="PackedScene" uid="uid://c4mmkowbkn2a4" path="res://game/entities/temple/temple.tscn" id="9_ysn4x"]
-[ext_resource type="PackedScene" uid="uid://btr12l074e5d7" path="res://game/entities/dead_slime/dead_slime.tscn" id="10_y71it"]
+[ext_resource type="PackedScene" uid="uid://c4mmkowbkn2a4" path="res://game/entities/temple/Temple.tscn" id="9_ysn4x"]
+[ext_resource type="PackedScene" uid="uid://btr12l074e5d7" path="res://game/entities/dead_slime/Dead_slime.tscn" id="10_y71it"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04f4u"]
 texture = ExtResource("4_04f4u")
@@ -898,10 +898,8 @@ color = Color(0.24684, 0.2112, 0.33, 1)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=69328701]
 custom_minimum_size = Vector2(976, 576)
-offset_left = 12.0
-offset_top = 9.0
-offset_right = 2012.0
-offset_bottom = 1721.0
+offset_right = 2000.0
+offset_bottom = 1712.0
 color = Color(0.0399, 0.0399, 0.07, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=160537819]
@@ -1076,10 +1074,9 @@ position = Vector2(1392, 1157)
 position = Vector2(771, 1029)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=204890745]
-visible = false
 
 [node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1077837434]
-position = Vector2(1208, 1648)
+position = Vector2(569, 1366)
 
 [node name="SpawnPoint_01" type="Marker2D" parent="SpawnPoints" unique_id=999550475]
 position = Vector2(1122, 0)
