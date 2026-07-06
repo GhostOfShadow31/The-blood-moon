@@ -42,14 +42,18 @@ var interactable: Interactable = null
 
 # Combat
 var has_sword: bool = false
+var is_attacking: bool = false
+var attack_buffer_locked: bool = false
+var attack_facing: int = 1
 
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
 	
+	handle_interaction()
+	handle_attack()
+	
 	handle_gravity(delta)
-	
 	handle_movement()
-	
 	handle_jump()
 	
 	move_and_slide()
@@ -100,24 +104,29 @@ func handle_jump() -> void:
 func can_jump() -> bool:
 	return (jump_buffer_timer > 0.0 and coyote_timer > 0.0)
 
-func _input(event: InputEvent) -> void:
-	# Interaction du joueur un Interactable (pnj..)
-	if event.is_action_pressed("ui_interact"):
-		interact()
-	# Attaque, nécessite d'avoir une épée
-	if event.is_action_pressed("ui_attack"):
-		attack()
-
-func interact() -> void:
-	if interactable:
+func handle_interaction() -> void:
+	if Input.is_action_pressed("ui_interact") and interactable:
 		interactable.interact()
 
-func attack() -> void:
-	if not has_sword:
+func handle_attack() -> void:
+	if Input.is_action_pressed("ui_attack"):
+		try_attack()
+	
+	if Input.is_action_just_released("ui_attack"):
+		attack_buffer_locked = false
+
+func try_attack() -> void:
+	if attack_buffer_locked or is_attacking or not has_sword:
 		return
+	is_attacking = true
+	attack_buffer_locked = true
+	attack_facing = facing
 	play_attack_animation()
 
 func update_animation() -> void:
+	if is_attacking:
+		play_attack_animation()
+		return
 	if not is_on_floor():
 		if velocity.y < 0:
 			play_jump_animation()
@@ -161,7 +170,7 @@ func play_die_animation() -> void:
 		animated_sprite.play("die_right")
 
 func play_attack_animation() -> void:
-	if facing < 0:
+	if attack_facing < 0:
 		animated_sprite.play("attack_left")
 	else:
 		animated_sprite.play("attack_right")
@@ -186,3 +195,8 @@ func apply_knockback(source_position: Vector2) -> void:
 
 func die() -> void:
 	play_die_animation()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if animated_sprite.animation == "attack_left" or animated_sprite.animation == "attack_right":
+		is_attacking = false
