@@ -46,6 +46,12 @@ var is_attacking: bool = false
 var attack_buffer_locked: bool = false
 var attack_facing: int = 1
 
+# Animation
+var anim_controller: PlayerAnimationController = PlayerAnimationController.new()
+
+func _ready() -> void:
+	anim_controller.setup(self, animated_sprite)
+
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
 	
@@ -121,64 +127,15 @@ func try_attack() -> void:
 	is_attacking = true
 	attack_buffer_locked = true
 	attack_facing = facing
-	play_attack_animation()
+	anim_controller.play_attack_animation()
 
 func update_animation() -> void:
-	if is_attacking:
-		play_attack_animation()
-		return
-	if not is_on_floor():
-		if velocity.y < 0:
-			play_jump_animation()
-		else:
-			play_fall_animation()
-	elif velocity.x != 0:
-		play_run_animation()
-	else:
-		play_idle_animation()
-
-func play_jump_animation() -> void:
-	pass # No animation for the moment
-	# Expect animation name: "jump_left" & "jump_right"
-
-func play_fall_animation() -> void:
-	pass # No animation for the moment
-	# Expect animation name: "fall_left" & "fall_right"
-
-func play_run_animation() -> void:
-	if facing < 0:
-		animated_sprite.play("run_left")
-	else:
-		animated_sprite.play("run_right")
-
-func play_idle_animation() -> void:
-	if facing < 0:
-		animated_sprite.play("idle_left")
-	else:
-		animated_sprite.play("idle_right")
-
-func play_hurt_animation() -> void:
-	if facing < 0:
-		animated_sprite.play("hurt_left")
-	else:
-		animated_sprite.play("hurt_right")
-
-func play_die_animation() -> void:
-	if facing < 0:
-		animated_sprite.play("die_left")
-	else:
-		animated_sprite.play("die_right")
-
-func play_attack_animation() -> void:
-	if attack_facing < 0:
-		animated_sprite.play("attack_left")
-	else:
-		animated_sprite.play("attack_right")
+	anim_controller.update()
 
 func take_damage(damage: int, source_position: Vector2) -> void:
 	health -= damage
 	
-	play_hurt_animation()
+	anim_controller.play_hurt_animation()
 	apply_knockback(source_position)
 	
 	if health <= 0:
@@ -194,7 +151,7 @@ func apply_knockback(source_position: Vector2) -> void:
 	velocity.y = -knockback_force.y
 
 func die() -> void:
-	play_die_animation()
+	anim_controller.play_die_animation()
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:
