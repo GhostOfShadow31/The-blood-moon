@@ -7,6 +7,7 @@ var sprite: AnimatedSprite2D = null
 func setup(p_player: Player, p_sprite: AnimatedSprite2D) -> void:
 	player = p_player
 	sprite = p_sprite
+	p_sprite.animation_finished.connect(_on_animation_finished)
 
 # Lit  l'état du joueur et joue les animations
 func update() -> void:
@@ -60,3 +61,7 @@ func play_attack_animation() -> void:
 		sprite.play("attack_left")
 	else:
 		sprite.play("attack_right")
+
+func _on_animation_finished() -> void:
+	if sprite.animation == "attack_left" or sprite.animation == "attack_right":
+		player.is_attacking = false

@@ -635,5 +635,3 @@ shape = SubResource("CapsuleShape2D_sqo6f")
 [node name="Left" type="CollisionShape2D" parent="HitBox" unique_id=1518051105]
 position = Vector2(-14, 0)
 shape = SubResource("CapsuleShape2D_u0rc1")
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
