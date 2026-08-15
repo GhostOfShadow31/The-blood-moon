@@ -6,15 +6,16 @@
 
 ### Mort et réapparition
 
-* [ ] Définir clairement l'état `mort` du joueur
-* [ ] Déclencher la mort lorsque les PV atteignent 0
-* [ ] Empêcher le joueur d'effectuer ses actions normales pendant sa mort
-* [ ] Déclencher la rencontre avec La Mort
-* [ ] Permettre à l'interaction avec La Mort de se terminer
-* [ ] Restaurer le joueur à sa position de mort
-* [ ] Restaurer le joueur dans un état jouable
-* [ ] Vérifier qu'une seconde mort fonctionne correctement
-* [ ] Vérifier qu'une mort sur un piège ne provoque pas plusieurs dégâts/morts consécutifs
+* [x] Définir clairement l'état `mort` du joueur
+* [x] Déclencher la mort lorsque les PV atteignent 0
+* [x] Empêcher le joueur d'effectuer ses actions normales pendant sa mort
+* [~] Déclencher la rencontre avec La Mort (placeholder pour dialogue UI)
+* [x] Permettre à l'interaction avec La Mort de se terminer
+* [x] Restaurer le joueur à sa position de mort
+* [x] Restaurer le joueur dans un état jouable
+* [x] Vérifier qu'une seconde mort fonctionne correctement
+* [x] Vérifier qu'une mort sur un piège ne provoque pas plusieurs dégâts/morts consécutifs
+* [x] Modifier la teinte de l'écran lorsque le joueur atteint 1 PV
 
 **Jalon :**
 
