@@ -1,64 +1,67 @@
+class_name Temple
 extends Node2D
 
-@onready var sprite_back: AnimatedSprite2D = $BackAnimatedSprite2D
+const IDLE_ACTIVATE: String = "idle_activate"
+const IDLE_DEACTIVATE: String = "idle_deactivate"
+const ACTIVATE: String = "activate"
+
 @onready var sprite_front: AnimatedSprite2D = $FrontAnimatedSprite2D
+@onready var sprite_back: AnimatedSprite2D = $BackAnimatedSprite2D
 @onready var light_effect: PointLight2D = $PointLight2D
 
-enum State {
-	IDLE_ACTIVATE,
-	IDLE_DEACTIVATE,
-	ACTIVATE
-}
-
-var STATE_TO_ANIM: Dictionary = {
-	State.IDLE_ACTIVATE: "idle_activate",
-	State.IDLE_DEACTIVATE: "idle_deactivate",
-	State.ACTIVATE: "activate",
-}
-
-var current_animation: String
-var is_activate: bool = false
+var activated: bool = false
 
 func _ready() -> void:
 	light_effect.energy = 0.0
-	
-	current_animation = STATE_TO_ANIM[State.IDLE_DEACTIVATE]
-	sprite_back.play(current_animation)
-	sprite_front.play(current_animation)
+	play(IDLE_DEACTIVATE)
 
-func play_animation(state: State) -> void:
-	current_animation = STATE_TO_ANIM[state]
-	sprite_back.play(current_animation)
-	sprite_front.play(current_animation)
+# =========================
+# ANIMATION & EFFET
+# =========================
 
-func activation() -> void:
-	if not is_activate:
-		sprite_back.stop()
-		sprite_front.stop()
-		
-		current_animation = STATE_TO_ANIM[State.ACTIVATE]
-		sprite_back.play(current_animation)
-		sprite_front.play(current_animation)
-		show_light_effect()
-		
-		await sprite_back.animation_finished
-		await sprite_front.animation_finished
-		
-		current_animation = STATE_TO_ANIM[State.IDLE_ACTIVATE]
-		sprite_back.play(current_animation)
-		sprite_front.play(current_animation)
-		is_activate = true
+func play(animation_name: String) -> void:
+	sprite_front.play(animation_name)
+	sprite_back.play(animation_name)
 
-func is_activated() -> bool:
-	return is_activate
-
-func get_current_animation() -> String:
-	return current_animation
-
-func _on_activation_zone_body_entered(body: Node2D) -> void:
-	if body.get_parent() is Player:
-		activation()
+func stop() -> void:
+	sprite_front.stop()
+	sprite_back.stop()
 
 func show_light_effect() -> void:
 	var tween = create_tween()
 	tween.tween_property(light_effect, "energy", 1.0, 1.0)
+
+# =========================
+# DETECTION
+# =========================
+
+func _on_activation_zone_body_entered(body: Node2D) -> void:
+	if body is Player:
+		activate()
+
+# =========================
+# ACTIVATION
+# =========================
+
+func activate() -> void:
+	if activated:
+		return
+	
+	activated = true
+	
+	show_light_effect()
+	
+	play(ACTIVATE)
+	await sprite_front.animation_finished
+	
+	play(IDLE_ACTIVATE)
+
+# =========================
+# INFORMATION
+# =========================
+
+func is_activated() -> bool:
+	return activated
+
+func get_spawn_position() -> Vector2:
+	return global_position

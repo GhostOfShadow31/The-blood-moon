@@ -378,17 +378,17 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2j2kv"]
 
-[node name="Temple" type="Node2D"]
+[node name="Temple" type="Node2D" unique_id=1555460762]
 script = ExtResource("1_2j2kv")
 
-[node name="BackAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="BackAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=209283130]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ekh6v")
 animation = &"activate"
 frame = 15
 frame_progress = 1.0
 
-[node name="FrontAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="FrontAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=36635624]
 z_index = 15
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_liftw")
@@ -396,14 +396,14 @@ animation = &"activate"
 frame = 15
 frame_progress = 1.0
 
-[node name="Activation_zone" type="Area2D" parent="."]
+[node name="Activation_zone" type="Area2D" parent="." unique_id=452694050]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Activation_zone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Activation_zone" unique_id=596422495]
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_2j2kv")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1601817709]
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("3_kmr23")
 
