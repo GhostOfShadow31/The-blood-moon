@@ -24,3 +24,12 @@ func get_room_at(position: Vector2):
 		if room.bounds.has_point(position):
 			return room.focus
 	return null
+
+# Position ou placer le pnj "Death" à partir de la mort du joueur
+func get_death_position(_death_position: Vector2) -> Vector2:
+	assert(false, "Must be implemented")
+	return Vector2.ZERO
+
+# Changer la couleur du CanvaModulate pour,l'apparition du pnj "Death"
+func switch_to_death_ambiance(_value: bool) -> void:
+	assert(false, "Must be implemented")

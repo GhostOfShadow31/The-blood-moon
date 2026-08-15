@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cw1aiss6j7rwr"]
+
+[ext_resource type="Script" uid="uid://cb6lr8tdpxpnt" path="res://game/entities/death/Death.gd" id="1_itl63"]
+[ext_resource type="Texture2D" uid="uid://csvdfu3nv2u0f" path="res://assets/sprites/characters/Death/Unarmed_Idle.png" id="1_l3lee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iujqe"]
+atlas = ExtResource("1_l3lee")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_to6ng"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iujqe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Death" type="Node2D" unique_id=1775351390]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_itl63")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=44810091]
+modulate = Color(1, 1, 1, 0.75000006)
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_to6ng")

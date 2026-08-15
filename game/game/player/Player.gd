@@ -7,12 +7,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
 	
-	handle_interaction()
-	handle_attack()
+	if not is_dead():
+		handle_interaction()
+		handle_attack()
+		
+		handle_movement()
+		handle_jump()
 	
 	handle_gravity(delta)
-	handle_movement()
-	handle_jump()
 	
 	move_and_slide()
 	
@@ -166,6 +168,12 @@ func apply_knockback(source_position: Vector2) -> void:
 
 @export var max_health: int = 5
 
+enum State {
+	ALIVE,
+	DEAD
+}
+
+var state: State = State.ALIVE
 var health: int = max_health
 
 func take_damage(damage: int) -> void:
@@ -173,10 +181,11 @@ func take_damage(damage: int) -> void:
 		return
 	
 	invulnerability_timer = INVULNERABILITY_TIME
-	health -= damage
-	print("Nouveau seuil de PV: ", health)
+	health = max(health - damage, 0) # Bornée par le bas à 0
+	print("PV: ", health)
 	
 	if health <= 0:
+		state = State.DEAD
 		die()
 		return
 	
@@ -190,10 +199,14 @@ func recover(to_position: Vector2) -> void:
 
 func set_hp(value: int) -> void:
 	health = value if value < max_health else max_health
+	state = State.ALIVE
 	print("Seuil de PV: ", health)
 
+func get_health() -> int:
+	return health
+
 func is_dead() -> bool:
-	return health <= 0
+	return state == State.DEAD
 
 func die() -> void:
 	anim_controller.play_die_animation()

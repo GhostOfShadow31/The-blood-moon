@@ -893,8 +893,7 @@ sources/2 = SubResource("TileSetAtlasSource_7r60c")
 script = ExtResource("1_uylaq")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1228146367]
-visible = false
-color = Color(0.24684, 0.2112, 0.33, 1)
+color = Color(0.24705882, 0.21176471, 0.32941177, 1)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=69328701]
 custom_minimum_size = Vector2(976, 576)
@@ -1035,29 +1034,46 @@ position = Vector2(119, 521)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("7_vd7jv")
 
+[node name="Pnjs" type="Node2D" parent="." unique_id=34772597]
+
+[node name="DeadSlime" parent="Pnjs" unique_id=1471190440 instance=ExtResource("10_y71it")]
+position = Vector2(536, 1371)
+
 [node name="RecoveryPoints" type="Node2D" parent="." unique_id=343648343]
 visible = false
 
 [node name="RecoveryPoint_01" type="Marker2D" parent="RecoveryPoints" unique_id=516770975]
 position = Vector2(904, 1600)
 
-[node name="RecoveryPoint_02" type="Marker2D" parent="RecoveryPoints" unique_id=401018919]
+[node name="RecoveryPoint_02" type="Marker2D" parent="RecoveryPoints" unique_id=1905942893]
+position = Vector2(911, 1264)
+
+[node name="RecoveryPoint_03" type="Marker2D" parent="RecoveryPoints" unique_id=833434703]
+position = Vector2(1200, 1296)
+
+[node name="RecoveryPoint_04" type="Marker2D" parent="RecoveryPoints" unique_id=401018919]
 position = Vector2(1338, 992)
 
-[node name="RecoveryPoint_03" type="Marker2D" parent="RecoveryPoints" unique_id=1183757731]
+[node name="RecoveryPoint_05" type="Marker2D" parent="RecoveryPoints" unique_id=1183757731]
 position = Vector2(1194, 912)
 
-[node name="RecoveryPoint_04" type="Marker2D" parent="RecoveryPoints" unique_id=1047037435]
+[node name="RecoveryPoint_06" type="Marker2D" parent="RecoveryPoints" unique_id=1047037435]
 position = Vector2(1115, 880)
 
-[node name="RecoveryPoint_05" type="Marker2D" parent="RecoveryPoints" unique_id=1332883910]
-position = Vector2(1679, 1216)
+[node name="RecoveryPoint_07" type="Marker2D" parent="RecoveryPoints" unique_id=1075566515]
+position = Vector2(1585, 1344)
 
-[node name="RecoveryPoint_06" type="Marker2D" parent="RecoveryPoints" unique_id=1499742253]
+[node name="RecoveryPoint_08" type="Marker2D" parent="RecoveryPoints" unique_id=1332883910]
+position = Vector2(1617, 1184)
+
+[node name="RecoveryPoint_09" type="Marker2D" parent="RecoveryPoints" unique_id=1499742253]
 position = Vector2(423, 864)
 
-[node name="RecoveryPoint_07" type="Marker2D" parent="RecoveryPoints" unique_id=1985877080]
+[node name="RecoveryPoint_10" type="Marker2D" parent="RecoveryPoints" unique_id=1985877080]
 position = Vector2(472, 976)
+
+[node name="RecoveryPoint_11" type="Marker2D" parent="RecoveryPoints" unique_id=1651625795]
+position = Vector2(400, 576)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=204890745]
 
@@ -1067,7 +1083,38 @@ position = Vector2(1200, 1648)
 [node name="SpawnPoint_01" type="Marker2D" parent="SpawnPoints" unique_id=999550475]
 position = Vector2(1122, 0)
 
-[node name="Pnjs" type="Node2D" parent="." unique_id=34772597]
+[node name="DeathPositions" type="Node2D" parent="." unique_id=438438427]
+visible = false
 
-[node name="DeadSlime" parent="Pnjs" unique_id=1471190440 instance=ExtResource("10_y71it")]
-position = Vector2(536, 1371)
+[node name="DeathPosition_01" type="Marker2D" parent="DeathPositions" unique_id=680321993]
+position = Vector2(814, 1600)
+
+[node name="DeathPosition_02" type="Marker2D" parent="DeathPositions" unique_id=1765991493]
+position = Vector2(882, 1264)
+
+[node name="DeathPosition_03" type="Marker2D" parent="DeathPositions" unique_id=1369512474]
+position = Vector2(1280, 1264)
+
+[node name="DeathPosition_04" type="Marker2D" parent="DeathPositions" unique_id=579976869]
+position = Vector2(1394, 976)
+
+[node name="DeathPosition_05" type="Marker2D" parent="DeathPositions" unique_id=1926552473]
+position = Vector2(1233, 896)
+
+[node name="DeathPosition_06" type="Marker2D" parent="DeathPositions" unique_id=1584246112]
+position = Vector2(1040, 864)
+
+[node name="DeathPosition_07" type="Marker2D" parent="DeathPositions" unique_id=192457365]
+position = Vector2(1512, 1392)
+
+[node name="DeathPosition_08" type="Marker2D" parent="DeathPositions" unique_id=1098746189]
+position = Vector2(1667, 1152)
+
+[node name="DeathPosition_09" type="Marker2D" parent="DeathPositions" unique_id=278579557]
+position = Vector2(513, 832)
+
+[node name="DeathPosition_10" type="Marker2D" parent="DeathPositions" unique_id=1831148053]
+position = Vector2(411, 1040)
+
+[node name="DeathPosition_11" type="Marker2D" parent="DeathPositions" unique_id=1154077722]
+position = Vector2(479, 544)

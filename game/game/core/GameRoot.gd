@@ -9,6 +9,7 @@ var current_level: Level
 
 @onready var world: Node2D = $World
 @onready var player: Node2D = $Player
+@onready var death: Node2D = $Death
 @onready var camera: Camera2D = $Camera2D
 
 func _ready() -> void:
@@ -59,13 +60,21 @@ func setup_camera() -> void:
 
 # Gère les dégâts d'environnement
 func handle_spike_damage() -> void:
-	var damage_taken: int = 5
+	var damage_taken: int = 1
 	player.take_damage(damage_taken)
+	if player.get_health() == 1:
+		current_level.switch_to_death_ambiance(true)
 	hit_freeze(0.025)
 	player.apply_knockback(player.global_position)
 	await get_tree().create_timer(0.25).timeout
 	if player.is_dead():
-		player.recover(current_level.get_respawn_position(player.global_position))
+		death.show_death(true)
+		death.go_to(current_level.get_death_position(player.global_position))
+		# Démarrer dialogue ici
+		player.recover(current_level.get_safe_recovery_position(player.global_position))
+		await get_tree().create_timer(5.0).timeout
+		death.show_death(false)
+		current_level.switch_to_death_ambiance(false)
 		player.set_hp(player.max_health)
 	else:
 		player.recover(current_level.get_safe_recovery_position(player.global_position))

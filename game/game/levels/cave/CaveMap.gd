@@ -2,7 +2,14 @@ extends Node2D
 
 @onready var recoverypoints: Node2D = $RecoveryPoints
 @onready var spawnpoints: Node2D = $SpawnPoints
+@onready var death_positions: Node2D = $DeathPositions
 @onready var spike_layer: TileMapLayer = $Map/Frontground_spike
+@onready var canva_modulate: CanvasModulate = $CanvasModulate
+
+const CANVAS_MODULATE_SHADE: Dictionary[String, Color] = {
+	"default": Color("3f3654"),
+	"death": Color("303832")
+}
 
 const CAMERA_BOUNDS: Rect2 = Rect2(
 	Vector2.ZERO,

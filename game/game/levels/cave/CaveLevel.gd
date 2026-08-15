@@ -38,6 +38,17 @@ func get_safe_recovery_position(death_position: Vector2) -> Vector2:
 	
 	return get_closer_position(death_position, recoverypoints)
 
+func get_death_position(death_position: Vector2) -> Vector2:
+	var death_poistions: Array[Node] = map.death_positions.get_children()
+	return get_closer_position(death_position, death_poistions)
+
+func switch_to_death_ambiance(value: bool) -> void:
+	var tween := create_tween()
+	if value:
+		tween.tween_property(map.canva_modulate, "color", map.CANVAS_MODULATE_SHADE["death"], 0.75)
+	else:
+		tween.tween_property(map.canva_modulate, "color", map.CANVAS_MODULATE_SHADE["default"], 0.75)
+
 # Renvoie la position la plus proche
 func get_closer_position(from: Vector2, positions: Array[Node]) -> Vector2:
 	var choosen_position: Node2D = null

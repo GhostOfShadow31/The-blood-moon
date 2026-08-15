@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://m0mfi1b8glm3"]
 
 [ext_resource type="Script" uid="uid://1qx34r53qu2i" path="res://game/core/GameRoot.gd" id="1_cf6bx"]
+[ext_resource type="PackedScene" uid="uid://cw1aiss6j7rwr" path="res://game/entities/death/Death.tscn" id="3_dwnv2"]
 [ext_resource type="PackedScene" uid="uid://cgy3c0dem2dky" path="res://game/player/Player.tscn" id="4_vxf6d"]
 [ext_resource type="Script" uid="uid://c7wiudvpwoy1" path="res://game/systems/CameraController.gd" id="5_ial4j"]
 [ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://game/ui/fadeOverlay.tscn" id="6_7o2vy"]
@@ -13,6 +14,8 @@ script = ExtResource("1_cf6bx")
 [node name="World" type="Node2D" parent="." unique_id=103285618]
 
 [node name="Player" parent="." unique_id=393644728 instance=ExtResource("4_vxf6d")]
+
+[node name="Death" parent="." unique_id=1775351390 instance=ExtResource("3_dwnv2")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1015770665]
 script = ExtResource("5_ial4j")
