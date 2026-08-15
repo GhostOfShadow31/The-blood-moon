@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b8i1or8nw2wn8" path="res://assets/textures/cave/details.png" id="5_ogvxq"]
 [ext_resource type="Texture2D" uid="uid://wg65fsvlxu7c" path="res://assets/textures/cave/torches.png" id="5_vd7jv"]
 [ext_resource type="Texture2D" uid="uid://c5knsso8swdbr" path="res://assets/textures/cave/lights/torchlight.tres" id="7_vd7jv"]
-[ext_resource type="PackedScene" uid="uid://c4mmkowbkn2a4" path="res://game/entities/temple/Temple.tscn" id="9_ysn4x"]
 [ext_resource type="PackedScene" uid="uid://btr12l074e5d7" path="res://game/entities/dead_slime/Dead_slime.tscn" id="10_y71it"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04f4u"]
@@ -894,6 +893,7 @@ sources/2 = SubResource("TileSetAtlasSource_7r60c")
 script = ExtResource("1_uylaq")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1228146367]
+visible = false
 color = Color(0.24684, 0.2112, 0.33, 1)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=69328701]
@@ -1041,42 +1041,28 @@ visible = false
 [node name="RecoveryPoint_01" type="Marker2D" parent="RecoveryPoints" unique_id=516770975]
 position = Vector2(904, 1600)
 
-[node name="RecoveryPoint_02" type="Marker2D" parent="RecoveryPoints" unique_id=665975926]
-position = Vector2(917, 1264)
-
-[node name="RecoveryPoint_03" type="Marker2D" parent="RecoveryPoints" unique_id=401018919]
+[node name="RecoveryPoint_02" type="Marker2D" parent="RecoveryPoints" unique_id=401018919]
 position = Vector2(1338, 992)
 
-[node name="RecoveryPoint_04" type="Marker2D" parent="RecoveryPoints" unique_id=1183757731]
+[node name="RecoveryPoint_03" type="Marker2D" parent="RecoveryPoints" unique_id=1183757731]
 position = Vector2(1194, 912)
 
-[node name="RecoveryPoint_05" type="Marker2D" parent="RecoveryPoints" unique_id=1047037435]
+[node name="RecoveryPoint_04" type="Marker2D" parent="RecoveryPoints" unique_id=1047037435]
 position = Vector2(1115, 880)
 
-[node name="RecoveryPoint_06" type="Marker2D" parent="RecoveryPoints" unique_id=66757819]
-position = Vector2(1205, 1408)
-
-[node name="RecoveryPoint_07" type="Marker2D" parent="RecoveryPoints" unique_id=398435742]
-position = Vector2(1589, 1344)
-
-[node name="RecoveryPoint_08" type="Marker2D" parent="RecoveryPoints" unique_id=1332883910]
+[node name="RecoveryPoint_05" type="Marker2D" parent="RecoveryPoints" unique_id=1332883910]
 position = Vector2(1679, 1216)
 
-[node name="RecoveryPoint_09" type="Marker2D" parent="RecoveryPoints" unique_id=1499742253]
-position = Vector2(149, 592)
+[node name="RecoveryPoint_06" type="Marker2D" parent="RecoveryPoints" unique_id=1499742253]
+position = Vector2(423, 864)
 
-[node name="CheckPoints" type="Node2D" parent="." unique_id=1086452533]
-
-[node name="Temple_01" parent="CheckPoints" unique_id=1850881793 instance=ExtResource("9_ysn4x")]
-position = Vector2(1392, 1157)
-
-[node name="Temple_02" parent="CheckPoints" unique_id=1895349361 instance=ExtResource("9_ysn4x")]
-position = Vector2(771, 1029)
+[node name="RecoveryPoint_07" type="Marker2D" parent="RecoveryPoints" unique_id=1985877080]
+position = Vector2(472, 976)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=204890745]
 
 [node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1077837434]
-position = Vector2(569, 1366)
+position = Vector2(1200, 1648)
 
 [node name="SpawnPoint_01" type="Marker2D" parent="SpawnPoints" unique_id=999550475]
 position = Vector2(1122, 0)

@@ -47,12 +47,16 @@ func handle_gravity(delta: float) -> void:
 const COYOTE_TIME: float = 0.08
 const JUMP_BUFFER_TIME: float = 0.10
 const KNOCKBACK_TIME: float = 0.15
+const INVULNERABILITY_TIME: float = 0.5
 
 var coyote_timer: float = 0.0
 var jump_buffer_timer: float = 0.0
 var knockback_timer: float = 0.0
+var invulnerability_timer: float = 0.0
 
 func update_timers(delta: float) -> void:
+	if invulnerability_timer > 0.0:
+		invulnerability_timer -= delta
 	if is_knocked_back:
 		knockback_timer -= delta
 		if knockback_timer <= 0:
@@ -158,19 +162,41 @@ func apply_knockback(source_position: Vector2) -> void:
 # HEALTH
 # =========================
 
+@onready var hurtbox: CollisionShape2D = $HurtBox/CollisionShape2D
+
 @export var max_health: int = 5
+
 var health: int = max_health
 
 func take_damage(damage: int) -> void:
-	health -= damage
+	if !can_take_damage():
+		return
 	
-	anim_controller.play_hurt_animation()
+	invulnerability_timer = INVULNERABILITY_TIME
+	health -= damage
+	print("Nouveau seuil de PV: ", health)
 	
 	if health <= 0:
 		die()
+		return
+	
+	anim_controller.play_hurt_animation()
 
-func recover(position: Vector2) -> void:
-	global_position = position
+func can_take_damage() -> bool:
+	return false if invulnerability_timer > 0.0 else true
+
+func recover(to_position: Vector2) -> void:
+	global_position = to_position
+
+func set_hp(value: int) -> void:
+	health = value if value < max_health else max_health
+	print("Seuil de PV: ", health)
+
+func is_dead() -> bool:
+	return health <= 0
 
 func die() -> void:
 	anim_controller.play_die_animation()
+
+func get_hurtbox() -> CollisionShape2D:
+	return hurtbox

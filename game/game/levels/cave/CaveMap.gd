@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var recovery_markers: Node2D = $RecoveryPoints
-@onready var checkpoint_markers: Node2D = $CheckPoints
-@onready var spawnpoint_markers: Node2D = $SpawnPoints
+@onready var recoverypoints: Node2D = $RecoveryPoints
+@onready var spawnpoints: Node2D = $SpawnPoints
+@onready var spike_layer: TileMapLayer = $Map/Frontground_spike
 
 const CAMERA_BOUNDS: Rect2 = Rect2(
 	Vector2.ZERO,
@@ -86,3 +86,9 @@ const rooms: Array[Dictionary] = [
 		"focus": Vector2(400.0, 496.0)
 	},
 ]
+
+func is_spike(from_position: Vector2) -> bool:
+	var local_position: Vector2 = spike_layer.to_local(from_position)
+	var cell: Vector2 = spike_layer.local_to_map(local_position)
+	
+	return spike_layer.get_cell_source_id(cell) != -1

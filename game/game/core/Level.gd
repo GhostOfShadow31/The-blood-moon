@@ -13,12 +13,7 @@ func get_spawn_position(_spawn_context: SpawnContext) -> Vector2:
 	assert(false, "Must be implemented")
 	return Vector2.ZERO
 
-# Position où replacer le joueur après une mort (HP = 0)
-func get_respawn_position(_death_position: Vector2) -> Vector2:
-	assert(false, "Must be implemented")
-	return Vector2.ZERO
-
-# Position où replacer le joueur après une mort "soft" (piques, chute, etc.)
+# Position où replacer le joueur après avoir pris des dégâts d'environnement (piques, chute, etc.)
 func get_safe_recovery_position(_death_position: Vector2) -> Vector2:
 	assert(false, "Must be implemented")
 	return Vector2.ZERO
