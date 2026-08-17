@@ -64,4 +64,5 @@ func play_attack_animation() -> void:
 
 func _on_animation_finished() -> void:
 	if sprite.animation == "attack_left" or sprite.animation == "attack_right":
+		player.disable_attack_hitbox()
 		player.is_attacking = false
