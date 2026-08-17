@@ -49,6 +49,15 @@ func switch_to_death_ambiance(value: bool) -> void:
 	else:
 		tween.tween_property(map.canva_modulate, "color", map.CANVAS_MODULATE_SHADE["default"], 0.75)
 
+func get_enemies() -> Array[Enemy]:
+	var pnjs: Array[Node] = map.pnjs.get_children()
+	var enemies: Array[Enemy] = []
+	for pnj: Node in pnjs:
+		if pnj is Enemy:
+			enemies.append(pnj)
+	
+	return enemies
+
 # Renvoie la position la plus proche
 func get_closer_position(from: Vector2, positions: Array[Node]) -> Vector2:
 	var choosen_position: Node2D = null

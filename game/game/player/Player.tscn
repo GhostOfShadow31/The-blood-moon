@@ -602,7 +602,9 @@ size = Vector2(10.666667, 21.333334)
 [node name="Player" type="CharacterBody2D" unique_id=83400284]
 z_index = 5
 scale = Vector2(0.75, 0.75)
+collision_layer = 8
 script = ExtResource("1_lqtee")
+has_sword = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1320293525]
 visible = false
@@ -613,7 +615,7 @@ shape = SubResource("RectangleShape2D_1063x")
 texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_jtv3d")
-animation = &"die_left"
+animation = &"idle_right"
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1185582802]
 visible = false
@@ -627,11 +629,16 @@ shape = SubResource("RectangleShape2D_76wbd")
 [node name="HitBox" type="Area2D" parent="." unique_id=568391374]
 visible = false
 position = Vector2(0, -12)
+collision_mask = 4
 
 [node name="Right" type="CollisionShape2D" parent="HitBox" unique_id=2058381248]
 position = Vector2(12, 0)
 shape = SubResource("CapsuleShape2D_sqo6f")
+disabled = true
 
 [node name="Left" type="CollisionShape2D" parent="HitBox" unique_id=1518051105]
 position = Vector2(-14, 0)
 shape = SubResource("CapsuleShape2D_u0rc1")
+disabled = true
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

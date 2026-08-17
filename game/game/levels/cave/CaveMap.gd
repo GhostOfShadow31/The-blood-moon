@@ -3,6 +3,7 @@ extends Node2D
 @onready var recoverypoints: Node2D = $RecoveryPoints
 @onready var spawnpoints: Node2D = $SpawnPoints
 @onready var death_positions: Node2D = $DeathPositions
+@onready var pnjs: Node2D = $Pnjs
 @onready var spike_layer: TileMapLayer = $Map/Frontground_spike
 @onready var canva_modulate: CanvasModulate = $CanvasModulate
 

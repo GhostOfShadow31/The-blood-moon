@@ -29,20 +29,20 @@
 
 ### Combat du joueur
 
-* [ ] Définir le fonctionnement d'une attaque du joueur
-* [ ] Permettre à une attaque d'infliger des dégâts
-* [ ] Gérer la mort d'un ennemi
+* [x] Définir le fonctionnement d'une attaque du joueur
+* [~] Permettre à une attaque d'infliger des dégâts (selon certaines frames de l'attaque)
+* [x] Gérer la mort d'un ennemi
 * [ ] Vérifier les interactions joueur/ennemi
 * [ ] Tester plusieurs ennemis simultanément
 
 ### Ennemi de base
 
-* [ ] Créer un ennemi générique simple
-* [ ] Lui permettre de se déplacer dans sa zone
-* [ ] Détecter le joueur comme intrus
-* [ ] Attaquer le joueur
-* [ ] Recevoir des dégâts
-* [ ] Mourir
+* [x] Créer un ennemi générique simple
+* [x] Lui permettre de se déplacer dans sa zone
+* [x] Détecter le joueur comme intrus
+* [x] Attaquer le joueur
+* [x] Recevoir des dégâts
+* [x] Mourir
 * [ ] Réapparaître après avoir quitté/rechargé la zone si c'est le comportement retenu
 
 ### `Cave`

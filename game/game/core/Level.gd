@@ -33,3 +33,8 @@ func get_death_position(_death_position: Vector2) -> Vector2:
 # Changer la couleur du CanvaModulate pour,l'apparition du pnj "Death"
 func switch_to_death_ambiance(_value: bool) -> void:
 	assert(false, "Must be implemented")
+
+# Récupérer tous les ennemis d'un niveau
+func get_enemies() -> Array[Enemy]:
+	assert(false, "Must be implemented")
+	return []

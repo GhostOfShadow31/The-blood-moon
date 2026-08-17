@@ -6,8 +6,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
-	
-	if not is_dead():
+	if not is_dead() and not is_knocked_back:
 		handle_interaction()
 		handle_attack()
 		
@@ -28,9 +27,6 @@ func _physics_process(delta: float) -> void:
 var facing: int = 1
 
 func handle_movement() -> void:
-	if is_knocked_back:
-		return
-	
 	var direction: float = Input.get_axis("ui_left", "ui_right")
 	
 	velocity.x = direction * move_speed
@@ -48,7 +44,7 @@ func handle_gravity(delta: float) -> void:
 
 const COYOTE_TIME: float = 0.08
 const JUMP_BUFFER_TIME: float = 0.10
-const KNOCKBACK_TIME: float = 0.15
+const KNOCKBACK_TIME: float = 0.25
 const INVULNERABILITY_TIME: float = 0.5
 
 var coyote_timer: float = 0.0
@@ -115,7 +111,14 @@ func handle_interaction() -> void:
 # ATTACK
 # =========================
 
-var has_sword: bool = false
+signal attack_enemy(enemy: Enemy, damage: int)
+
+@onready var hitbox_right: CollisionShape2D = $HitBox/Right
+@onready var hitbox_left: CollisionShape2D = $HitBox/Left
+
+@export var has_sword: bool = false
+@export var damage: int = 1
+@export var knockback_power: Vector2 = Vector2(10, 10)
 var is_attacking: bool = false
 var attack_buffer_locked: bool = false
 var attack_facing: int = 1
@@ -130,10 +133,25 @@ func handle_attack() -> void:
 func try_attack() -> void:
 	if attack_buffer_locked or is_attacking or not has_sword:
 		return
+		
 	is_attacking = true
 	attack_buffer_locked = true
 	attack_facing = facing
+	
+	enable_attack_hitbox()
 	anim_controller.play_attack_animation()
+
+func enable_attack_hitbox() -> void:
+	hitbox_right.disabled = attack_facing != 1
+	hitbox_left.disabled = attack_facing != -1
+
+func disable_attack_hitbox() -> void:
+	hitbox_right.disabled = true
+	hitbox_left.disabled = true
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body is Enemy:
+		attack_enemy.emit(body, damage)
 
 # =========================
 # ANIMATION
@@ -176,12 +194,12 @@ enum State {
 var state: State = State.ALIVE
 var health: int = max_health
 
-func take_damage(damage: int) -> void:
+func take_damage(amount: int) -> void:
 	if !can_take_damage():
 		return
 	
 	invulnerability_timer = INVULNERABILITY_TIME
-	health = max(health - damage, 0) # Bornée par le bas à 0
+	health = max(health - amount, 0) # Bornée par le bas à 0
 	print("PV: ", health)
 	
 	if health <= 0:
@@ -196,6 +214,7 @@ func can_take_damage() -> bool:
 
 func recover(to_position: Vector2) -> void:
 	global_position = to_position
+	velocity = Vector2.ZERO
 
 func set_hp(value: int) -> void:
 	health = value if value < max_health else max_health
