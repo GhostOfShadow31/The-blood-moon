@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://buf0sl1l7hrfo"]
+
+[ext_resource type="Script" uid="uid://qu3p1lahd8fp" path="res://game/entities/destructible_wall/Destructible_wall.gd" id="1_56aoi"]
+[ext_resource type="Texture2D" uid="uid://7b0lv230jqfe" path="res://assets/sprites/characters/pnjs/destructible_wall/destructible_wall.png" id="1_dhtde"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56aoi"]
+size = Vector2(16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is2v7"]
+atlas = ExtResource("1_dhtde")
+region = Rect2(0, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqk8m"]
+atlas = ExtResource("1_dhtde")
+region = Rect2(16, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3g33"]
+atlas = ExtResource("1_dhtde")
+region = Rect2(32, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp034"]
+atlas = ExtResource("1_dhtde")
+region = Rect2(48, 0, 16, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqk8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is2v7")
+}],
+"loop": true,
+"name": &"idle_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqk8m")
+}],
+"loop": true,
+"name": &"idle_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3g33")
+}],
+"loop": true,
+"name": &"idle_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp034")
+}],
+"loop": true,
+"name": &"idle_4",
+"speed": 5.0
+}]
+
+[node name="DestructibleWall" type="CharacterBody2D" unique_id=2037948174]
+collision_layer = 5
+collision_mask = 8
+script = ExtResource("1_56aoi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1441553400]
+visible = false
+shape = SubResource("RectangleShape2D_56aoi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1044833369]
+sprite_frames = SubResource("SpriteFrames_fqk8m")
+animation = &"idle_1"

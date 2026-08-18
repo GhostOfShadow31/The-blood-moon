@@ -107,7 +107,7 @@ func define_direction_chase() -> void:
 
 # --- Combat ---
 
-func take_damage(amount: int) -> void:
+func take_damage(amount: int, _source_position: Vector2) -> void:
 	if invulnerability_timer > 0.0:
 		return
 	

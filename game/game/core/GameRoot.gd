@@ -97,7 +97,7 @@ func handle_enemy_damage(damage: int, from: Vector2) -> void:
 # Gère les dégâts du joueur
 func handle_player_damage(enemy: Enemy, damage: int) -> void:
 	enemy.apply_knockback(player.global_position, player.knockback_power)
-	enemy.take_damage(damage)
+	enemy.take_damage(damage, player.global_position)
 
 # Gère la mort du joueur
 func handle_death() -> void:

@@ -32,8 +32,8 @@
 * [x] Définir le fonctionnement d'une attaque du joueur
 * [~] Permettre à une attaque d'infliger des dégâts (selon certaines frames de l'attaque)
 * [x] Gérer la mort d'un ennemi
-* [ ] Vérifier les interactions joueur/ennemi
-* [ ] Tester plusieurs ennemis simultanément
+* [x] Vérifier les interactions joueur/ennemi
+* [x] Tester plusieurs ennemis simultanément
 
 ### Ennemi de base
 
@@ -47,10 +47,10 @@
 
 ### `Cave`
 
-* [ ] Placer les premiers ennemis
-* [ ] Définir leurs emplacements
-* [ ] Ajouter les ennemis servant de barrières de progression
-* [ ] Tester les différents chemins possibles
+* [x] Placer les premiers ennemis
+* [x] Définir leurs emplacements
+* [x] Ajouter les ennemis servant de barrières de progression
+* [x] Tester les différents chemins possibles
 
 **Jalon :**
 
