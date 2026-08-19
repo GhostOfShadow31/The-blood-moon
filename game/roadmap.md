@@ -64,23 +64,23 @@
 
 ### Interaction
 
-* [ ] Définir le fonctionnement général de l'interaction
-* [ ] Permettre au joueur de récupérer un objet
-* [ ] Permettre au joueur d'interagir avec un PNJ
-* [ ] Vérifier que le système peut accueillir d'autres interactions
+* [x] Définir le fonctionnement général de l'interaction
+* [x] Permettre au joueur de récupérer un objet
+* [x] Permettre au joueur d'interagir avec un PNJ
+* [x] Vérifier que le système peut accueillir d'autres interactions
 
 ### Épée
 
-* [ ] Transformer la récupération de l'épée en interaction fonctionnelle
-* [ ] Ajouter l'épée à la progression du joueur
-* [ ] Permettre son utilisation
-* [ ] Utiliser l'épée pour ouvrir le premier passage
+* [x] Transformer la récupération de l'épée en interaction fonctionnelle
+* [x] Ajouter l'épée à la progression du joueur
+* [x] Permettre son utilisation
+* [x] Utiliser l'épée pour ouvrir le premier passage
 
 ### Première progression
 
-* [ ] Définir le parcours principal de `Cave`
-* [ ] Identifier les zones optionnelles
-* [ ] Identifier les zones nécessitant une capacité future
+* [x] Définir le parcours principal de `Cave`
+* [x] Identifier les zones optionnelles
+* [x] Identifier les zones nécessitant une capacité future
 * [ ] Vérifier que le joueur comprend suffisamment où progresser
 
 **Jalon :**
