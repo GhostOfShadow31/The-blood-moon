@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c7wiudvpwoy1" path="res://game/systems/CameraController.gd" id="5_ial4j"]
 [ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://game/ui/fadeOverlay.tscn" id="6_7o2vy"]
 [ext_resource type="PackedScene" uid="uid://dueryo5pmmw13" path="res://game/ui/DialogueUI.tscn" id="7_iaa7i"]
+[ext_resource type="PackedScene" uid="uid://c8v1xdrloivql" path="res://game/ui/UI.tscn" id="8_cf6bx"]
 [ext_resource type="PackedScene" uid="uid://cfoqxjumxtfx4" path="res://game/ui/PV.tscn" id="8_kdgru"]
 
 [node name="GameRoot" type="Node2D" unique_id=2089132566]
@@ -29,4 +30,4 @@ visible = false
 
 [node name="Pv" parent="UIRoot" unique_id=139383208 instance=ExtResource("8_kdgru")]
 
-[node name="UI" type="Node2D" parent="." unique_id=904772868]
+[node name="Ui" parent="." unique_id=670408781 instance=ExtResource("8_cf6bx")]

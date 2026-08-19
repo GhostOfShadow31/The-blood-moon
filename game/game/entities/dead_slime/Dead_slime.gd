@@ -19,6 +19,8 @@ func interact() -> void:
 	show_indicator(false)
 	player.has_sword = true
 	shine_effect.energy = 0.5
+	
+	GameData.set_data("sword_collected", true)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is not Player or has_interacted:
@@ -31,7 +33,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is not Player:
 		return
 	if player != null and player.interactable == self:
-		player.interactable = self
+		player.interactable = null
 	player = null
 	show_indicator(false)
 

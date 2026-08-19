@@ -45,6 +45,8 @@ func is_dead() -> bool:
 func die():
 	visible = false
 	set_collision_layer_value(1, false)
+	
+	GameData.set_data(name + "_destroyed", true)
 
 func is_hit_from_correct_position(source_position: Vector2) -> bool:
 	var offset: Vector2 = source_position - global_position

@@ -71,7 +71,7 @@ func update_timers(delta: float) -> void:
 # JUMP
 # =========================
 
-@export var jump_height: float = 50.0
+@export var jump_height: float = 64.0
 @export var time_to_apex: float = 0.40
 @export var jump_multiplier: float = 0.25
 var gravity:

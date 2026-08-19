@@ -11,6 +11,7 @@ var current_level: Level
 @onready var player: Node2D = $Player
 @onready var death: Node2D = $Death
 @onready var camera: Camera2D = $Camera2D
+@onready var UI: Control = $Ui
 
 func _ready() -> void:
 	start_game()
@@ -25,6 +26,13 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if current_level.is_spike(player.get_hurtbox().global_position):
 		handle_environment_damage()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("debug_input"):
+		# Mettre ici ce que l'on veut pour debuguer (la touche est "!")
+		GameData.show_all()
+	if event.is_action_pressed("ui_inventory"):
+		UI.toggle_inventory()
 
 # Obtenir une scène à partir de son identifiant
 func get_level_scene(level_id: String) -> PackedScene:

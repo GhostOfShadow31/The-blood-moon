@@ -604,7 +604,6 @@ z_index = 5
 scale = Vector2(0.75, 0.75)
 collision_layer = 8
 script = ExtResource("1_lqtee")
-has_sword = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1320293525]
 visible = false

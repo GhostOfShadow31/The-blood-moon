@@ -95,7 +95,7 @@
 
 ### Collectibles
 
-* [ ] Définir le fonctionnement générique d'un collectible
+* [x] Définir le fonctionnement générique d'un collectible
 * [ ] Faire persister un collectible récupéré
 * [ ] Ajouter les premiers collectibles de `Cave`
 * [ ] Empêcher leur récupération multiple

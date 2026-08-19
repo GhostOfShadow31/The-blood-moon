@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c8v1xdrloivql"]
+
+[ext_resource type="Script" uid="uid://rg8bmbw2sx6n" path="res://game/ui/UI.gd" id="1_74n88"]
+
+[node name="Ui" type="Control" unique_id=670408781]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_74n88")
+
+[node name="HUD" type="Control" parent="." unique_id=1857572362]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inventory" type="Control" parent="." unique_id=626408831]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialog" type="Control" parent="." unique_id=134859448]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Screens" type="Control" parent="." unique_id=969419131]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
