@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://cw1aiss6j7rwr" path="res://game/entities/death/Death.tscn" id="3_dwnv2"]
 [ext_resource type="PackedScene" uid="uid://cgy3c0dem2dky" path="res://game/player/Player.tscn" id="4_vxf6d"]
 [ext_resource type="Script" uid="uid://c7wiudvpwoy1" path="res://game/systems/CameraController.gd" id="5_ial4j"]
-[ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://game/ui/fadeOverlay.tscn" id="6_7o2vy"]
-[ext_resource type="PackedScene" uid="uid://dueryo5pmmw13" path="res://game/ui/DialogueUI.tscn" id="7_iaa7i"]
+[ext_resource type="PackedScene" uid="uid://vnqx3ofkuigu" path="res://game/ui/restes/fadeOverlay.tscn" id="6_7o2vy"]
+[ext_resource type="PackedScene" uid="uid://dueryo5pmmw13" path="res://game/ui/restes/DialogueUI.tscn" id="7_iaa7i"]
 [ext_resource type="PackedScene" uid="uid://c8v1xdrloivql" path="res://game/ui/UI.tscn" id="8_cf6bx"]
-[ext_resource type="PackedScene" uid="uid://cfoqxjumxtfx4" path="res://game/ui/PV.tscn" id="8_kdgru"]
+[ext_resource type="PackedScene" uid="uid://cfoqxjumxtfx4" path="res://game/ui/restes/PV.tscn" id="8_kdgru"]
 
 [node name="GameRoot" type="Node2D" unique_id=2089132566]
 script = ExtResource("1_cf6bx")

@@ -5,6 +5,7 @@
 - Texture de base de la grotte: https://odiurd.itch.io/tileset -- Odiurd
 - Texture des piques: https://omniclause.itch.io/spikes --Omniclause
 - Texture des torches: https://pixleroy.itch.io/pixel-torches -- PixLeroy
+- Texture du Journal: https://crusenho.itch.io/complete-ui-book-styles-pack -- Crusenho
 
 
 - UI du fond pour les dialogues: Mixe de:

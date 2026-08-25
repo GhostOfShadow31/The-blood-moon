@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemEffect" format=3 uid="uid://bgha1hk1dl06g"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_ngoee"]
+
+[resource]
+script = ExtResource("1_ngoee")
+amount = 1
+metadata/_custom_type_script = "uid://5pjnru0ljfks"

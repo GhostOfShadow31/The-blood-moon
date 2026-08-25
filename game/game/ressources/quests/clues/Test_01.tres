@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="QuestClue" format=3 uid="uid://ncajpq0l3wpv"]
+
+[ext_resource type="Script" uid="uid://ddgfrccmpp5rk" path="res://game/ressources/QuestClue.gd" id="1_hqcgk"]
+
+[resource]
+script = ExtResource("1_hqcgk")
+text = "Test 01"
+metadata/_custom_type_script = "uid://ddgfrccmpp5rk"

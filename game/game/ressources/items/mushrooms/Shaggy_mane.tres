@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://csur532sio8s"]
+
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_6t0uf"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_cn3ii"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_davev"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn3ii"]
+atlas = ExtResource("1_6t0uf")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syn6c"]
+atlas = ExtResource("1_6t0uf")
+region = Rect2(112, 64, 16, 16)
+
+[resource]
+script = ExtResource("1_davev")
+id = "shaggy_mane"
+item_name = "Shaggy Mane"
+icon = SubResource("AtlasTexture_cn3ii")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_syn6c")
+journal_slot = 25
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bmjyavqug4xwc"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_kk6xr"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_krnvg"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_ssv60"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk6xr"]
+atlas = ExtResource("1_krnvg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujmlw"]
+atlas = ExtResource("1_krnvg")
+region = Rect2(112, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_ssv60")
+id = "saffron_milkcap"
+item_name = "Saffron MilkCap"
+icon = SubResource("AtlasTexture_kk6xr")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_ujmlw")
+journal_slot = 24
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

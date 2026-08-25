@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://p73l2wjwuuuk"]
+
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_53b26"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_hskqc"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_hukla"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hskqc"]
+atlas = ExtResource("1_hukla")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51h3f"]
+atlas = ExtResource("1_hukla")
+region = Rect2(128, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_53b26")
+id = "shiitake"
+item_name = "Shiitake"
+icon = SubResource("AtlasTexture_hskqc")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_51h3f")
+journal_slot = 26
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

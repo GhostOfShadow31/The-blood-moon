@@ -11,6 +11,10 @@ func set_data(key: String, value: Variant) -> void:
 func get_data(key: String, default_value: Variant = null) -> Variant:
 	return data.get(key, default_value)
 
+# Savoir si une donnée est présente
+func has_data(key: String) -> bool:
+	return data.has(key)
+
 func show_all() -> void:
 	print("--- GameData ---")
 	print(data)

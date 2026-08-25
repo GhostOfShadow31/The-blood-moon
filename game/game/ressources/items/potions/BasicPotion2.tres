@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://daav6jfnu0d3x"]
+
+[ext_resource type="Texture2D" uid="uid://c5ukq61ktnqel" path="res://assets/sprites/items/potions/90_free_potions_pack/_png/red_round.png" id="1_eybn3"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_n5rso"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_qfubw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eybn3"]
+atlas = ExtResource("1_eybn3")
+
+[resource]
+script = ExtResource("1_n5rso")
+id = "basic_potion_2"
+item_name = "Potion de soin efficace"
+description = "Tu peux neanmoins aller voir
+./game/ui/UI.gd:38"
+lore = "Tu pourras ajouter ce que tu veux au journal en respectant ce qui est etablit"
+icon = SubResource("AtlasTexture_eybn3")
+category = "consumables"
+stakable = true
+max_stack = 10
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

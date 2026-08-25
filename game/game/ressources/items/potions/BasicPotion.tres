@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cf6xu7mr31flq"]
+
+[ext_resource type="Texture2D" uid="uid://vkor18uoe8r2" path="res://assets/sprites/items/potions/90_free_potions_pack/_png/red_vial.png" id="1_j7keb"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_okg7m"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_vn8oe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x82e7"]
+atlas = ExtResource("1_j7keb")
+
+[resource]
+script = ExtResource("1_vn8oe")
+id = "basic_potion"
+item_name = "Potion de soin"
+description = "Salut. Si tu vois ca, les potions ne font rien."
+lore = "Tous ce qui est enregistre dans ce journal est fictif."
+icon = SubResource("AtlasTexture_x82e7")
+category = "consumables"
+stakable = true
+max_stack = 10
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

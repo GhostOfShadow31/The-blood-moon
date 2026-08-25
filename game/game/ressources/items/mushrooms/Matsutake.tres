@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://clcy7gm5jw3la"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_e8ujb"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_l56oa"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_lraiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8ujb"]
+atlas = ExtResource("1_l56oa")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmrkr"]
+atlas = ExtResource("1_l56oa")
+region = Rect2(144, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_lraiu")
+id = "matsutake"
+item_name = "Matsutake"
+icon = SubResource("AtlasTexture_e8ujb")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_mmrkr")
+journal_slot = 19
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

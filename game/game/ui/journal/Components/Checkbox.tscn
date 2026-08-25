@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bilvxuwunk3l2"]
+
+[ext_resource type="Script" uid="uid://00gwl51p1tu" path="res://game/ui/journal/Components/Checkbox.gd" id="1_6qhk7"]
+[ext_resource type="Texture2D" uid="uid://nl28antxi6k0" path="res://assets/ui/journal/Checkbox_UI.png" id="1_rxdu4"]
+[ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="2_6qhk7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqgq"]
+atlas = ExtResource("1_rxdu4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ec5w"]
+atlas = ExtResource("1_rxdu4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l73gw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqgq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ec5w")
+}],
+"loop": true,
+"name": &"done",
+"speed": 5.0
+}]
+
+[node name="Checkbox" type="Control" unique_id=2117606243]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6qhk7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1561730909]
+sprite_frames = SubResource("SpriteFrames_l73gw")
+
+[node name="Label" type="Label" parent="." unique_id=513670858]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -8.0
+offset_right = 81.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6qhk7")
+theme_override_font_sizes/font_size = 10
+text = "Lorem ipsum"
+vertical_alignment = 1

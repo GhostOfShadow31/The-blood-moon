@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dkq8mg2ceyhgi"]
+
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_cxb5k"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_ef11x"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_hxy86"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef11x"]
+atlas = ExtResource("1_cxb5k")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myu6w"]
+atlas = ExtResource("1_cxb5k")
+region = Rect2(144, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_hxy86")
+id = "truffle"
+item_name = "Truffle"
+icon = SubResource("AtlasTexture_ef11x")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_myu6w")
+journal_slot = 30
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

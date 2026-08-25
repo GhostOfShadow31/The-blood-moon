@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dkb31dhikn1h7"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_4h64y"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_6p8w2"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_57532"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h64y"]
+atlas = ExtResource("1_57532")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23p4d"]
+atlas = ExtResource("1_57532")
+region = Rect2(176, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_6p8w2")
+id = "indigo_milkcap"
+item_name = "Indigo Milkcap"
+icon = SubResource("AtlasTexture_4h64y")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_23p4d")
+journal_slot = 15
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

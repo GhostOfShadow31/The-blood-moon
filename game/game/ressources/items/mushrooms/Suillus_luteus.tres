@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c726xqn2mjrhg"]
+
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_iufqn"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_mjyk6"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_vr1kj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1kj"]
+atlas = ExtResource("1_iufqn")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbnep"]
+atlas = ExtResource("1_iufqn")
+region = Rect2(160, 48, 16, 16)
+
+[resource]
+script = ExtResource("1_mjyk6")
+id = "suillus_luteus"
+item_name = "Suillus Luteus"
+icon = SubResource("AtlasTexture_vr1kj")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_bbnep")
+journal_slot = 29
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

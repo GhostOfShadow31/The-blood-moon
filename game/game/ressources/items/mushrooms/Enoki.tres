@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://q8s6aivbst2a"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_kgv5m"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_ww0kl"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_y8on6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgv5m"]
+atlas = ExtResource("1_y8on6")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2exl"]
+atlas = ExtResource("1_y8on6")
+region = Rect2(112, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_ww0kl")
+id = "enoki"
+item_name = "Enoki"
+icon = SubResource("AtlasTexture_kgv5m")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_p2exl")
+journal_slot = 9
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

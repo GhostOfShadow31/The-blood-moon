@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://da7ubqjer8yro"]
+
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_cvt4h"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_sxpmm"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_tk0fv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxpmm"]
+atlas = ExtResource("1_tk0fv")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjw4p"]
+atlas = ExtResource("1_tk0fv")
+region = Rect2(128, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_cvt4h")
+id = "ceasar_s_mushroom"
+item_name = "Ceasar's Mushroom"
+icon = SubResource("AtlasTexture_sxpmm")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_hjw4p")
+journal_slot = 4
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

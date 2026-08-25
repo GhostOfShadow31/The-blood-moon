@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dueryo5pmmw13"]
 
 [ext_resource type="Texture2D" uid="uid://bnryw3bdqvvtc" path="res://assets/ui/dialogues/fond_frame.png" id="1_6snq5"]
-[ext_resource type="Script" uid="uid://p4fbbo7hk8k2" path="res://game/ui/DialogueUI.gd" id="1_wjgy6"]
+[ext_resource type="Script" uid="uid://p4fbbo7hk8k2" path="res://game/ui/restes/DialogueUI.gd" id="1_wjgy6"]
 
 [node name="DialogueUI" type="Control"]
 layout_mode = 3

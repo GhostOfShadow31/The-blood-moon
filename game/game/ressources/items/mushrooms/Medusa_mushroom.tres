@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cewnxkxy5itam"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_refjs"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_xdwpe"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_xkrcl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_refjs"]
+atlas = ExtResource("1_xkrcl")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkerb"]
+atlas = ExtResource("1_xkrcl")
+region = Rect2(176, 48, 16, 16)
+
+[resource]
+script = ExtResource("1_xdwpe")
+id = "medusa_mushroom"
+item_name = "Medusa Mushroom"
+icon = SubResource("AtlasTexture_refjs")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_fkerb")
+journal_slot = 20
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

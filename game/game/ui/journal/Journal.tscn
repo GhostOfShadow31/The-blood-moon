@@ -1,0 +1,486 @@
+[gd_scene format=3 uid="uid://bnxtq54oatnke"]
+
+[ext_resource type="Script" uid="uid://bs4fokxgcbttp" path="res://game/ui/journal/Journal.gd" id="1_o8uuw"]
+[ext_resource type="Texture2D" uid="uid://qm0xrjmk0mor" path="res://assets/ui/journal/Background.png" id="2_h36kp"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="2_rk4o1"]
+[ext_resource type="Resource" uid="uid://dhmjif3cdquv4" path="res://game/ressources/items/mushrooms/Aspen.tres" id="3_e68su"]
+[ext_resource type="Texture2D" uid="uid://c0ecvug0xpix6" path="res://assets/ui/journal/Banner.png" id="3_o8uuw"]
+[ext_resource type="Resource" uid="uid://k8tiij1nwlhe" path="res://game/ressources/items/mushrooms/Bare_toothed_russula.tres" id="4_cehev"]
+[ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="4_h36kp"]
+[ext_resource type="Script" uid="uid://duwl1xikpwrp1" path="res://game/ui/journal/Navigation.gd" id="5_7srm7"]
+[ext_resource type="Texture2D" uid="uid://che1md5cu6kwt" path="res://assets/ui/journal/Button.png" id="5_h36kp"]
+[ext_resource type="Script" uid="uid://id43w1a67dxm" path="res://game/ui/journal/Consumables.gd" id="6_c8uu1"]
+[ext_resource type="Script" uid="uid://w5w3dy424xdy" path="res://game/ui/journal/Collectibles.gd" id="7_ewwvg"]
+[ext_resource type="PackedScene" uid="uid://dgonsxw3u6b0i" path="res://game/ui/journal/Components/Onglet.tscn" id="8_5wmvj"]
+[ext_resource type="Resource" uid="uid://1dgucdsc1fu4" path="res://game/ressources/items/mushrooms/Black_trumpet.tres" id="8_66bl6"]
+[ext_resource type="Script" uid="uid://cnh7jeoybluip" path="res://game/ui/journal/Quests.gd" id="8_ls26t"]
+[ext_resource type="PackedScene" uid="uid://hy2wt8veu21h" path="res://game/ui/journal/Components/Slot.tscn" id="8_psd34"]
+[ext_resource type="Resource" uid="uid://da7ubqjer8yro" path="res://game/ressources/items/mushrooms/Ceasar_s_mushroom.tres" id="9_2afod"]
+[ext_resource type="Resource" uid="uid://bkmn2ehnv8f5p" path="res://game/ressources/items/mushrooms/Champignon.tres" id="10_ry23v"]
+[ext_resource type="Resource" uid="uid://bs02xnb5l33mu" path="res://game/ressources/items/mushrooms/Chanterelle.tres" id="11_dbd27"]
+[ext_resource type="Resource" uid="uid://hnxsu8ugn8sj" path="res://game/ressources/items/mushrooms/Chicken_of_the_wood.tres" id="12_riyma"]
+[ext_resource type="Resource" uid="uid://c2ith7gknk41q" path="res://game/ressources/items/mushrooms/Common_funnel.tres" id="13_3hvu8"]
+[ext_resource type="PackedScene" uid="uid://bcgj1xf7vvsnb" path="res://game/ui/journal/Components/ProgressBar.tscn" id="13_5wmvj"]
+[ext_resource type="PackedScene" uid="uid://bqcvlw6jvjm7q" path="res://game/ui/journal/Components/Quest.tscn" id="14_cehev"]
+[ext_resource type="Resource" uid="uid://q8s6aivbst2a" path="res://game/ressources/items/mushrooms/Enoki.tres" id="14_jrnyk"]
+[ext_resource type="Resource" uid="uid://c3mjrrg17mcn7" path="res://game/ressources/items/mushrooms/Golden_brittlegill.tres" id="15_ysl24"]
+[ext_resource type="Resource" uid="uid://dpnr531x6fteh" path="res://game/ressources/items/mushrooms/Greasers.tres" id="16_kfu0w"]
+[ext_resource type="Resource" uid="uid://bo50gdbhw0u86" path="res://game/ressources/items/mushrooms/Grey_knight.tres" id="17_uuuq4"]
+[ext_resource type="Resource" uid="uid://suvf63cqei1y" path="res://game/ressources/items/mushrooms/Honey_agaric.tres" id="18_5s2n2"]
+[ext_resource type="Resource" uid="uid://dwn2v8osgxxvw" path="res://game/ressources/items/mushrooms/Honey_fungus.tres" id="19_vpvyc"]
+[ext_resource type="Resource" uid="uid://dkb31dhikn1h7" path="res://game/ressources/items/mushrooms/Indigo_milkcap.tres" id="20_c0s0e"]
+[ext_resource type="Resource" uid="uid://1biui7csl0wa" path="res://game/ressources/items/mushrooms/Inky_cap.tres" id="21_d4xwq"]
+[ext_resource type="Resource" uid="uid://c0c1acd0of0j3" path="res://game/ressources/items/mushrooms/Lobster_mushroom.tres" id="22_fsqeo"]
+[ext_resource type="Resource" uid="uid://bb5io2ludqqqg" path="res://game/ressources/items/mushrooms/Maitake.tres" id="23_56ubi"]
+[ext_resource type="Resource" uid="uid://clcy7gm5jw3la" path="res://game/ressources/items/mushrooms/Matsutake.tres" id="24_jdt8q"]
+[ext_resource type="Resource" uid="uid://cewnxkxy5itam" path="res://game/ressources/items/mushrooms/Medusa_mushroom.tres" id="25_m5nmb"]
+[ext_resource type="Resource" uid="uid://dlrxtvefgdw7d" path="res://game/ressources/items/mushrooms/Morchella.tres" id="26_eya73"]
+[ext_resource type="Resource" uid="uid://uqouop0jp161" path="res://game/ressources/items/mushrooms/Parsaol_mushroom.tres" id="27_fdrap"]
+[ext_resource type="Resource" uid="uid://cbleptm2bunv3" path="res://game/ressources/items/mushrooms/Penny_bun.tres" id="28_gu0fn"]
+[ext_resource type="Resource" uid="uid://bmjyavqug4xwc" path="res://game/ressources/items/mushrooms/Saffron_milkcap.tres" id="29_6fawd"]
+[ext_resource type="Resource" uid="uid://csur532sio8s" path="res://game/ressources/items/mushrooms/Shaggy_mane.tres" id="30_5l2jq"]
+[ext_resource type="Resource" uid="uid://p73l2wjwuuuk" path="res://game/ressources/items/mushrooms/Shiitake.tres" id="31_tfvej"]
+[ext_resource type="Resource" uid="uid://xs35lgl2f14s" path="res://game/ressources/items/mushrooms/Shimeji.tres" id="32_1srqn"]
+[ext_resource type="Resource" uid="uid://deeoi0ijwis86" path="res://game/ressources/items/mushrooms/Straw_mushroom.tres" id="33_22t6e"]
+[ext_resource type="Resource" uid="uid://c726xqn2mjrhg" path="res://game/ressources/items/mushrooms/Suillus_luteus.tres" id="34_6voy1"]
+[ext_resource type="Resource" uid="uid://dkq8mg2ceyhgi" path="res://game/ressources/items/mushrooms/Truffle.tres" id="35_7we0g"]
+[ext_resource type="Script" uid="uid://wa1jpxiou1r1" path="res://game/ui/journal/Bestiary.gd" id="37_2afod"]
+[ext_resource type="Script" uid="uid://bocllrqro5nlh" path="res://game/ressources/Quest.gd" id="37_3hvu8"]
+[ext_resource type="Resource" uid="uid://n80m2fuifg44" path="res://game/ressources/quests/Old_mill.tres" id="38_jrnyk"]
+[ext_resource type="Resource" uid="uid://bmxt5gdwdnxjn" path="res://game/ressources/items/ennemies/Cave_slime.tres" id="38_ry23v"]
+[ext_resource type="Resource" uid="uid://d1x0lwgp3kv7c" path="res://game/ressources/quests/test.tres" id="39_ysl24"]
+[ext_resource type="Script" uid="uid://cg6wqhpfvbxsh" path="res://game/ui/journal/Abilities.gd" id="42_ysl24"]
+[ext_resource type="Script" uid="uid://c23yss2k8x8cc" path="res://game/ressources/Abiltie.gd" id="43_5s2n2"]
+[ext_resource type="Resource" uid="uid://td64pok40m6n" path="res://game/ressources/abilities/Dash.tres" id="44_vpvyc"]
+[ext_resource type="Resource" uid="uid://j13g07lys2a" path="res://game/ressources/abilities/Wall_jump.tres" id="45_c0s0e"]
+[ext_resource type="PackedScene" uid="uid://brruneflutsh6" path="res://game/ui/journal/Components/Abilitie.tscn" id="50_kfu0w"]
+[ext_resource type="PackedScene" uid="uid://dodbietfw6trw" path="res://game/ui/journal/Components/Details.tscn" id="54_kfu0w"]
+[ext_resource type="PackedScene" uid="uid://c3l535qnwuixd" path="res://game/ui/journal/Components/Validator.tscn" id="56_uuuq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni7oy"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wmvj"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewwvg"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q3hv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni7oy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wmvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewwvg")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt71b"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv0my"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0gfb"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1w5ln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt71b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv0my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0gfb")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f75no"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0t1q"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pquae"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38s26"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f75no")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0t1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pquae")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cn8k"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no81m"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh4mm"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qrd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cn8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no81m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh4mm")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q3hv"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4add7"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o1o0"]
+atlas = ExtResource("5_h36kp")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kcptg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q3hv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4add7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o1o0")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.5
+}]
+
+[node name="Journal" type="Control" unique_id=127046679]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o8uuw")
+
+[node name="Navigation" type="Node" parent="." unique_id=1214562999]
+script = ExtResource("5_7srm7")
+
+[node name="Consumables" type="Node" parent="." unique_id=2040004882]
+script = ExtResource("6_c8uu1")
+
+[node name="Collectibles" type="Node" parent="." unique_id=1585962313]
+script = ExtResource("7_ewwvg")
+collectibles = Array[ExtResource("2_rk4o1")]([ExtResource("3_e68su"), ExtResource("4_cehev"), ExtResource("8_66bl6"), ExtResource("9_2afod"), ExtResource("10_ry23v"), ExtResource("11_dbd27"), ExtResource("12_riyma"), ExtResource("13_3hvu8"), ExtResource("14_jrnyk"), ExtResource("15_ysl24"), ExtResource("16_kfu0w"), ExtResource("17_uuuq4"), ExtResource("18_5s2n2"), ExtResource("19_vpvyc"), ExtResource("20_c0s0e"), ExtResource("21_d4xwq"), ExtResource("22_fsqeo"), ExtResource("23_56ubi"), ExtResource("24_jdt8q"), ExtResource("25_m5nmb"), ExtResource("26_eya73"), ExtResource("27_fdrap"), ExtResource("28_gu0fn"), ExtResource("29_6fawd"), ExtResource("30_5l2jq"), ExtResource("31_tfvej"), ExtResource("32_1srqn"), ExtResource("33_22t6e"), ExtResource("34_6voy1"), ExtResource("35_7we0g")])
+
+[node name="Quests" type="Node" parent="." unique_id=571119237]
+script = ExtResource("8_ls26t")
+quests = Array[ExtResource("37_3hvu8")]([ExtResource("38_jrnyk"), ExtResource("39_ysl24")])
+
+[node name="Bestiary" type="Node" parent="." unique_id=517931209]
+script = ExtResource("37_2afod")
+enemies = Array[ExtResource("2_rk4o1")]([ExtResource("38_ry23v")])
+
+[node name="Abilities" type="Node" parent="." unique_id=2021958304]
+script = ExtResource("42_ysl24")
+abilities = Array[ExtResource("43_5s2n2")]([ExtResource("44_vpvyc"), ExtResource("45_c0s0e")])
+
+[node name="Background" type="TextureRect" parent="." unique_id=1815741233]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_h36kp")
+
+[node name="Banner" type="TextureRect" parent="." unique_id=1643254688]
+layout_mode = 0
+offset_top = -45.0
+offset_right = 224.0
+offset_bottom = -5.0
+texture = ExtResource("3_o8uuw")
+
+[node name="JournalLabel" type="Label" parent="." unique_id=541084577]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -39.0
+offset_right = 235.0
+offset_bottom = -9.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h36kp")
+theme_override_font_sizes/font_size = 35
+text = "Journal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tabs" type="HBoxContainer" parent="." unique_id=655705580]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 18.0
+offset_right = 115.0
+offset_bottom = 18.0
+theme_override_constants/separation = 19
+alignment = 1
+
+[node name="Consumables" parent="Tabs" unique_id=1704283975 instance=ExtResource("8_5wmvj")]
+layout_mode = 2
+sf = SubResource("SpriteFrames_8q3hv")
+
+[node name="Collectibles" parent="Tabs" unique_id=2000174402 instance=ExtResource("8_5wmvj")]
+layout_mode = 2
+sf = SubResource("SpriteFrames_1w5ln")
+
+[node name="Quests" parent="Tabs" unique_id=1068564133 instance=ExtResource("8_5wmvj")]
+layout_mode = 2
+sf = SubResource("SpriteFrames_38s26")
+
+[node name="Bestiary" parent="Tabs" unique_id=1775435994 instance=ExtResource("8_5wmvj")]
+layout_mode = 2
+sf = SubResource("SpriteFrames_8qrd2")
+
+[node name="Abilities" parent="Tabs" unique_id=231350800 instance=ExtResource("8_5wmvj")]
+layout_mode = 2
+sf = SubResource("SpriteFrames_kcptg")
+
+[node name="Content" type="Control" parent="." unique_id=480153873]
+anchors_preset = 0
+
+[node name="Items" type="GridContainer" parent="Content" unique_id=1608575523]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 27.0
+offset_right = 116.0
+offset_bottom = 124.0
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+columns = 3
+
+[node name="Slot_01" parent="Content/Items" unique_id=427298482 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_02" parent="Content/Items" unique_id=2036587917 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_03" parent="Content/Items" unique_id=278792060 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_04" parent="Content/Items" unique_id=1101948085 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_05" parent="Content/Items" unique_id=540770141 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_06" parent="Content/Items" unique_id=257419353 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_07" parent="Content/Items" unique_id=342449874 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_08" parent="Content/Items" unique_id=2082338609 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_09" parent="Content/Items" unique_id=847264678 instance=ExtResource("8_psd34")]
+layout_mode = 2
+
+[node name="Slot_10" parent="Content/Items" unique_id=110560418 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_11" parent="Content/Items" unique_id=1112708360 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_12" parent="Content/Items" unique_id=1492242078 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_13" parent="Content/Items" unique_id=1844010616 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_14" parent="Content/Items" unique_id=385448107 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_15" parent="Content/Items" unique_id=765471800 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_16" parent="Content/Items" unique_id=1306267928 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_17" parent="Content/Items" unique_id=962399413 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_18" parent="Content/Items" unique_id=1065587821 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_19" parent="Content/Items" unique_id=2123589382 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_20" parent="Content/Items" unique_id=2117842814 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_21" parent="Content/Items" unique_id=1379704656 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_22" parent="Content/Items" unique_id=703807406 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_23" parent="Content/Items" unique_id=2027211825 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_24" parent="Content/Items" unique_id=1198550772 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_25" parent="Content/Items" unique_id=1181420805 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_26" parent="Content/Items" unique_id=1901508415 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_27" parent="Content/Items" unique_id=1206331185 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_28" parent="Content/Items" unique_id=715591700 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_29" parent="Content/Items" unique_id=776629495 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Slot_30" parent="Content/Items" unique_id=200593753 instance=ExtResource("8_psd34")]
+visible = false
+layout_mode = 2
+
+[node name="Quests" type="VBoxContainer" parent="Content" unique_id=748437339]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 28.0
+offset_right = 116.0
+offset_bottom = 122.0
+theme_override_constants/separation = 16
+
+[node name="Quest_01" parent="Content/Quests" unique_id=2113328894 instance=ExtResource("14_cehev")]
+layout_mode = 2
+
+[node name="Quest_02" parent="Content/Quests" unique_id=831586120 instance=ExtResource("14_cehev")]
+layout_mode = 2
+
+[node name="Abilities" type="VBoxContainer" parent="Content" unique_id=906528949]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 28.0
+offset_right = 116.0
+offset_bottom = 122.0
+theme_override_constants/separation = 16
+
+[node name="Abilitie_01" parent="Content/Abilities" unique_id=245148675 instance=ExtResource("50_kfu0w")]
+layout_mode = 2
+
+[node name="Abilitie_02" parent="Content/Abilities" unique_id=2072799299 instance=ExtResource("50_kfu0w")]
+layout_mode = 2
+
+[node name="Details" parent="Content" unique_id=1154837481 instance=ExtResource("54_kfu0w")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 7.0
+offset_right = 232.0
+offset_bottom = 134.0
+
+[node name="ProgressBar" parent="." unique_id=1525657370 instance=ExtResource("13_5wmvj")]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 75.0
+offset_right = 15.0
+offset_bottom = 75.0
+rotation = 1.5707964
+
+[node name="Validator" parent="." unique_id=441444205 instance=ExtResource("56_uuuq4")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 73.0
+offset_right = 120.0
+offset_bottom = 73.0

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://hy2wt8veu21h"]
+
+[ext_resource type="Texture2D" uid="uid://2t0fe7ibsvof" path="res://assets/ui/journal/Slot.png" id="1_hmtq8"]
+[ext_resource type="Script" uid="uid://blqbd4sq70m3f" path="res://game/ui/journal/Components/Slot.gd" id="2_lcw5w"]
+[ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="2_x4tin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4tin"]
+atlas = ExtResource("1_hmtq8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcw5w"]
+atlas = ExtResource("1_hmtq8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukky5"]
+atlas = ExtResource("1_hmtq8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ls2j"]
+atlas = ExtResource("1_hmtq8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a036g"]
+atlas = ExtResource("1_hmtq8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdio3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4tin")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcw5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukky5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ls2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a036g")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 5.0
+}]
+
+[node name="Slot" type="Control" unique_id=1101948085]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("2_lcw5w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=358292044]
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_wdio3")
+
+[node name="ItemIcon" type="Sprite2D" parent="AnimatedSprite2D" unique_id=673470059]
+
+[node name="Quantity" type="Label" parent="AnimatedSprite2D" unique_id=1228811782]
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 11.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0.96, 0.96, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_x4tin")
+theme_override_font_sizes/font_size = 7
+horizontal_alignment = 2

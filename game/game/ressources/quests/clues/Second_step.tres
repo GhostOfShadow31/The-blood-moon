@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="QuestClue" format=3 uid="uid://8s1dqjjlh1s6"]
+
+[ext_resource type="Script" uid="uid://ddgfrccmpp5rk" path="res://game/ressources/QuestClue.gd" id="1_q4tdp"]
+
+[resource]
+script = ExtResource("1_q4tdp")
+text = "Deuxieme etape"
+metadata/_custom_type_script = "uid://ddgfrccmpp5rk"

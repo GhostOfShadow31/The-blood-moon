@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bqcvlw6jvjm7q"]
+
+[ext_resource type="Script" uid="uid://wu6v4mkbmwrf" path="res://game/ui/journal/Components/Quest.gd" id="1_8he2i"]
+[ext_resource type="Texture2D" uid="uid://dtu8socwh7hbm" path="res://assets/ui/journal/Quest_UI.png" id="2_rmfs6"]
+[ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="3_v4djc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lccq"]
+atlas = ExtResource("2_rmfs6")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87u2e"]
+atlas = ExtResource("2_rmfs6")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnmpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lccq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87u2e")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 5.0
+}]
+
+[node name="Quest" type="Control" unique_id=2113328894]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -48.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 16.0
+script = ExtResource("1_8he2i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1894258824]
+position = Vector2(48, 16)
+sprite_frames = SubResource("SpriteFrames_bnmpo")
+
+[node name="QuestTitle" type="Label" parent="AnimatedSprite2D" unique_id=1866193584]
+offset_left = -43.0
+offset_top = -6.0
+offset_right = 17.0
+offset_bottom = 4.0
+theme_override_colors/font_color = Color(0.27450982, 0.1764706, 0.18431373, 1)
+theme_override_fonts/font = ExtResource("3_v4djc")
+theme_override_font_sizes/font_size = 10
+text = "Titre"
+vertical_alignment = 1
+
+[node name="QuestState" type="Label" parent="AnimatedSprite2D" unique_id=1771491383]
+offset_left = 27.0
+offset_top = -6.0
+offset_right = 45.0
+offset_bottom = 5.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.3254902)
+theme_override_fonts/font = ExtResource("3_v4djc")
+theme_override_font_sizes/font_size = 5
+text = "State"
+horizontal_alignment = 2
+vertical_alignment = 1

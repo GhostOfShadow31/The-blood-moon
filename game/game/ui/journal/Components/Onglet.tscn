@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dgonsxw3u6b0i"]
+
+[ext_resource type="Script" uid="uid://dcbsqgin6alt0" path="res://game/ui/journal/Components/Onglet.gd" id="1_2rqx4"]
+[ext_resource type="Texture2D" uid="uid://che1md5cu6kwt" path="res://assets/ui/journal/Button.png" id="2_d6u4o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f3vs"]
+atlas = ExtResource("2_d6u4o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6u4o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f3vs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Onglet" type="Control" unique_id=1704283975]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2rqx4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1576508793]
+sprite_frames = SubResource("SpriteFrames_d6u4o")

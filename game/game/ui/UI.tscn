@@ -1,28 +1,48 @@
 [gd_scene format=3 uid="uid://c8v1xdrloivql"]
 
 [ext_resource type="Script" uid="uid://rg8bmbw2sx6n" path="res://game/ui/UI.gd" id="1_74n88"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="2_ijiyr"]
+[ext_resource type="Resource" uid="uid://cf6xu7mr31flq" path="res://game/ressources/items/potions/BasicPotion.tres" id="3_o5eca"]
+[ext_resource type="Resource" uid="uid://daav6jfnu0d3x" path="res://game/ressources/items/potions/BasicPotion2.tres" id="4_pf7yf"]
+[ext_resource type="Script" uid="uid://bocllrqro5nlh" path="res://game/ressources/Quest.gd" id="5_ougkd"]
+[ext_resource type="PackedScene" uid="uid://bnxtq54oatnke" path="res://game/ui/journal/Journal.tscn" id="5_tddda"]
+[ext_resource type="Resource" uid="uid://n80m2fuifg44" path="res://game/ressources/quests/Old_mill.tres" id="6_g7i31"]
+[ext_resource type="Resource" uid="uid://d1x0lwgp3kv7c" path="res://game/ressources/quests/test.tres" id="7_gygow"]
 
-[node name="Ui" type="Control" unique_id=670408781]
-layout_mode = 3
-anchors_preset = 0
+[node name="Ui" type="CanvasLayer" unique_id=125390390]
 script = ExtResource("1_74n88")
+items = Array[ExtResource("2_ijiyr")]([ExtResource("3_o5eca"), ExtResource("4_pf7yf")])
+quests = Array[ExtResource("5_ougkd")]([ExtResource("6_g7i31"), ExtResource("7_gygow")])
 
 [node name="HUD" type="Control" parent="." unique_id=1857572362]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Inventory" type="Control" parent="." unique_id=626408831]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Journal" parent="." unique_id=127046679 instance=ExtResource("5_tddda")]
+z_index = 1000
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = 130.0
+offset_right = -102.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
 
 [node name="Dialog" type="Control" parent="." unique_id=134859448]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Screens" type="Control" parent="." unique_id=969419131]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

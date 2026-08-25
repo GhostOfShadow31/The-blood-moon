@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c0c1acd0of0j3"]
+
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_52jwo"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_ryh87"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_wic4q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wic4q"]
+atlas = ExtResource("1_52jwo")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8lrq"]
+atlas = ExtResource("1_52jwo")
+region = Rect2(144, 64, 16, 16)
+
+[resource]
+script = ExtResource("1_ryh87")
+id = "lubster_mushroom"
+item_name = "Lusbter Mushroom"
+icon = SubResource("AtlasTexture_wic4q")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_l8lrq")
+journal_slot = 17
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

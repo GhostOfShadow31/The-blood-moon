@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://suvf63cqei1y"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_50f6l"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_hwjf3"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_o61qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50f6l"]
+atlas = ExtResource("1_o61qd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5frd8"]
+atlas = ExtResource("1_o61qd")
+region = Rect2(96, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_hwjf3")
+id = "honey_agaric"
+item_name = "Honey Agaric"
+icon = SubResource("AtlasTexture_50f6l")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_5frd8")
+journal_slot = 13
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

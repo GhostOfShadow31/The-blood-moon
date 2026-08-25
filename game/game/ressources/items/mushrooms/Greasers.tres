@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dpnr531x6fteh"]
+
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_2ub43"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_l45id"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_l86s8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l86s8"]
+atlas = ExtResource("1_l45id")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndmvr"]
+atlas = ExtResource("1_l45id")
+region = Rect2(96, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_2ub43")
+id = "greasers"
+item_name = "Greasers"
+icon = SubResource("AtlasTexture_l86s8")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_ndmvr")
+journal_slot = 11
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

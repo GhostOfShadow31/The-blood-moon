@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://n80m2fuifg44"]
+
+[ext_resource type="Script" uid="uid://bocllrqro5nlh" path="res://game/ressources/Quest.gd" id="1_crj2i"]
+[ext_resource type="Script" uid="uid://ddgfrccmpp5rk" path="res://game/ressources/QuestClue.gd" id="1_eok7r"]
+[ext_resource type="Resource" uid="uid://bjh4hujlmlqa5" path="res://game/ressources/quests/clues/First_step.tres" id="2_dongs"]
+[ext_resource type="Resource" uid="uid://8s1dqjjlh1s6" path="res://game/ressources/quests/clues/Second_step.tres" id="3_h12lj"]
+
+[resource]
+script = ExtResource("1_crj2i")
+id = "old_mill"
+title = "Old Mill"
+description = "Ici, on pourrait avoir le resume de la quete."
+clues = Array[ExtResource("1_eok7r")]([ExtResource("2_dongs"), ExtResource("3_h12lj")])
+metadata/_custom_type_script = "uid://bocllrqro5nlh"

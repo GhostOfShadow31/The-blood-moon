@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://d1x0lwgp3kv7c"]
+
+[ext_resource type="Script" uid="uid://bocllrqro5nlh" path="res://game/ressources/Quest.gd" id="1_dvj5h"]
+[ext_resource type="Script" uid="uid://ddgfrccmpp5rk" path="res://game/ressources/QuestClue.gd" id="1_foq0n"]
+[ext_resource type="Resource" uid="uid://ncajpq0l3wpv" path="res://game/ressources/quests/clues/Test_01.tres" id="2_53v7v"]
+[ext_resource type="Resource" uid="uid://yps11tlw6dbu" path="res://game/ressources/quests/clues/Test_02.tres" id="3_j177u"]
+[ext_resource type="Resource" uid="uid://be785r61bipa3" path="res://game/ressources/quests/clues/Test_03.tres" id="4_svccx"]
+
+[resource]
+script = ExtResource("1_dvj5h")
+id = "test"
+title = "Test"
+description = "Cette fois, les etapes sont validees, tu peux aussi essayer d'en faire."
+clues = Array[ExtResource("1_foq0n")]([ExtResource("2_53v7v"), ExtResource("3_j177u"), ExtResource("4_svccx")])
+metadata/_custom_type_script = "uid://bocllrqro5nlh"

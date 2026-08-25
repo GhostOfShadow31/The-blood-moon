@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vnqx3ofkuigu"]
 
-[ext_resource type="Script" uid="uid://csehaciuia4ll" path="res://game/ui/Overlay.gd" id="1_efydk"]
+[ext_resource type="Script" uid="uid://csehaciuia4ll" path="res://game/ui/restes/Overlay.gd" id="1_efydk"]
 
 [node name="FadeOverlay" type="ColorRect"]
 offset_right = 320.0

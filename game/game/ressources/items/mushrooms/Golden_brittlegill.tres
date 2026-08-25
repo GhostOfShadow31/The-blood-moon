@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c3mjrrg17mcn7"]
+
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_jopmj"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_js8r5"]
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_o0kgj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0kgj"]
+atlas = ExtResource("1_jopmj")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn6kh"]
+atlas = ExtResource("1_jopmj")
+region = Rect2(112, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_js8r5")
+id = "golden_brittlegill"
+item_name = "Golden Brittlegill"
+icon = SubResource("AtlasTexture_o0kgj")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_xn6kh")
+journal_slot = 10
+metadata/_custom_type_script = "uid://b6wadkel4w2du"

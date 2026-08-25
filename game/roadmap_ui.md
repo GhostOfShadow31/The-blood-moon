@@ -70,16 +70,15 @@ Pour l'instant, ton inventaire contient principalement :
 
 Les capacités restent séparées.
 
-* [ ] Définir ce qu'est un objet dans le jeu
-* [ ] Définir les catégories d'objets
-* [ ] Définir les données minimales d'un objet
-* [ ] Créer le système permettant de posséder un objet
-* [ ] Gérer les quantités pour les objets empilables
-* [ ] Ajouter un objet à l'inventaire
-* [ ] Retirer un objet de l'inventaire
-* [ ] Consommer un objet
-* [ ] Empêcher la récupération multiple d'un collectible
-* [ ] Faire persister l'inventaire pendant la partie
+* [x] Définir ce qu'est un objet dans le jeu
+* [x] Définir les catégories d'objets
+* [x] Définir les données minimales d'un objet
+* [x] Créer le système permettant de posséder un objet
+* [x] Gérer les quantités pour les objets empilables
+* [x] Ajouter un objet à l'inventaire
+* [x] Consommer un objet
+* [x] Empêcher la récupération multiple d'un collectible
+* [x] Faire persister l'inventaire pendant la partie
 
 **Jalon :**
 

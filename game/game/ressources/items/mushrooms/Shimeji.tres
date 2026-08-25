@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://xs35lgl2f14s"]
+
+[ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_4jlb1"]
+[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_gg5uk"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_ye0pf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jlb1"]
+atlas = ExtResource("1_gg5uk")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7swig"]
+atlas = ExtResource("1_gg5uk")
+region = Rect2(160, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_ye0pf")
+id = "shimeji"
+item_name = "Shimeji"
+icon = SubResource("AtlasTexture_4jlb1")
+category = "collectibles"
+persistent = true
+silhouette = SubResource("AtlasTexture_7swig")
+journal_slot = 27
+metadata/_custom_type_script = "uid://b6wadkel4w2du"
