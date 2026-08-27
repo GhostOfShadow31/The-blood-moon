@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://btr12l074e5d7" path="res://game/entities/dead_slime/Dead_slime.tscn" id="10_y71it"]
 [ext_resource type="PackedScene" uid="uid://b0cxh4r73jyau" path="res://game/entities/cave_slime/Cave_slime.tscn" id="11_7r60c"]
 [ext_resource type="PackedScene" uid="uid://buf0sl1l7hrfo" path="res://game/entities/destructible_wall/Destructible_wall.tscn" id="12_qr2qm"]
+[ext_resource type="PackedScene" uid="uid://dbkhqt0txrnwb" path="res://game/entities/loot/Loot.tscn" id="13_4fjvv"]
+[ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="14_ac8h0"]
+[ext_resource type="Resource" uid="uid://cf6xu7mr31flq" path="res://game/ressources/items/potions/BasicPotion.tres" id="15_65gun"]
+[ext_resource type="Resource" uid="uid://daav6jfnu0d3x" path="res://game/ressources/items/potions/BasicPotion2.tres" id="16_q0j37"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04f4u"]
 texture = ExtResource("4_04f4u")
@@ -1136,6 +1140,13 @@ rotation = 1.5707964
 hit_direction = 2
 anim_name = "idle_3"
 
+[node name="Loot" parent="Pnjs" unique_id=1710938643 instance=ExtResource("13_4fjvv")]
+position = Vector2(608, 1691)
+loot = Dictionary[ExtResource("14_ac8h0"), int]({
+ExtResource("15_65gun"): 2,
+ExtResource("16_q0j37"): 1
+})
+
 [node name="RecoveryPoints" type="Node2D" parent="." unique_id=343648343]
 visible = false
 
@@ -1175,7 +1186,7 @@ position = Vector2(400, 576)
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=204890745]
 
 [node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1077837434]
-position = Vector2(627, 1385)
+position = Vector2(661, 1665)
 
 [node name="SpawnPoint_01" type="Marker2D" parent="SpawnPoints" unique_id=999550475]
 position = Vector2(1122, 0)

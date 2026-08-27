@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dbkhqt0txrnwb"]
+
+[ext_resource type="Script" uid="uid://rcxyjby00str" path="res://game/entities/loot/Loot.gd" id="1_3o3eh"]
+[ext_resource type="Texture2D" uid="uid://cr3yyylaq76ar" path="res://assets/sprites/items/butin/Cave_loot.png" id="1_jbnjf"]
+[ext_resource type="Texture2D" uid="uid://ieb5ul6w6cn5" path="res://assets/sprites/items/butin/Halo.tres" id="2_jbnjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbnjf"]
+atlas = ExtResource("1_jbnjf")
+region = Rect2(0, 0, 16, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o3eh"]
+atlas = ExtResource("1_jbnjf")
+region = Rect2(0, 11, 16, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbnjf"]
+size = Vector2(36, 21)
+
+[node name="Loot" type="Node2D" unique_id=675504910]
+script = ExtResource("1_3o3eh")
+
+[node name="TopPivot" type="Node2D" parent="." unique_id=1115617813]
+position = Vector2(-6, 0)
+
+[node name="Top" type="Sprite2D" parent="TopPivot" unique_id=975059414]
+z_index = 1
+position = Vector2(6, -5.5)
+texture = SubResource("AtlasTexture_jbnjf")
+
+[node name="Bottom" type="Sprite2D" parent="." unique_id=235652972]
+z_index = 1
+position = Vector2(0, 2.5)
+texture = SubResource("AtlasTexture_3o3eh")
+
+[node name="Interact_zone" type="Area2D" parent="." unique_id=214272359]
+visible = false
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_zone" unique_id=2045638625]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_jbnjf")
+
+[node name="Halo" type="PointLight2D" parent="." unique_id=1571436060]
+texture = ExtResource("2_jbnjf")
+
+[connection signal="body_entered" from="Interact_zone" to="." method="_on_interact_zone_body_entered"]
