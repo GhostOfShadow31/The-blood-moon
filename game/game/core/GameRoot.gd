@@ -30,8 +30,7 @@ func _physics_process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("debug_input"):
 		# Mettre ici ce que l'on veut pour debuguer (la touche est "!")
-		#GameData.show_all()
-		print(UI.journal.consumables.owned_consumables)
+		GameData.show_all()
 	if event.is_action_pressed("ui_journal"):
 		player.is_journal_open = not player.is_journal_open
 		UI.toggle_journal()

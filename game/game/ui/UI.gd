@@ -32,29 +32,31 @@ func consume(item: Item) -> Array[ItemEffect]:
 
 
 # Debug / Test
-@export var items: Array[Item] = []
-@export var quests: Array[Quest] = []
+@export var cons: Array[Item] = []
+@export var coll: Array[Item] = []
+@export var ques: Array[Quest] = []
+@export var best: Array[Item] = []
+@export var abil: Array[Ability] = []
 
-func _ready() -> void:	
-	journal.add_consumable(items[0], 5)
-	journal.add_consumable(items[1], 2)
-	
-	journal.start()
+func _ready() -> void:
+	# Consommables
+	#GameData.add_consumable(cons[0], 5)
+	#GameData.add_consumable(cons[1], 2)
 	
 	# Collectibles
-	GameData.set_data("aspen_collected", true)
+	GameData.add_collectible(coll[0])
 	
 	# Quests
-	journal.quests.register_quest(quests[0])
-	journal.quests.register_quest(quests[1])
-	journal.quests.validate_clue(quests[1], 0)
-	journal.quests.validate_clue(quests[1], 1)
-	journal.quests.validate_clue(quests[1], 2)
-	journal.quests.set_quest_state(quests[1], Quest.State.COMPLETED)
+	GameData.add_quest(ques[0], Quest.State.IN_PROGRESS)
+	GameData.add_quest(ques[1], Quest.State.IN_PROGRESS)
+	GameData.validate_quest_clue(ques[1], 0)
+	GameData.validate_quest_clue(ques[1], 1)
+	GameData.validate_quest_clue(ques[1], 2)
+	GameData.set_quest_state(ques[1], Quest.State.COMPLETED)
 	
 	# Bestiary
-	GameData.set_data("cave_slime_discovered", true)
+	GameData.discover_enemy(best[0])
 	
 	# Ablities
-	GameData.set_data("abilitie_dash", true)
-	GameData.set_data("abilitie_wall_jump", true)
+	GameData.unlock_ability(abil[0])
+	GameData.unlock_ability(abil[1])

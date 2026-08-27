@@ -19,7 +19,7 @@ const CHECKBOX_SCENE: PackedScene = preload("res://game/ui/journal/Components/Ch
 
 var item: Item
 var quest: Quest
-var abilitie: Abilitie
+var ability: Ability
 
 # Afficher les détails d'un item
 func display_item(i: Item) -> void:
@@ -55,8 +55,7 @@ func display_quest(q: Quest) -> void:
 		if child is Checkbox:
 			child.queue_free()
 	
-	var quest_data: Dictionary = GameData.get_data("quest_" + quest.id, {})
-	var clues: Array[bool] = quest_data.get("clues", [])
+	var clues: Array[bool] = GameData.get_quest_clues(quest)
 	
 	for i in range(quest.clues.size()):
 		var checkbox: Checkbox = CHECKBOX_SCENE.instantiate()
@@ -66,14 +65,14 @@ func display_quest(q: Quest) -> void:
 		checkbox.set_state(clues[i])
 
 # Afficher les détails d'une capacité
-func display_abilitie(a: Abilitie):
+func display_abilitie(a: Ability):
 	clear()
 	row_display.visible = true
 	
-	abilitie = a
+	ability = a
 	
-	name_label_row.text = abilitie.abilities_name
-	description_label_row.text = abilitie.description
+	name_label_row.text = ability.abilitiy_name
+	description_label_row.text = ability.description
 	separator.visible = false
 	
 	for child in vbox_row.get_children():
@@ -86,10 +85,10 @@ func can_be_displayed(i: Item) -> bool:
 	if not i.category == "collectibles" and not i.category == "bestiary":
 		return true
 	
-	if i.category == "collectibles" and GameData.has_data(i.id + "_collected"):
+	if i.category == "collectibles" and GameData.has_collectible(i):
 		return true
 	
-	if i.category == "bestiary" and GameData.has_data(i.id + "_discovered"):
+	if i.category == "bestiary" and GameData.has_discovered_enemy(i):
 		return true
 	
 	return false
@@ -98,6 +97,6 @@ func can_be_displayed(i: Item) -> bool:
 func clear() -> void:
 	item = null
 	quest = null
-	abilitie = null
+	ability = null
 	slot_display.visible = false
 	row_display.visible = false

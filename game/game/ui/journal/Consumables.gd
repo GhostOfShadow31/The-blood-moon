@@ -1,25 +1,15 @@
 extends Node
 
-var owned_consumables: Dictionary[Item, int] = {}
-
-# Ajoute un item aux items possédés
-# avec la quantité indiqué
-func add_consumable(item: Item, quantity: int = 1) -> void:
-	if owned_consumables.has(item):
-		owned_consumables[item] += quantity
-	else:
-		owned_consumables[item] = quantity
-
 # Met à jour l'affichage des slots
-# avec des consomables possédés (owned_consumables)
 func refresh_consumables(slots: Array[Slot]) -> void:
 	for slot in slots:
 		slot.remove_objet()
 	
 	var slot_index: int = 0
 	
-	for item in owned_consumables:
-		var quantity: int = owned_consumables[item]
+	var all_consumables: Dictionary = GameData.get_all_consumables()
+	for item in all_consumables:
+		var quantity: int = all_consumables[item]
 		
 		var full_stacks = floori(float(quantity) / item.max_stack)
 		var remainder: int = quantity % item.max_stack
@@ -38,12 +28,9 @@ func refresh_consumables(slots: Array[Slot]) -> void:
 
 # Consommer un item et renvoie un tableau des effets
 func consume(item: Item) -> Array[ItemEffect]:
-	if not owned_consumables.has(item):
+	if not GameData.has_consumable(item):
 		return []
 	
-	owned_consumables[item] -= 1
-	
-	if owned_consumables[item] <= 0:
-		owned_consumables.erase(item)
+	GameData.remove_consumable(item, 1)
 	
 	return item.effects

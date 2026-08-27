@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Abilitie" format=3 uid="uid://j13g07lys2a"]
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://j13g07lys2a"]
 
-[ext_resource type="Script" uid="uid://c23yss2k8x8cc" path="res://game/ressources/Abiltie.gd" id="1_21tga"]
+[ext_resource type="Script" uid="uid://c23yss2k8x8cc" path="res://game/ressources/Ability.gd" id="1_21tga"]
 
 [resource]
 script = ExtResource("1_21tga")
 id = "wall_jump"
-abilities_name = "Wall Jump"
+abilitiy_name = "Wall Jump"
 description = "Mais a terme, ca serait cool de pouvoir voir les capacites apprises."
 metadata/_custom_type_script = "uid://c23yss2k8x8cc"

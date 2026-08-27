@@ -1,4 +1,4 @@
-class_name Abilitie_UI
+class_name Ability_UI
 extends Control
 
 const TEXT_COLOR: Dictionary[String, Color] = {
@@ -7,25 +7,25 @@ const TEXT_COLOR: Dictionary[String, Color] = {
 }
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var abilitie_name: Label = $AnimatedSprite2D/AbilitieTitle
+@onready var ability_name: Label = $AnimatedSprite2D/AbilityTitle
 
-var abilitie: Abilitie
+var ability: Ability
 
-# Instancie avec une ressource Abilitie
-func set_object(a: Abilitie) -> void:
-	abilitie = a
-	abilitie_name.text = abilitie.abilities_name
+# Instancie avec une ressource Ability
+func set_object(a: Ability) -> void:
+	ability = a
+	ability_name.text = ability.abilitiy_name
 
 # Retourne la capacité
-func get_object() -> Abilitie:
-	return abilitie
+func get_object() -> Ability:
+	return ability
 
 # Définit ou non si cette quête est seléctionnée
-func play(anim_abilitie_name: String) -> void:
-	match anim_abilitie_name:
+func play(anim_ability_name: String) -> void:
+	match anim_ability_name:
 		"default":
 			sprite.play("default")
-			abilitie_name.add_theme_color_override("font_color", TEXT_COLOR["default"])
+			ability_name.add_theme_color_override("font_color", TEXT_COLOR["default"])
 		"selected":
 			sprite.play("selected")
-			abilitie_name.add_theme_color_override("font_color", TEXT_COLOR["selected"])
+			ability_name.add_theme_color_override("font_color", TEXT_COLOR["selected"])

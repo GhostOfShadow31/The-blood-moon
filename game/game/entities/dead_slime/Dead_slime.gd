@@ -20,7 +20,7 @@ func interact() -> void:
 	player.has_sword = true
 	shine_effect.energy = 0.5
 	
-	GameData.set_data("sword_collected", true)
+	GameData.set_world_state("sword_collected", true)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is not Player or has_interacted:

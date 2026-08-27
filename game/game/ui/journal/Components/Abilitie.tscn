@@ -31,7 +31,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Abilitie" type="Control" unique_id=245148675]
+[node name="Ability" type="Control" unique_id=245148675]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -48.0
@@ -44,7 +44,7 @@ script = ExtResource("1_y6bvu")
 position = Vector2(48, 16)
 sprite_frames = SubResource("SpriteFrames_t4cn6")
 
-[node name="AbilitieTitle" type="Label" parent="AnimatedSprite2D" unique_id=257152452]
+[node name="AbilityTitle" type="Label" parent="AnimatedSprite2D" unique_id=257152452]
 offset_left = -43.0
 offset_top = -6.0
 offset_right = 17.0

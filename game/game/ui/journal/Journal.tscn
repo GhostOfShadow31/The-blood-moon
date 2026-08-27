@@ -50,7 +50,7 @@
 [ext_resource type="Resource" uid="uid://bmxt5gdwdnxjn" path="res://game/ressources/items/ennemies/Cave_slime.tres" id="38_ry23v"]
 [ext_resource type="Resource" uid="uid://d1x0lwgp3kv7c" path="res://game/ressources/quests/test.tres" id="39_ysl24"]
 [ext_resource type="Script" uid="uid://cg6wqhpfvbxsh" path="res://game/ui/journal/Abilities.gd" id="42_ysl24"]
-[ext_resource type="Script" uid="uid://c23yss2k8x8cc" path="res://game/ressources/Abiltie.gd" id="43_5s2n2"]
+[ext_resource type="Script" uid="uid://c23yss2k8x8cc" path="res://game/ressources/Ability.gd" id="43_5s2n2"]
 [ext_resource type="Resource" uid="uid://td64pok40m6n" path="res://game/ressources/abilities/Dash.tres" id="44_vpvyc"]
 [ext_resource type="Resource" uid="uid://j13g07lys2a" path="res://game/ressources/abilities/Wall_jump.tres" id="45_c0s0e"]
 [ext_resource type="PackedScene" uid="uid://brruneflutsh6" path="res://game/ui/journal/Components/Abilitie.tscn" id="50_kfu0w"]

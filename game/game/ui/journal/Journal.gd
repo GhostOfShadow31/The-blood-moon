@@ -60,9 +60,6 @@ func _ready() -> void:
 		if child is Slot:
 			slots.append(child)
 
-func start() -> void:
-	select_node("consumables")
-
 func _unhandled_input(event: InputEvent) -> void:
 	if not is_journal_active:
 		return
@@ -228,7 +225,7 @@ func show_details() -> void:
 		details.display_item(node.get_object())
 	elif node is Quest_UI:
 		details.display_quest(node.get_object())
-	elif node is Abilitie_UI:
+	elif node is Ability_UI:
 		details.display_abilitie(node.get_object())
 
 # Détermine si un noeud est un onglet
@@ -239,7 +236,7 @@ func is_tab(node) -> bool:
 
 # Détermine si le noeud est du bon type pouyr afficher
 func is_displayable(node) -> bool:
-	if node is Slot or node is Quest_UI or node is Abilitie_UI:
+	if node is Slot or node is Quest_UI or node is Ability_UI:
 		return true
 	return false
 
@@ -271,4 +268,4 @@ func set_active(value: bool) -> void:
 	is_journal_active = value
 	if not value and validator.is_validator_active:
 		validator.hide_validator()
-		select_node("consumables")
+	select_node("consumables")

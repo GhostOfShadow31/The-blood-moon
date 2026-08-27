@@ -12,3 +12,9 @@ enum State {
 @export_multiline var description: String
 
 @export var clues: Array[QuestClue] = []
+var clues_bool:
+	get:
+		var arr: Array[bool] = []
+		for clue in clues:
+			arr.append(false)
+		return arr
