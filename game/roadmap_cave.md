@@ -96,16 +96,16 @@
 ### Collectibles
 
 * [x] Définir le fonctionnement générique d'un collectible
-* [ ] Faire persister un collectible récupéré
+* [x] Faire persister un collectible récupéré
 * [ ] Ajouter les premiers collectibles de `Cave`
-* [ ] Empêcher leur récupération multiple
-* [ ] Ajouter leur affichage dans l'inventaire si nécessaire
+* [x] Empêcher leur récupération multiple
+* [x] Ajouter leur affichage dans l'inventaire si nécessaire
 
 ### Monstres / butins
 
-* [ ] Définir le fonctionnement d'un butin
-* [ ] Ajouter les premiers butins cachés
-* [ ] Vérifier leur persistance
+* [x] Définir le fonctionnement d'un butin
+* [~] Ajouter les premiers butins cachés
+* [x] Vérifier leur persistance
 
 ### Carte
 
