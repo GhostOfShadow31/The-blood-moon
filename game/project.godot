@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*uid://crsu4dre6wuf6"
+UI="*uid://c8v1xdrloivql"
 
 [display]
 

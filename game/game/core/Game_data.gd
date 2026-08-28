@@ -2,13 +2,18 @@ class_name Game_data
 extends Node
 
 var data: Dictionary = {
-	"world": {},
+	"world": {
+		"cave": {}
+	},
 	"journal": {
 		"consumables": {},
 		"collectibles": {},
 		"quests": {},
 		"bestiary": {},
 		"abilities": {}
+	},
+	"map": {
+		"cave": []
 	}
 }
 
@@ -19,10 +24,10 @@ func show_all() -> void:
 
 # -- World --
 func set_world_state(id: String, value: Variant) -> void:
-	data["world"][id] = value
+	data["world"]["cave"][id] = value
 
 func get_state_world(id: String, default_value: Variant = null) -> Variant:
-	return data["world"].get(id, default_value)
+	return data["world"]["cave"].get(id, default_value)
 
 # -- Consommables --
 func add_consumable(item: Item, quantity: int) -> void:
@@ -106,3 +111,11 @@ func unlock_ability(ability: Ability) -> void:
 
 func has_ability(ability: Ability) -> bool:
 	return data["journal"]["abilities"].has(ability)
+
+# -- Map --
+func add_room(room_id: int) -> void:
+	if not data["map"]["cave"].has(room_id):
+		data["map"]["cave"].append(room_id)
+
+func has_room(room_id: int) -> bool:
+	return data["map"]["cave"].has(room_id)

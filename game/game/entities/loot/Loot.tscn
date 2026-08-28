@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://rcxyjby00str" path="res://game/entities/loot/Loot.gd" id="1_3o3eh"]
 [ext_resource type="Texture2D" uid="uid://cr3yyylaq76ar" path="res://assets/sprites/items/butin/Cave_loot.png" id="1_jbnjf"]
 [ext_resource type="Texture2D" uid="uid://ieb5ul6w6cn5" path="res://assets/sprites/items/butin/Halo.tres" id="2_jbnjf"]
+[ext_resource type="Texture2D" uid="uid://b8lhxhn630uf4" path="res://assets/sprites/misc/arrow_icon.png" id="4_3o3eh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbnjf"]
 atlas = ExtResource("1_jbnjf")
@@ -14,6 +15,28 @@ region = Rect2(0, 11, 16, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbnjf"]
 size = Vector2(36, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4rso"]
+atlas = ExtResource("4_3o3eh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgkrf"]
+atlas = ExtResource("4_3o3eh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbnjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4rso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgkrf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
 
 [node name="Loot" type="Node2D" unique_id=675504910]
 script = ExtResource("1_3o3eh")
@@ -42,4 +65,11 @@ shape = SubResource("RectangleShape2D_jbnjf")
 [node name="Halo" type="PointLight2D" parent="." unique_id=1571436060]
 texture = ExtResource("2_jbnjf")
 
+[node name="Indicator" type="AnimatedSprite2D" parent="." unique_id=1831180232]
+visible = false
+position = Vector2(0, -17)
+sprite_frames = SubResource("SpriteFrames_jbnjf")
+animation = &"idle"
+
 [connection signal="body_entered" from="Interact_zone" to="." method="_on_interact_zone_body_entered"]
+[connection signal="body_exited" from="Interact_zone" to="." method="_on_interact_zone_body_exited"]

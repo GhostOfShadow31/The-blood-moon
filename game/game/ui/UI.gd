@@ -3,6 +3,7 @@ extends CanvasLayer
 const OFFSET_JOURNAL: Vector2 = Vector2(0.0, 170.0)
 
 @onready var journal: Control = $Journal
+@onready var feedback: Control = $Feedback
 
 var is_inventory_visible: bool = false
 
@@ -30,33 +31,6 @@ func hide_journal() -> void:
 func consume(item: Item) -> Array[ItemEffect]:
 	return journal.consume(item)
 
-
-# Debug / Test
-@export var cons: Array[Item] = []
-@export var coll: Array[Item] = []
-@export var ques: Array[Quest] = []
-@export var best: Array[Item] = []
-@export var abil: Array[Ability] = []
-
-func _ready() -> void:
-	# Consommables
-	#GameData.add_consumable(cons[0], 5)
-	#GameData.add_consumable(cons[1], 2)
-	
-	# Collectibles
-	GameData.add_collectible(coll[0])
-	
-	# Quests
-	GameData.add_quest(ques[0], Quest.State.IN_PROGRESS)
-	GameData.add_quest(ques[1], Quest.State.IN_PROGRESS)
-	GameData.validate_quest_clue(ques[1], 0)
-	GameData.validate_quest_clue(ques[1], 1)
-	GameData.validate_quest_clue(ques[1], 2)
-	GameData.set_quest_state(ques[1], Quest.State.COMPLETED)
-	
-	# Bestiary
-	GameData.discover_enemy(best[0])
-	
-	# Ablities
-	GameData.unlock_ability(abil[0])
-	GameData.unlock_ability(abil[1])
+# Affiche un feedback lors de la récupération d'un objet
+func get_feedback(items: Dictionary) -> void:
+	feedback.show_loot(items)

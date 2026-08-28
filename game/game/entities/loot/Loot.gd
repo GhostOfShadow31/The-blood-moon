@@ -8,6 +8,7 @@ const DURATION: float = 5.0
 @onready var gradient: Gradient = $Halo.texture.gradient
 @onready var top_pivot: Node2D = $TopPivot
 @onready var sprite_top: Sprite2D = $TopPivot/Top
+@onready var indicator: AnimatedSprite2D = $Indicator
 
 var has_interacted: bool = false
 var player: Player = null
@@ -33,18 +34,37 @@ func interact() -> void:
 	if has_interacted:
 		return
 	has_interacted = true
+	show_indicator(false)
 	
 	var tween = create_tween()
-	tween.tween_property(sprite_top, "position", Vector2(0.0, -5.5), 1.5)
+	tween.parallel().tween_property(halo, "energy", 0.0, 0.5)
+	tween.parallel().tween_property(sprite_top, "position", Vector2(0.0, -5.5), 1.5)
 	tween.tween_interval(0.25)
 	tween.tween_property(top_pivot, "rotation", deg_to_rad(-45.0), 0.75).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	tween.parallel().tween_property(halo, "energy", 0.0, 1.0)
 	
 	for item in loot:
 		GameData.add_consumable(item, loot[item])
+	UI.get_feedback(loot)
 
 func _on_interact_zone_body_entered(body: Node2D) -> void:
 	if body is not Player or has_interacted:
 		return
 	player = body
 	player.interactable = self
+	show_indicator()
+
+func _on_interact_zone_body_exited(body: Node2D) -> void:
+	if body is not Player:
+		return
+	if player != null and player.interactable == self:
+		player.interactable = null
+	player = null
+	show_indicator(false)
+
+func show_indicator(show: bool = true) -> void:
+	if show:
+		indicator.visible = true
+		indicator.play("idle")
+	else:
+		indicator.visible = false
+		indicator.stop()

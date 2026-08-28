@@ -5,7 +5,7 @@ const SMOOTHING: float = 0.05
 const LOOK_AHEAD: int = 30
 const ROOM_WEIGHT: float = 0.25
 
-var player: Node2D
+var player: Player
 var level: Level
 var bounds: Rect2
 var current_room: Area2D
@@ -27,10 +27,10 @@ func _process(_delta) -> void:
 	
 	var target: Vector2 = player.global_position + get_look_ahead()
 	
-	var room_position = level.get_room_at(player.global_position)
+	var room: Dictionary = level.get_room_at(player.global_position)
 	
-	if room_position != null:
-		target = target.lerp(room_position, ROOM_WEIGHT)
+	if room != {}:
+		target = target.lerp(room.focus, ROOM_WEIGHT)
 	
 	target = clamp_to_bounds(target)
 	

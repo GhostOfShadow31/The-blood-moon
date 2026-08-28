@@ -11,7 +11,6 @@ var current_level: Level
 @onready var player: Node2D = $Player
 @onready var death: Node2D = $Death
 @onready var camera: Camera2D = $Camera2D
-@onready var UI: CanvasLayer = $Ui
 
 func _ready() -> void:
 	start_game()
@@ -23,7 +22,7 @@ func _ready() -> void:
 	for enemy in enemies:
 		enemy.attack_player.connect(handle_enemy_damage)
 
-func _physics_process(_delta: float) -> void:
+func _process(_delta: float) -> void:
 	if current_level.is_spike(player.get_hurtbox().global_position):
 		handle_environment_damage()
 

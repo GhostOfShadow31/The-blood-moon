@@ -19,11 +19,11 @@ func get_safe_recovery_position(_death_position: Vector2) -> Vector2:
 	return Vector2.ZERO
 
 # Récupérer la position centrale de la salle ou rien (null)
-func get_room_at(position: Vector2):
+func get_room_at(position: Vector2) -> Dictionary:
 	for room: Dictionary in rooms:
 		if room.bounds.has_point(position):
-			return room.focus
-	return null
+			return room
+	return {}
 
 # Position ou placer le pnj "Death" à partir de la mort du joueur
 func get_death_position(_death_position: Vector2) -> Vector2:
