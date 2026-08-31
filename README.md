@@ -1,64 +1,77 @@
 # The Blood Moon
 
-Projet de jeu narratif développé avec Godot.
+**The Blood Moon** est un projet de jeu narratif développé avec Godot.
 
----
+Le dépôt contient à la fois le projet du jeu et les ressources nécessaires à la conception de son univers narratif.
 
-## Structure du projet
+## Prérequis
 
-Le projet est organisé en deux parties principales à la racine :
+* **Godot 4.6.3.stable.official [7d41c59c4]**
+* **Git**
 
-### `game/`
+Aucune dépendance ni aucun plugin supplémentaire n'est nécessaire.
 
-Contient tout ce qui concerne le jeu en lui-même :
+## Récupérer le projet
 
-* `scenes/` : scènes Godot (niveau, UI, menus…)
-* `scripts/` : scripts du gameplay
-* `shaders/` : shaders graphiques
-* `data/` : données diverses du jeu
-* `project.godot` : fichier principal du projet Godot
-* `icon.svg` : icône du projet
-* `README.md`, `License.md`, `Architecture.md` : documentation du jeu
+Cloner le dépôt Git :
 
-C’est le cœur jouable du projet.
+```bash
+git clone <URL_DU_DEPOT>
+cd <DOSSIER_DU_PROJET>
+```
 
----
-
-### `lore/`
-
-Contient l’univers narratif et la documentation du monde :
-
-* `00_bible.md` : base de l’univers
-* `01_civilisations/` : description des civilisations
-* `02_apostle/` : éléments liés aux figures centrales
-* `decisions_canon.md` : décisions officielles du lore
-* `inbox/` : idées et éléments en cours de tri
-* `README.md` : documentation du lore
-
-C’est toute la partie écriture et worldbuilding.
-
----
-
-## Philosophie du projet
-
-* Séparation claire entre **gameplay** et **univers narratif**
-* Le dossier `game/` reste technique et orienté production
-* Le dossier `lore/` sert de base de référence créative
-
----
+Le projet Godot se trouve dans le répertoire `game/`.
 
 ## Lancer le projet
 
-Ouvrir simplement le projet Godot :
+Le projet se lance depuis l'éditeur Godot.
+
+Ouvrir Godot, puis importer le projet situé à l'emplacement suivant :
+
+```text
+game/project.godot
+```
+
+Une fois le projet ouvert, il peut être lancé directement depuis l'éditeur.
+
+> Le projet n'est actuellement pas prévu pour être lancé directement depuis la ligne de commande.
+
+## Développement
+
+Pour travailler sur le jeu, se placer dans le répertoire `game/` :
 
 ```bash
 cd game
-godot project.godot
 ```
 
----
+Ce répertoire contient le projet Godot et constitue l'environnement de développement du jeu.
 
-## Notes
+La documentation spécifique au développement du jeu est disponible dans [`game/README.md`](game/README.md).
 
-* Le projet utilise Godot Engine
-* Le lore est conçu pour évoluer indépendamment du gameplay
+## Organisation du dépôt
+
+Le dépôt est principalement divisé en deux parties :
+
+* **`game/`** — projet Godot et ressources nécessaires au développement du jeu ;
+* **`lore/`** — documentation narrative et worldbuilding de l'univers.
+
+Chaque partie possède son propre README pour sa documentation détaillée :
+
+* [`game/README.md`](game/README.md)
+* [`lore/README.md`](lore/README.md)
+
+Cette séparation permet de maintenir indépendamment la partie **technique** du projet et sa partie **narrative**.
+
+## Philosophie du projet
+
+The Blood Moon sépare volontairement le développement du jeu et la conception de son univers.
+
+Le répertoire `game/` est orienté vers la production et le développement technique du jeu.
+
+Le répertoire `lore/` constitue la base de référence pour l'univers narratif et peut évoluer indépendamment de l'implémentation du jeu.
+
+## Statut
+
+Projet indépendant en développement.
+
+La structure et le contenu du projet sont susceptibles d'évoluer.

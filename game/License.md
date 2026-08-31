@@ -1,24 +1,28 @@
-# Licences
+# Licences et attributions
 
-- Sprites du héro: https://craftpix.net/file-licenses/
-- Sprites des potions: https://creativecommons.org/licenses/by/4.0/ -- Alex
-- Texture de base de la grotte: https://odiurd.itch.io/tileset -- Odiurd
-- Texture des piques: https://omniclause.itch.io/spikes --Omniclause
-- Texture des torches: https://pixleroy.itch.io/pixel-torches -- PixLeroy
-- Texture du Journal: https://crusenho.itch.io/complete-ui-book-styles-pack -- Crusenho
+Ce document répertorie les ressources externes utilisées dans **The Blood Moon**, ainsi que leurs licences et leurs créateurs.
 
+## Assets
 
-- UI du fond pour les dialogues: Mixe de:
-  - ruled_paper_01: https://openclipart.org/detail/16004
-  - blank_parchment_01: https://openclipart.org/detail/57367
-  - blank_parchment_02: https://openclipart.org/detail/127759
-  - blank_parchment_03: https://openclipart.org/detail/304393
-  - blank_parchment_04: https://openclipart.org/detail/267378
-  - blank_scroll_01: https://openclipart.org/detail/103417
-  - reiwa_era_scroll_01: https://openclipart.org/detail/323845
-  - map_01: https://openclipart.org/detail/44005
+| Utilisation dans le projet | Asset | Créateur | Licence | Source |
+|---|---|---|---|---|
+| Héro | / | / | CCO | [Lien](https://craftpix.net/freebies/free-swordsman-1-3-level-pixel-top-down-sprite-character-pack/) |
+| Potions | / | Alex | CC BY 4.0 | [Lien vers license](https://creativecommons.org/licenses/by/4.0/) |
+| Textures Grotte | Minimalist Cave Tileset & Slime! | Odiurd | CC BY 4.0 (d) | [Lien](https://odiurd.itch.io/tileset) |
+| Piques | Spikes | Omniclause | CCO | [Lien](https://omniclause.itch.io/spikes) |
+| Torches | Pixelart Torches | PixLeroy | CCO | [Lien](https://pixleroy.itch.io/pixel-torches) |
+| Journal | BookStyles | Crusenho | CC BY 4.0 | [Lien](https://crusenho.itch.io/complete-ui-book-styles-pack) |
 
-# IA utilisées
+## Outils d'IA utilisés
 
-- ChatGPT -- Conseil en tous genre
-- Leonardo AI -- Génération d'images
+| Outil | Utilisation |
+|---|---|
+| ChatGPT | Conseil en tous genre |
+
+## Notes
+
+Les ressources listées dans ce document ne sont pas nécessairement soumises aux mêmes conditions que le reste du projet.
+
+Chaque ressource doit être utilisée conformément à la licence ou aux conditions d'utilisation qui lui sont applicables.
+
+Les licences et conditions d'utilisation peuvent évoluer. Les informations présentes dans ce document correspondent aux conditions connues au moment de l'utilisation ou de l'ajout de la ressource au projet.

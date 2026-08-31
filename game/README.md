@@ -1,27 +1,62 @@
-# Informations importantes
+# The Blood Moon — Game
 
-Quelques petites informations mais importantes sur le fonctionnement, l'arobrescence de ce projet
+Ce répertoire contient le projet Godot de **The Blood Moon**.
 
-Le developpement de ce jeu se fait sur **Godot 4.4.1 (stable)**
+Il constitue l'environnement de développement du jeu. Pour les informations générales sur le projet, consulter le [README principal](../README.md).
 
-https://godotengine.org/download/
+## Prérequis
 
-L'arborescence de ce projet n'est pas absolue, elle peut être amenée à changer si le moment y est propice.
+* **Godot 4.6.3.stable.official [7d41c59c4]**
 
-Pour cloner le dépôt : `git clone https://github.com/<ton_username>/<nom_du_repo>.gitudios (sprites, tuilesets...)
+Aucune dépendance ni aucun plugin supplémentaire n'est nécessaire.
 
-Le fichier **License.md** permettra de garder une trace des licence utilisées
-Pour rappel, voici les deux type de licence gratuite :
+## Ouvrir le projet
 
-- CCO (domaine public)
-- CC-BY-XX x.0 (utilisation libre sous couvert de siter l'auteur.e)
+Depuis Godot, importer le fichier :
 
-Le fichier **Architecture.md** permettra de gérer l'architecture du projet, il serait efficace de mettre à jour ce fichier quand l'architecture du projet évolue
+```text
+project.godot
+```
 
-Certains de ces fichiers ne sont peut-être pas encore créé car pas nécessaire pour l'instant, il faut seulement les placer à la racine (au même endroit que **README.md**)
+Le projet peut ensuite être lancé directement depuis l'éditeur Godot.
 
-Ce README à pour but de simplifier la compréhension, du projet pour toute nouvelle personne.
-Toute imprécision ou question pourra être posée auprès de :
+## Développement
 
-- **Severinvlm** - Séverin
-- **GhostOfShadow31** - Max
+Le développement du jeu se fait entièrement dans ce répertoire.
+
+L'organisation du projet est susceptible d'évoluer au cours du développement. Lorsqu'une modification importante de l'architecture intervient, le fichier [`Architecture.md`](Architecture.md) doit être mis à jour afin de conserver une documentation cohérente du projet.
+
+## Organisation
+
+```text
+game/
+├── assets/          # Ressources graphiques et autres ressources du jeu
+├── data/            # Données utilisées par le jeu
+├── game/            # Éléments internes du jeu
+├── shaders/         # Shaders
+├── Architecture.md  # Documentation de l'architecture du projet
+├── icon.svg         # Icône du projet
+├── License.md       # Informations relatives aux licences utilisées
+├── project.godot    # Fichier principal du projet Godot
+└── README.md        # Documentation du projet
+```
+
+Les fichiers de travail temporaires et les documents de suivi du développement ne sont pas nécessairement représentés dans cette arborescence.
+
+## Architecture
+
+Le fichier [`Architecture.md`](Architecture.md) constitue la référence concernant l'organisation et l'architecture technique du projet.
+
+Il doit être consulté avant d'effectuer des modifications importantes à la structure du projet et mis à jour lorsque celle-ci évolue de manière significative.
+
+## Documentation
+
+* [Architecture](Architecture.md) — organisation et architecture technique du projet.
+* [README principal](../README.md) — présentation générale du projet et informations pour démarrer.
+* [Documentation du lore](../lore/README.md) — univers narratif et worldbuilding.
+
+## Statut
+
+Le projet est en développement.
+
+L'organisation actuelle du projet n'est pas définitive et peut évoluer en fonction des besoins du développement.
