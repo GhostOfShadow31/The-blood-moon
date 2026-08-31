@@ -8,7 +8,7 @@ const ROOM_WEIGHT: float = 0.25
 var player: Player
 var level: Level
 var bounds: Rect2
-var current_room: Area2D
+var current_room_id: int = -1
 
 # Setup à faire pour bien calibrer la caméra
 func setup(p_player: Node2D, p_level: Level) -> void:
@@ -31,6 +31,10 @@ func _process(_delta) -> void:
 	
 	if room != {}:
 		target = target.lerp(room.focus, ROOM_WEIGHT)
+		
+		if room.id != current_room_id:
+			current_room_id = room.id
+			UI.discover_room(room.id)
 	
 	target = clamp_to_bounds(target)
 	

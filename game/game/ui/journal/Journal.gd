@@ -1,5 +1,7 @@
 extends Control
 
+const OFFSET: Vector2 = Vector2(0.0, 180.0)
+
 # Onglets disponibles
 enum ONGLETS {
 	CONSUMABLES,
@@ -266,6 +268,14 @@ func consume(item: Item) -> Array[ItemEffect]:
 # Définit si le journal est actif ou non
 func set_active(value: bool) -> void:
 	is_journal_active = value
-	if not value and validator.is_validator_active:
-		validator.hide_validator()
-	select_node("consumables")
+	if value:
+		var tween := create_tween()
+		tween.tween_property(self, "global_position", global_position - OFFSET, 0.15)
+		
+		select_node("consumables")
+	else:
+		var tween := create_tween()
+		tween.tween_property(self, "global_position", global_position + OFFSET, 0.15)
+		
+		if validator.is_validator_active:
+			validator.hide_validator()

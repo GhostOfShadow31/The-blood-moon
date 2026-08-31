@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://rg8bmbw2sx6n" path="res://game/ui/UI.gd" id="1_74n88"]
 [ext_resource type="PackedScene" uid="uid://cf4g5cm3kokgm" path="res://game/ui/feedback/Feedback.tscn" id="3_gw2lh"]
+[ext_resource type="PackedScene" uid="uid://b8l74qpmioypx" path="res://game/ui/map/Map.tscn" id="4_dhiur"]
 [ext_resource type="PackedScene" uid="uid://bnxtq54oatnke" path="res://game/ui/journal/Journal.tscn" id="5_tddda"]
 
 [node name="Ui" type="CanvasLayer" unique_id=125390390]
@@ -21,9 +22,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -102.0
-offset_top = 130.0
+offset_top = 140.0
 offset_right = -102.0
-offset_bottom = 130.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.85, 0.85)
@@ -41,3 +42,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Feedback" parent="." unique_id=548873480 instance=ExtResource("3_gw2lh")]
+
+[node name="Map" parent="." unique_id=2133242127 instance=ExtResource("4_dhiur")]
+offset_top = 180.0
+offset_bottom = 180.0

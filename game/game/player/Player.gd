@@ -1,19 +1,21 @@
 class_name Player
 extends CharacterBody2D
 
-var is_journal_open: bool = false
+var is_ui_open: bool = false
 
 func _ready() -> void:
 	anim_controller.setup(self, animated_sprite)
 
 func _physics_process(delta: float) -> void:
 	update_timers(delta)
-	if not is_dead() and not is_knocked_back and not is_journal_open:
+	if not is_dead() and not is_knocked_back and not is_ui_open:
 		handle_interaction()
 		handle_attack()
 		
 		handle_movement()
 		handle_jump()
+	else:
+		velocity.x = 0.0
 	
 	handle_gravity(delta)
 	

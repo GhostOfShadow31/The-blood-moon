@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://b8l74qpmioypx"]
+
+[ext_resource type="Script" uid="uid://bfny41uptims" path="res://game/ui/map/Map.gd" id="1_hgygt"]
+[ext_resource type="Texture2D" uid="uid://2w3glr7ymy3i" path="res://assets/ui/map/Marker_player.png" id="2_mikyr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgygt"]
+load_path = "res://.godot/imported/Map.png-491d327de28e590ae7a83362d781ff11.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mikyr"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8yvq"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwoo"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o0jb"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rstj2"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2cry"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nntkx"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re30f"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmtno"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qmvh"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncf5y"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_362f7"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bqpc"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hva82"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca7bc"]
+atlas = SubResource("CompressedTexture2D_hgygt")
+region = Rect2(128, 192, 64, 64)
+
+[node name="Map" type="Control" unique_id=2133242127]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hgygt")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=606541407]
+color = Color(0.285, 0.285, 0.5, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1199097699]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="Maps" type="Control" parent="." unique_id=143353172]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="cave" type="Control" parent="Maps" unique_id=423349458]
+anchors_preset = 0
+
+[node name="Room_01" type="TextureRect" parent="Maps/cave" unique_id=1768806846]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 98.0
+offset_right = 193.0
+offset_bottom = 162.0
+texture = SubResource("AtlasTexture_mikyr")
+
+[node name="Room_02" type="TextureRect" parent="Maps/cave" unique_id=1217600164]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 92.0
+offset_right = 162.0
+offset_bottom = 156.0
+texture = SubResource("AtlasTexture_o8yvq")
+
+[node name="Room_03" type="TextureRect" parent="Maps/cave" unique_id=2060698773]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 81.0
+offset_right = 144.0
+offset_bottom = 145.0
+texture = SubResource("AtlasTexture_nwwoo")
+
+[node name="Room_04" type="TextureRect" parent="Maps/cave" unique_id=1135379429]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 77.0
+offset_right = 198.0
+offset_bottom = 141.0
+texture = SubResource("AtlasTexture_6o0jb")
+
+[node name="Room_05" type="TextureRect" parent="Maps/cave" unique_id=1823555914]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 62.0
+offset_right = 204.0
+offset_bottom = 126.0
+texture = SubResource("AtlasTexture_rstj2")
+
+[node name="Room_06" type="TextureRect" parent="Maps/cave" unique_id=1768080180]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 45.0
+offset_right = 183.0
+offset_bottom = 109.0
+texture = SubResource("AtlasTexture_s2cry")
+
+[node name="Room_07" type="TextureRect" parent="Maps/cave" unique_id=406822646]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 15.0
+offset_right = 193.0
+offset_bottom = 79.0
+texture = SubResource("AtlasTexture_nntkx")
+
+[node name="Room_08" type="TextureRect" parent="Maps/cave" unique_id=438620396]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 95.0
+offset_right = 220.0
+offset_bottom = 159.0
+texture = SubResource("AtlasTexture_re30f")
+
+[node name="Room_09" type="TextureRect" parent="Maps/cave" unique_id=364560373]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 101.0
+offset_right = 238.0
+offset_bottom = 165.0
+texture = SubResource("AtlasTexture_lmtno")
+
+[node name="Room_10" type="TextureRect" parent="Maps/cave" unique_id=811839401]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 70.0
+offset_right = 234.0
+offset_bottom = 134.0
+texture = SubResource("AtlasTexture_0qmvh")
+
+[node name="Room_11" type="TextureRect" parent="Maps/cave" unique_id=547875647]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 56.0
+offset_right = 232.0
+offset_bottom = 120.0
+texture = SubResource("AtlasTexture_ncf5y")
+
+[node name="Room_12" type="TextureRect" parent="Maps/cave" unique_id=168120045]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 30.0
+offset_right = 220.0
+offset_bottom = 94.0
+texture = SubResource("AtlasTexture_362f7")
+
+[node name="Room_13" type="TextureRect" parent="Maps/cave" unique_id=1130910661]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 50.0
+offset_right = 145.0
+offset_bottom = 114.0
+texture = SubResource("AtlasTexture_3bqpc")
+
+[node name="Room_14" type="TextureRect" parent="Maps/cave" unique_id=2063753671]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 129.0
+texture = SubResource("AtlasTexture_hva82")
+
+[node name="Room_15" type="TextureRect" parent="Maps/cave" unique_id=1633516105]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 28.0
+offset_right = 150.0
+offset_bottom = 92.0
+texture = SubResource("AtlasTexture_ca7bc")
+
+[node name="PlayerMarker" type="Marker2D" parent="." unique_id=1448031708]
+
+[node name="Sprite2D" type="TextureRect" parent="PlayerMarker" unique_id=1346709644]
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 14.0
+offset_bottom = 14.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_mikyr")

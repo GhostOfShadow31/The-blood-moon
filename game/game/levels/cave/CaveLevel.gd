@@ -1,5 +1,8 @@
 extends Level
 
+const MAP_ID: String = "cave"
+const ROOMS_NUMBER: int = 15
+
 @onready var map: Node2D = $CaveMap
 
 func _ready() -> void:

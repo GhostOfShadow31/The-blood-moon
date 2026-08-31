@@ -173,12 +173,12 @@ La carte est importante pour un Metroidvania, mais **pas nécessaire pour déblo
 
 Je la mettrais donc après inventaire/dialogues.
 
-* [ ] Créer l'écran de carte
-* [ ] Afficher les zones découvertes
-* [ ] Masquer les zones inconnues
-* [ ] Afficher la position du joueur
-* [ ] Mettre à jour la carte lors de l'exploration
-* [ ] Faire persister les zones découvertes
+* [x] Créer l'écran de carte
+* [x] Afficher les zones découvertes
+* [x] Masquer les zones inconnues
+* [x] Afficher la position du joueur
+* [x] Mettre à jour la carte lors de l'exploration
+* [x] Faire persister les zones découvertes
 * [ ] Permettre de naviguer dans la carte
 
 ### Facultatif

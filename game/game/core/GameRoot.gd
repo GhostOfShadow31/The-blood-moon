@@ -29,10 +29,14 @@ func _process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("debug_input"):
 		# Mettre ici ce que l'on veut pour debuguer (la touche est "!")
-		GameData.show_all()
+		#GameData.show_all()
+		print(camera.current_room_id)
 	if event.is_action_pressed("ui_journal"):
-		player.is_journal_open = not player.is_journal_open
+		player.is_ui_open = not player.is_ui_open
 		UI.toggle_journal()
+	elif event.is_action_pressed("ui_map"):
+		player.is_ui_open = not player.is_ui_open
+		UI.toggle_map()
 
 # Obtenir une scène à partir de son identifiant
 func get_level_scene(level_id: String) -> PackedScene:
@@ -48,6 +52,8 @@ func start_game() -> void:
 # Changer de niveau
 func change_level(level_id: String, spawn_context: SpawnContext) -> void:
 	load_level(level_id)
+	
+	UI.initialize(player, current_level)
 	
 	place_player(spawn_context)
 
