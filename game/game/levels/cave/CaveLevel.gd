@@ -1,7 +1,6 @@
 extends Level
 
 const MAP_ID: String = "cave"
-const ROOMS_NUMBER: int = 15
 
 @onready var map: Node2D = $CaveMap
 
@@ -74,3 +73,7 @@ func get_closer_position(from: Vector2, positions: Array[Node]) -> Vector2:
 			best_score = score
 	
 	return choosen_position.global_position
+
+# Récupérer le nombre de salle du niveau
+func get_rooms_number() -> int:
+	return map.rooms.size()
