@@ -2,14 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_1153n"]
 [ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_bufaj"]
-[ext_resource type="Texture2D" uid="uid://wra01bcnqcsm" path="res://assets/sprites/items/mushrooms/Mushrooms.png" id="1_lq4oh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bufaj"]
-atlas = ExtResource("1_lq4oh")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ya846"]
-atlas = ExtResource("1_lq4oh")
 region = Rect2(160, 16, 16, 16)
 
 [resource]

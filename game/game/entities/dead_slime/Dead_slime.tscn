@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4agxpoepq50" path="res://game/entities/dead_slime/Dead_slime.gd" id="1_53s6k"]
 [ext_resource type="Texture2D" uid="uid://8yemkcd4dem4" path="res://assets/sprites/characters/pnjs/dead_slime/slime.png" id="2_ys460"]
-[ext_resource type="Texture2D" uid="uid://b8lhxhn630uf4" path="res://assets/sprites/characters/pnjs/dead_slime/arrow_icon.png" id="3_rbb6l"]
+[ext_resource type="Texture2D" uid="uid://b4egtw2861e3x" path="res://assets/sprites/misc/arrow_icon.png" id="3_m1fvn"]
 [ext_resource type="Texture2D" uid="uid://c5nxqluhkb84i" path="res://assets/sprites/characters/pnjs/dead_slime/shine_effect.tres" id="4_ys460"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn260"]
@@ -32,22 +32,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yvbps"]
-atlas = ExtResource("3_rbb6l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_igrfl"]
+atlas = ExtResource("3_m1fvn")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8cik3"]
-atlas = ExtResource("3_rbb6l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0tv"]
+atlas = ExtResource("3_m1fvn")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cts6n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yvbps")
+"texture": SubResource("AtlasTexture_igrfl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8cik3")
+"texture": SubResource("AtlasTexture_xi0tv")
 }],
 "loop": true,
 "name": &"idle",
@@ -69,7 +69,6 @@ texture_filter = 1
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_cts6n")
 animation = &"idle"
-frame = 1
 frame_progress = 0.586137
 
 [node name="Interact_zone" type="Area2D" parent="." unique_id=544873812]

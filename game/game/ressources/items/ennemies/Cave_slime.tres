@@ -2,14 +2,11 @@
 
 [ext_resource type="Script" uid="uid://5pjnru0ljfks" path="res://game/ressources/ItemEffect.gd" id="1_1kbxd"]
 [ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="1_nfeu5"]
-[ext_resource type="Texture2D" uid="uid://c6aarinbtit2u" path="res://assets/sprites/characters/pnjs/cave_slime/cave_slime.png" id="1_vfuw2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kbxd"]
-atlas = ExtResource("1_vfuw2")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uaxhh"]
-atlas = ExtResource("1_vfuw2")
 region = Rect2(0, 96, 32, 32)
 
 [resource]
