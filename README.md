@@ -75,3 +75,11 @@ Le répertoire `lore/` constitue la base de référence pour l'univers narratif 
 Projet indépendant en développement.
 
 La structure et le contenu du projet sont susceptibles d'évoluer.
+
+# Droits d'auteur
+
+© 2026 GhostOfShadow31 & Severinvlm. Tous droits réservés.
+
+Ce jeu est une œuvre collaborative créée conjointement par les auteurs mentionnés ci-dessus.
+
+Le code source est mis à disposition du public à des fins de consultation uniquement. Aucune autorisation n'est accordée pour copier, modifier, distribuer, sous-licencier ou utiliser le code source ou le jeu sans l'autorisation préalable des deux détenteurs des droits d'auteur.
