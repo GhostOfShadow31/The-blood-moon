@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0cxh4r73jyau"]
 
-[ext_resource type="Texture2D" uid="uid://c6aarinbtit2u" path="res://assets/sprites/characters/pnjs/cave_slime/cave_slime.png" id="1_2qbii"]
+[ext_resource type="Texture2D" uid="uid://b0os20chkgsm3" path="res://assets/sprites/characters/pnjs/cave_slime/cave_slime.png" id="1_2qbii"]
 [ext_resource type="Script" uid="uid://1vtnnlmq6o00" path="res://game/entities/cave_slime/Cave_slime.gd" id="1_un7ae"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_un7ae"]

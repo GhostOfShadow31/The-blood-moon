@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://buf0sl1l7hrfo"]
 
 [ext_resource type="Script" uid="uid://qu3p1lahd8fp" path="res://game/entities/destructible_wall/Destructible_wall.gd" id="1_56aoi"]
-[ext_resource type="Texture2D" uid="uid://7b0lv230jqfe" path="res://assets/sprites/characters/pnjs/destructible_wall/destructible_wall.png" id="1_dhtde"]
+[ext_resource type="Texture2D" uid="uid://cwwxrrtqs3qxq" path="res://assets/sprites/characters/pnjs/destructible_wall/destructible_wall.png" id="1_dhtde"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56aoi"]
 size = Vector2(16, 80)

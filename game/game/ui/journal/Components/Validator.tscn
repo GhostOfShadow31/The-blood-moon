@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8ygrkufvedkp" path="res://assets/ui/journal/validate_UI.png" id="1_lfdk4"]
 [ext_resource type="Script" uid="uid://bwfqxv34dsruf" path="res://game/ui/journal/Components/Validator.gd" id="1_yvd05"]
 [ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="3_hq5w8"]
-[ext_resource type="Texture2D" uid="uid://bfurqh2mu0eah" path="res://assets/ui/journal/Button_UI.png" id="4_0tsi2"]
+[ext_resource type="Texture2D" uid="uid://d1xh4y3cwri2i" path="res://assets/ui/journal/Button_UI.png" id="4_0tsi2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5s2n2"]
 atlas = ExtResource("1_lfdk4")

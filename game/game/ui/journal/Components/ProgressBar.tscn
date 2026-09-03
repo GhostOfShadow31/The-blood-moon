@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dac6xfwfqog1n" path="res://game/ui/journal/Components/ProgressBar.gd" id="1_yr6jp"]
 [ext_resource type="Texture2D" uid="uid://dn62mwh2x4oab" path="res://assets/ui/journal/ProgressBar.png" id="2_nknti"]
-[ext_resource type="Texture2D" uid="uid://b1b66av2qliaj" path="res://assets/ui/journal/ProgressBar_UI_01.png" id="3_6hyb3"]
+[ext_resource type="Texture2D" uid="uid://dj6synbo7tmoq" path="res://assets/ui/journal/ProgressBar_UI_01.png" id="3_6hyb3"]
 [ext_resource type="Texture2D" uid="uid://lbecs58pv4e5" path="res://assets/ui/journal/ProgressBar_UI_02.png" id="4_rqc35"]
 
 [node name="ProgressBar" type="Control" unique_id=1525657370]

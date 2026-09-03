@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hy2wt8veu21h"]
 
-[ext_resource type="Texture2D" uid="uid://2t0fe7ibsvof" path="res://assets/ui/journal/Slot.png" id="1_hmtq8"]
+[ext_resource type="Texture2D" uid="uid://drds2lfb7tgy3" path="res://assets/ui/journal/Slot.png" id="1_hmtq8"]
 [ext_resource type="Script" uid="uid://blqbd4sq70m3f" path="res://game/ui/journal/Components/Slot.gd" id="2_lcw5w"]
 [ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="2_x4tin"]
 

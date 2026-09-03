@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfny41uptims" path="res://game/ui/map/Map.gd" id="1_hgygt"]
 [ext_resource type="Texture2D" uid="uid://2w3glr7ymy3i" path="res://assets/ui/map/Marker_player.png" id="2_mikyr"]
-[ext_resource type="Texture2D" uid="uid://dp11j3a5i5kj7" path="res://assets/ui/map/Cursor.png" id="3_o8yvq"]
+[ext_resource type="Texture2D" uid="uid://ce1baq4vsvjpk" path="res://assets/ui/map/Cursor.png" id="3_o8yvq"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgygt"]
 load_path = "res://.godot/imported/Map.png-491d327de28e590ae7a83362d781ff11.ctex"

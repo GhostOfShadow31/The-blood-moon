@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqcvlw6jvjm7q"]
 
 [ext_resource type="Script" uid="uid://wu6v4mkbmwrf" path="res://game/ui/journal/Components/Quest.gd" id="1_8he2i"]
-[ext_resource type="Texture2D" uid="uid://dtu8socwh7hbm" path="res://assets/ui/journal/Quest_UI.png" id="2_rmfs6"]
+[ext_resource type="Texture2D" uid="uid://efyd2vpmpv4y" path="res://assets/ui/journal/Quest_UI.png" id="2_rmfs6"]
 [ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="3_v4djc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8lccq"]

@@ -1,7 +1,8 @@
 extends Control
 
 const OFFSET: Vector2 = Vector2(0.0, 180.0)
-const SNAP_DISTANCE: float = 5.0
+const SNAP_DISTANCE: float = 7.5
+const SNAP_SPEED: float = 50.0
 
 const BOUNDS: Rect2 = Rect2(Vector2(90.0, 29), Vector2(130.0, 117))
 
@@ -14,10 +15,11 @@ var maps_by_level: Dictionary[String, Control] = {}
 
 var player: Player = null
 var is_map_active: bool = false
+var target_marker: Node = null
 
 var current_level: Level = null
 var current_map: Control = null
-var current_markers: Array[Node] = []
+var current_markers: Array[Marker2D] = []
 
 # Initialise la map
 func initialize(p: Player, l: Level) -> void:
@@ -25,34 +27,53 @@ func initialize(p: Player, l: Level) -> void:
 	current_level = l
 	
 	current_map = maps_by_level[current_level.MAP_ID]
-	current_markers = current_map.get_node("Markers").get_children()
+	
+	var current_markers_nodes = current_map.get_node("Markers").get_children()
+	for child in current_markers_nodes:
+		current_markers.append(child as Marker2D)
+	
 	cursor.visible = false
 
 func _ready() -> void:
 	for map in maps.get_children():
 		maps_by_level[map.name] = map
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if not is_map_active:
 		return
 	
-	var direction: Vector2 = Vector2.ZERO
+	var movement: Vector2 = get_cursor_direction()
+	
+	if movement == Vector2.ZERO:
+		# Plus d'input : On cherche éventuellement un marqueur
+		var marker: Marker2D = get_closer_marker(cursor.global_position)
+		
+		if marker != null:
+			cursor.global_position = cursor.global_position.move_toward(
+				marker.position,
+				SNAP_SPEED * delta
+			)
+		
+		return
+	
+	# L'utilisateur controle le curseur normalement
+	if not cursor.visible:
+		cursor.visible = true
+	
+	cursor.global_position += movement
+	cursor.global_position = clamp_to_bounds(cursor.global_position)
+
+# Récupère la direction du curseur à l'input
+func get_cursor_direction() -> Vector2:
 	if Input.is_action_pressed("ui_left"):
-		direction = Vector2(-1.0, 0.0)
+		return Vector2.LEFT
 	elif Input.is_action_pressed("ui_right"):
-		direction = Vector2(1.0, 0.0)
+		return Vector2.RIGHT
 	elif Input.is_action_pressed("ui_up"):
-		direction = Vector2(0.0, -1.0)
+		return Vector2.UP
 	elif Input.is_action_pressed("ui_down"):
-		direction = Vector2(0.0, 1.0)
-	
-	if direction != Vector2.ZERO:
-		if not cursor.visible:
-			cursor.visible = true
-		cursor.global_position += direction
-		cursor.global_position = snap_to_marker(cursor.global_position)
-		cursor.global_position = clamp_to_bounds(cursor.global_position)
-	
+		return Vector2.DOWN
+	return Vector2.ZERO
 
 # Marque une salle comme découverte
 # Cette dernière st donc visible sur la carte
@@ -102,6 +123,20 @@ func clamp_to_bounds(pos: Vector2) -> Vector2:
 		clamp(pos.y, min_pos.y, max_pos.y)
 	)
 
+# Récupère le marqueur le plus proche
+func get_closer_marker(from_position: Vector2) -> Marker2D:
+	var closest_marker: Marker2D = null
+	var closest_distance: float = SNAP_DISTANCE
+	
+	for marker: Marker2D in current_markers:
+		var distance: float = from_position.distance_to(marker.position)
+		
+		if distance < closest_distance:
+			closest_distance = distance
+			closest_marker = marker
+	
+	return closest_marker
+
 # Si un marquer est proche du curseur, le curseur est attiré par ce dernier
 func snap_to_marker(from_position: Vector2) -> Vector2:
 	var closest_marker: Node = null
@@ -115,6 +150,7 @@ func snap_to_marker(from_position: Vector2) -> Vector2:
 			closest_marker = marker
 	
 	if closest_marker != null:
+		target_marker = closest_marker
 		return closest_marker.position
 	
 	return from_position
