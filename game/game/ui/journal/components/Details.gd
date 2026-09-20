@@ -1,6 +1,6 @@
 extends Control
 
-const CHECKBOX_SCENE: PackedScene = preload("res://game/ui/journal/Components/Checkbox.tscn")
+const CHECKBOX_SCENE: PackedScene = preload("res://game/ui/journal/components/Checkbox.tscn")
 
 # Conteneurs
 @onready var slot_display: Control = $SlotDisplay

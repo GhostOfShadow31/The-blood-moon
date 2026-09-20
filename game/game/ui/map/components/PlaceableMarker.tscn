@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bfv71frt380qu"]
+
+[ext_resource type="Script" uid="uid://bs7jjctsvj7uk" path="res://game/ui/map/components/PlaceableMarker.gd" id="1_e2gy6"]
+[ext_resource type="Texture2D" uid="uid://jj2ikv8a8wf3" path="res://assets/ui/map/placeable_marker.png" id="2_afkeb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayqd8"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73lhk"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v13mw"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpo20"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2jie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayqd8")
+}],
+"loop": true,
+"name": &"ash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73lhk")
+}],
+"loop": true,
+"name": &"foam",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v13mw")
+}],
+"loop": true,
+"name": &"slate",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpo20")
+}],
+"loop": true,
+"name": &"terracota",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afkeb"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubqh6"]
+atlas = ExtResource("2_afkeb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juont"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afkeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubqh6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="PlaceableMarker" type="Marker2D" unique_id=2024237294]
+script = ExtResource("1_e2gy6")
+
+[node name="MarkerSprite" type="AnimatedSprite2D" parent="." unique_id=724347090]
+sprite_frames = SubResource("SpriteFrames_w2jie")
+animation = &"terracota"
+
+[node name="SelectorSprite" type="AnimatedSprite2D" parent="." unique_id=382731181]
+sprite_frames = SubResource("SpriteFrames_juont")

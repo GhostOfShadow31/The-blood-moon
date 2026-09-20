@@ -30,7 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("debug_input"):
 		# Mettre ici ce que l'on veut pour debuguer (la touche est "!")
 		#GameData.show_all()
-		print(camera.current_room_id)
+		print(GameData.data.map.cave.markers)
 	if event.is_action_pressed("ui_journal"):
 		player.is_ui_open = not player.is_ui_open
 		UI.toggle_journal()

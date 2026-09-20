@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dbkhqt0txrnwb"]
 
 [ext_resource type="Script" uid="uid://rcxyjby00str" path="res://game/entities/loot/Loot.gd" id="1_3o3eh"]
-[ext_resource type="Texture2D" uid="uid://wms48on1sllj" path="res://assets/sprites/items/butin/Cave_loot.png" id="1_jbnjf"]
+[ext_resource type="Texture2D" uid="uid://cr3yyylaq76ar" path="res://assets/sprites/items/butin/Cave_loot.png" id="1_jbnjf"]
 [ext_resource type="Texture2D" uid="uid://ieb5ul6w6cn5" path="res://assets/sprites/items/butin/Halo.tres" id="2_jbnjf"]
-[ext_resource type="Texture2D" uid="uid://b4egtw2861e3x" path="res://assets/sprites/misc/arrow_icon.png" id="4_3o3eh"]
+[ext_resource type="Texture2D" uid="uid://b8lhxhn630uf4" path="res://assets/sprites/misc/arrow_icon.png" id="4_3o3eh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbnjf"]
 atlas = ExtResource("1_jbnjf")

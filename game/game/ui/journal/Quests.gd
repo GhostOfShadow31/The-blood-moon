@@ -2,7 +2,7 @@ extends Node
 
 @export var quests: Array[Quest] = []
 
-const QUEST_SCENE: PackedScene = preload("res://game/ui/journal/Components/Quest.tscn")
+const QUEST_SCENE: PackedScene = preload("res://game/ui/journal/components/Quest.tscn")
 
 var quests_nodes: Dictionary[String, Node] = {}
 

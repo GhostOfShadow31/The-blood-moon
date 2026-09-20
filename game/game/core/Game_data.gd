@@ -13,8 +13,19 @@ var data: Dictionary = {
 		"abilities": {}
 	},
 	"map": {
-		"cave": []
+		"cave": {
+			"rooms": [],
+			"markers": []
+		}
 	}
+}
+
+enum MAPS {
+	CAVE
+}
+
+const maps: Dictionary[MAPS, String] = {
+	MAPS.CAVE: "cave"
 }
 
 func show_all() -> void:
@@ -114,8 +125,23 @@ func has_ability(ability: Ability) -> bool:
 
 # -- Map --
 func add_room(room_id: int) -> void:
-	if not data["map"]["cave"].has(room_id):
-		data["map"]["cave"].append(room_id)
+	if not data["map"]["cave"]["rooms"].has(room_id):
+		data["map"]["cave"]["rooms"].append(room_id)
 
 func has_room(room_id: int) -> bool:
-	return data["map"]["cave"].has(room_id)
+	return data["map"]["cave"]["rooms"].has(room_id)
+
+func add_marker(marker: PlaceableMarker, map: MAPS) -> void:
+	data["map"][maps[map]]["markers"].append({
+		"type": marker.current_marker_type,
+		"position": marker.global_position
+	})
+
+func remove_marker(marker: PlaceableMarker, map: MAPS) -> void:
+	var markers: Array = data["map"][maps[map]]["markers"]
+	var size = markers.size()
+	
+	for i in range(size):
+		if markers[i]["position"] == marker.global_position:
+			markers.remove_at(i)
+			return

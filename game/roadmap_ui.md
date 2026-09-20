@@ -90,14 +90,14 @@ Les capacités restent séparées.
 
 Maintenant seulement, on construit l'interface.
 
-* [ ] Créer l'écran d'inventaire
-* [ ] Afficher les objets possédés
-* [ ] Afficher leur quantité
-* [ ] Sélectionner un objet
-* [ ] Afficher les informations de l'objet sélectionné
-* [ ] Utiliser un consommable depuis l'inventaire
-* [ ] Fermer l'inventaire et reprendre le jeu
-* [ ] Vérifier que l'affichage reflète immédiatement les changements de l'inventaire
+* [x] Créer l'écran d'inventaire
+* [x] Afficher les objets possédés
+* [x] Afficher leur quantité
+* [x] Sélectionner un objet
+* [x] Afficher les informations de l'objet sélectionné
+* [x] Utiliser un consommable depuis l'inventaire
+* [x] Fermer l'inventaire et reprendre le jeu
+* [x] Vérifier que l'affichage reflète immédiatement les changements de l'inventaire
 
 **Jalon :**
 
@@ -179,12 +179,12 @@ Je la mettrais donc après inventaire/dialogues.
 * [x] Afficher la position du joueur
 * [x] Mettre à jour la carte lors de l'exploration
 * [x] Faire persister les zones découvertes
-* [ ] Permettre de naviguer dans la carte
+* [x] Permettre de naviguer dans la carte
 
 ### Facultatif
 
-* [ ] Ajouter des marqueurs personnalisés
-* [ ] Permettre de supprimer/modifier les marqueurs
+* [x] Ajouter des marqueurs personnalisés
+* [x] Permettre de supprimer/modifier les marqueurs
 
 ---
 

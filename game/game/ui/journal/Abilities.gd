@@ -2,7 +2,7 @@ extends Node
 
 @export var abilities: Array[Ability] = []
 
-const ABILITIE_SCENE: PackedScene = preload("res://game/ui/journal/Components/Abilitie.tscn")
+const ABILITIE_SCENE: PackedScene = preload("res://game/ui/journal/components/Abilitie.tscn")
 
 var abilities_nodes: Dictionary[String, Node] = {}
 

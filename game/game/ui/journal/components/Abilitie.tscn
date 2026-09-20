@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brruneflutsh6"]
 
 [ext_resource type="Texture2D" uid="uid://dp7kre0tyxvhr" path="res://assets/ui/journal/Abiltie_UI.png" id="1_oqj1u"]
-[ext_resource type="Script" uid="uid://bywrugv43rwfv" path="res://game/ui/journal/Components/Abilitie.gd" id="1_y6bvu"]
+[ext_resource type="Script" uid="uid://bywrugv43rwfv" path="res://game/ui/journal/components/Abilitie.gd" id="1_y6bvu"]
 [ext_resource type="FontFile" uid="uid://bdxmh8fsijlqe" path="res://assets/fonts/monogram.ttf" id="2_y6bvu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oaj6v"]
