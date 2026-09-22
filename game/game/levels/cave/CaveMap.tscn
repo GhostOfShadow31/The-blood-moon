@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://boi7yf3mhylq4" path="res://game/levels/cave/CaveMap.gd" id="1_uylaq"]
 [ext_resource type="Texture2D" uid="uid://crh5rdlp7baas" path="res://assets/textures/cave/Ref.png" id="3_7r60c"]
-[ext_resource type="Texture2D" uid="uid://cfn4tmg6x6s7k" path="res://assets/textures/cave/terrain.png" id="4_04f4u"]
+[ext_resource type="Texture2D" uid="uid://rkp5oycw17bb" path="res://assets/textures/cave/terrain.png" id="4_04f4u"]
 [ext_resource type="Shader" uid="uid://bw17sukjci6uj" path="res://shaders/bud_glow.gdshader" id="4_ogvxq"]
 [ext_resource type="Texture2D" uid="uid://bilkggrq4cep5" path="res://assets/textures/cave/lights/sortie.tres" id="4_uylaq"]
 [ext_resource type="Texture2D" uid="uid://nq6cwcjachvp" path="res://assets/textures/cave/pique.png" id="5_f1sy0"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://b6wadkel4w2du" path="res://game/ressources/Item.gd" id="14_ac8h0"]
 [ext_resource type="Resource" uid="uid://cf6xu7mr31flq" path="res://game/ressources/items/potions/BasicPotion.tres" id="15_65gun"]
 [ext_resource type="Resource" uid="uid://daav6jfnu0d3x" path="res://game/ressources/items/potions/BasicPotion2.tres" id="16_q0j37"]
+[ext_resource type="PackedScene" uid="uid://ceibq1txvubrj" path="res://game/entities/pillar/Pillar.tscn" id="17_65gun"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04f4u"]
 texture = ExtResource("4_04f4u")
@@ -1147,6 +1148,9 @@ ExtResource("15_65gun"): 2,
 ExtResource("16_q0j37"): 1
 })
 
+[node name="Pillar" parent="Pnjs" unique_id=1666197805 instance=ExtResource("17_65gun")]
+position = Vector2(1046, 609)
+
 [node name="RecoveryPoints" type="Node2D" parent="." unique_id=343648343]
 visible = false
 
@@ -1186,7 +1190,7 @@ position = Vector2(400, 576)
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=204890745]
 
 [node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1077837434]
-position = Vector2(1200, 1631)
+position = Vector2(1079, 631)
 
 [node name="SpawnPoint_01" type="Marker2D" parent="SpawnPoints" unique_id=999550475]
 position = Vector2(1122, 0)

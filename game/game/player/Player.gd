@@ -108,7 +108,7 @@ func can_jump() -> bool:
 var interactable: Interactable = null
 
 func handle_interaction() -> void:
-	if Input.is_action_pressed("ui_interact") and interactable:
+	if Input.is_action_just_pressed("ui_interact") and interactable:
 		interactable.interact()
 
 # =========================

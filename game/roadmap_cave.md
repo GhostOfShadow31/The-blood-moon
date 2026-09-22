@@ -109,9 +109,9 @@
 
 ### Carte
 
-* [ ] Définir quelles zones sont révélées
-* [ ] Révéler progressivement la carte de `Cave`
-* [ ] Afficher la position du joueur
+* [x] Définir quelles zones sont révélées
+* [x] Révéler progressivement la carte de `Cave`
+* [x] Afficher la position du joueur
 
 > Les marqueurs restent **hors de la roadmap principale pour l'instant**.
 
